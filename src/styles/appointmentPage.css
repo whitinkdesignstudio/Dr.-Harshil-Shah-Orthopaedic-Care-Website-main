@@ -1,0 +1,515 @@
+/* ==========================================================================
+   APPOINTMENT PAGE OVERRIDES
+   - Page background: off-white (#f7fafb)
+   - All card/box backgrounds: very light teal-blue (#eaf6f6)
+     same as the "Know the journey. Ask better questions." section
+   ========================================================================== */
+
+/* ── Page background: off-white instead of dark navy ── */
+.appt-page-container {
+  background: #f7fafb !important;
+  color: #1e293b !important;
+  padding: 0 !important;
+}
+
+/* ── Hide the dark ambient glow rig — irrelevant on light bg ── */
+.appt-ambient-canvas {
+  display: none !important;
+}
+
+/* ── Shell / layout z-index cleanup ── */
+.appt-shell {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero heading & lead: switch from white to dark teal ── */
+.appt-hero-heading {
+  color: #0c3e44 !important;
+}
+
+.appt-hero-accent {
+  color: #146c72 !important;
+}
+
+.appt-hero-lead {
+  color: #4b636e !important;
+}
+
+/* ── LEFT COLUMN BOXES: very light teal-blue (#eaf6f6) ── */
+
+/* Doctor card */
+.appt-doctor-card {
+  background: #eaf6f6 !important;
+  border: 1px solid #c5e8e8 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.appt-doctor-meta strong {
+  color: #0c3e44 !important;
+}
+
+.appt-doctor-meta > span {
+  color: #4b636e !important;
+}
+
+.appt-mini-tag {
+  color: #146c72 !important;
+  background: rgba(20, 108, 114, 0.1) !important;
+  border-color: rgba(20, 108, 114, 0.2) !important;
+}
+
+/* Workflow card */
+.appt-workflow-card {
+  background: #eaf6f6 !important;
+  border: 1px solid #c5e8e8 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.appt-workflow-title {
+  color: #146c72 !important;
+}
+
+/* Timeline connector line */
+.appt-timeline::before {
+  background: #c5e8e8 !important;
+}
+
+/* Timeline markers */
+.appt-timeline-marker {
+  background: #ffffff !important;
+  border-color: #146c72 !important;
+  color: #146c72 !important;
+}
+
+/* Timeline text */
+.appt-timeline-content strong {
+  color: #0c3e44 !important;
+}
+
+.appt-timeline-content p {
+  color: #4b636e !important;
+}
+
+/* Direct call box */
+.appt-direct-call-box {
+  background: #eaf6f6 !important;
+  border: 1px solid #c5e8e8 !important;
+}
+
+.appt-direct-call-box:hover {
+  background: #d6efef !important;
+  border-color: #146c72 !important;
+}
+
+.appt-call-copy small {
+  color: #4b636e !important;
+}
+
+.appt-call-link {
+  color: #0c3e44 !important;
+}
+
+.appt-call-link:hover {
+  color: #146c72 !important;
+}
+
+/* Left column email & location additions */
+.appt-email-link {
+  font-size: 14.5px !important;
+  word-break: break-all;
+}
+
+.appt-location-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0c3e44;
+  margin-top: 2px;
+}
+
+.appt-location-address {
+  font-size: 12.5px;
+  color: #4b636e;
+  line-height: 1.45;
+  margin: 3px 0 6px;
+}
+
+.appt-location-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #146c72;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.appt-location-map-btn:hover {
+  color: #0c3e44;
+  gap: 6px;
+}
+
+/* Map Card */
+.appt-map-card {
+  background: #eaf6f6 !important;
+  border: 1px solid #c5e8e8 !important;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+
+.appt-map-card:hover {
+  border-color: #146c72 !important;
+}
+
+.appt-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.appt-map-header-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.appt-map-header-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #146c72;
+  display: inline-block;
+}
+
+.appt-map-header-title {
+  font-size: 12px;
+  font-weight: 750;
+  color: #0c3e44;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.appt-map-directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #146c72;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.appt-map-directions-link:hover {
+  color: #0c3e44;
+  gap: 6px;
+}
+
+.appt-map-frame-container {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 108, 114, 0.18);
+  background: #d6efef;
+}
+
+/* ── RIGHT COLUMN: form card stays white (clean contrast on off-white bg) ── */
+.appt-card-surface {
+  background: #ffffff !important;
+  box-shadow:
+    0 4px 24px rgba(12, 62, 68, 0.07),
+    0 0 0 1px rgba(20, 108, 114, 0.08) !important;
+}
+
+/* ── Receipt / success state: also very light teal ── */
+.appt-receipt-breakdown {
+  background: #eaf6f6 !important;
+  border-color: #c5e8e8 !important;
+}
+
+.appt-receipt-next-note {
+  background: #eaf6f6 !important;
+  border-color: #c5e8e8 !important;
+}
+
+/* ==========================================================================
+   APPOINTMENT PAGE: PHONE & MOBILE ALIGNMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Hero Section Alignment */
+  .contact-hero-redesign {
+    padding: 18px 0 16px !important;
+    min-height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .contact-hero-shell {
+    padding: 0 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    min-height: auto !important;
+  }
+
+  .contact-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .contact-hero-title {
+    font-size: clamp(24px, 6vw, 30px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 0 auto 8px auto !important;
+  }
+
+  .contact-hero-desc {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .contact-hero-visual {
+    min-height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .contact-hero-doctor-img {
+    max-height: 320px !important;
+    max-width: 270px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* 2. Direct Support Channels */
+  .contact-support-section {
+    padding: 28px 0 36px !important;
+  }
+
+  .contact-support-shell {
+    padding: 0 16px !important;
+  }
+
+  .contact-support-main-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .contact-cards-grid-col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .contact-method-card {
+    padding: 18px 16px !important;
+  }
+
+  /* 3. Booking Section */
+  .appt-booking-section {
+    padding: 28px 0 40px !important;
+  }
+
+  .appt-shell {
+    padding: 0 16px !important;
+  }
+
+  .appt-two-column-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .appt-card-surface {
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .appt-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .appt-header-row .appt-card-title {
+    font-size: 1.25rem !important;
+  }
+
+  .appt-grid-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .appt-type-segment {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .appt-slots-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+  }
+
+  .appt-slot-btn {
+    padding: 9px 4px !important;
+    font-size: 11.5px !important;
+  }
+
+  .appt-submit-btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
+    font-size: clamp(12.5px, 3.6vw, 15px) !important;
+    white-space: nowrap !important;
+    padding: 12px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .appt-info-column {
+    gap: 16px !important;
+  }
+
+  .appt-doctor-card,
+  .appt-workflow-card,
+  .appt-direct-call-box,
+  .appt-map-card {
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  /* 4. Prepare for Consultation */
+  .visit-section {
+    padding: 28px 0 36px !important;
+  }
+
+  .visit-container {
+    padding: 0 16px !important;
+  }
+
+  .cp-consult-layout {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .cp-consult-left {
+    padding-right: 0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .visit-step-card {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .visit-tip-bar {
+    padding: 16px 14px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .visit-tip-joint-pills {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .visit-joint-pill {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  /* 5. "Know the journey. Ask better questions." Box & 3D Images Cut-off Fix */
+  .contact-guide-banner {
+    padding: 20px 0 36px !important;
+  }
+
+  .contact-guide-card {
+    padding: 24px 16px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  .contact-guide-grid {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  .contact-3d-showcase {
+    width: 100% !important;
+    max-width: 290px !important;
+    height: 250px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: scale(0.62) !important;
+    transform-origin: center center !important;
+  }
+
+  .contact-guide-content {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .contact-guide-title {
+    font-size: clamp(22px, 5.5vw, 28px) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    margin-bottom: 12px !important;
+  }
+
+  .contact-guide-lead {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .contact-guide-cta-btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-3d-showcase {
+    transform: scale(0.54) !important;
+    height: 220px !important;
+  }
+
+  .appt-slots-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
