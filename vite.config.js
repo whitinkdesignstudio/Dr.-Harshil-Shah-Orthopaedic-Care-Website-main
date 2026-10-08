@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-const repositoryBase = '/Dr.-Harshil-Shah-website-react-/';
+const repositoryBase = '/Dr.-Harshil-Shah-Orthopaedic-Care-Website-main/';
 
 function getPublicAssetPaths(directory, root = directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
