@@ -255,7 +255,7 @@ function loadTexture(loader, url) {
   return textureCache[url];
 }
 
-export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTreatment }) {
+export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTreatment, onJointChange }) {
   const mountRef = useRef(null);
   const [selectedJoint, setSelectedJoint] = useState(initialJoint);
   const [viewMode, setViewMode] = useState('natural'); // 'natural' | 'surgical' | 'xray'
@@ -1059,7 +1059,11 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
           <button
             type="button"
             className={`viewer-joint-pill ${selectedJoint === 'knee' ? 'active' : ''}`}
-            onClick={() => { setSelectedJoint('knee'); handleDeselectHotspot(); }}
+            onClick={() => {
+              setSelectedJoint('knee');
+              handleDeselectHotspot();
+              if (onJointChange) onJointChange('knee');
+            }}
             title="Knee Anatomy 3D Model"
           >
             <span className="joint-pill-title">Knee</span>
@@ -1068,7 +1072,11 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
           <button
             type="button"
             className={`viewer-joint-pill ${selectedJoint === 'shoulder' ? 'active' : ''}`}
-            onClick={() => { setSelectedJoint('shoulder'); handleDeselectHotspot(); }}
+            onClick={() => {
+              setSelectedJoint('shoulder');
+              handleDeselectHotspot();
+              if (onJointChange) onJointChange('shoulder');
+            }}
             title="Shoulder Joint 3D Model"
           >
             <span className="joint-pill-title">Shoulder</span>
@@ -1077,7 +1085,11 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
           <button
             type="button"
             className={`viewer-joint-pill ${selectedJoint === 'hip' ? 'active' : ''}`}
-            onClick={() => { setSelectedJoint('hip'); handleDeselectHotspot(); }}
+            onClick={() => {
+              setSelectedJoint('hip');
+              handleDeselectHotspot();
+              if (onJointChange) onJointChange('hip');
+            }}
             title="Hip Joint 3D Model"
           >
             <span className="joint-pill-title">Hip</span>

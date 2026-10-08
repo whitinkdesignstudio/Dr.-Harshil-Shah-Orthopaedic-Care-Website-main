@@ -107,13 +107,10 @@ export default function HomePage() {
   return (
     <div className="mock-home">
 
-      {/* =========================================================================
-          1. HERO BANNER (With transparent-left hero image & doctor on right)
-          ========================================================================= */}
       <section className="mock-hero" aria-label="Hero Banner">
         <div className="mock-hero-media">
           <img
-            src="/a7675ee9-feed-4c23-a637-a0aaf4665117.jpeg"
+            src="/galleri/docter img/homepage.png"
             alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
             className="mock-hero-full-image"
             loading="eager"

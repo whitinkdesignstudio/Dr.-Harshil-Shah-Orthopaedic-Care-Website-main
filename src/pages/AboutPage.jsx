@@ -212,7 +212,7 @@ export default function AboutPage() {
       <section className="mock-hero" aria-label="Hero Banner">
         <div className="mock-hero-media">
           <img
-            src="/a7675ee9-feed-4c23-a637-a0aaf4665117.jpeg"
+            src="/galleri/docter img/about.png"
             alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
             className="mock-hero-full-image"
             loading="eager"

@@ -359,6 +359,33 @@ export const faqData = [
       'Contact the clinic promptly if you notice persistent high fever, severe pain not relieved by medication, spreading redness or continuous drainage from the surgical site, sudden calf pain or swelling, or unexpected breathing difficulty.',
     keywords: ['post-surgery warning signs', 'complications after surgery', 'when to call doctor'],
   },
+  {
+    id: 'recovery-gym-yoga-zumba-timing',
+    category: 'Recovery',
+    question: 'When can I return to my gym, yoga, or Zumba after surgery?',
+    answer:
+      'Gentle stretching and walking start within the first few weeks. Low-impact gym workouts (stationary cycling, upper-body training) and modified yoga postures can usually be resumed around 6 to 8 weeks as joint swelling settles and quadriceps control improves. Dynamic activities such as Zumba, aerobic dance, floor yoga, or higher-intensity gym training are gradually reintroduced between 3 to 4 months once joint stability, balance, and muscle strength are evaluated and cleared during your clinical review.',
+    keywords: ['gym after knee surgery', 'yoga after joint replacement', 'zumba return timeline', 'exercise resumption'],
+    featured: true,
+  },
+  {
+    id: 'recovery-stitches-stitchless-technique',
+    category: 'Recovery',
+    question: 'When will my surgical stitches be removed?',
+    answer:
+      'I routinely employ an advanced stitchless (subcuticular) closure technique using dissolvable internal sutures and specialized skin adhesives under waterproof dressings. This means there are no external threads, metal staples, or clips that need to be painfully removed. The internal stitches absorb naturally on their own beneath the skin, leaving a fine cosmetic scar. Your waterproof dressing is typically checked or removed during your first follow-up clinic visit at 10 to 14 days.',
+    keywords: ['stitch removal timing', 'stitchless surgery', 'dissolvable sutures', 'no staples knee surgery'],
+    featured: true,
+  },
+  {
+    id: 'recovery-hip-squat-and-sports',
+    category: 'Recovery',
+    question: 'Can I squat and play sports after a hip replacement?',
+    answer:
+      'Yes. With modern muscle-sparing approaches (such as the direct anterior approach) and high-performance ceramic-on-crosslinked-polyethylene implants, the hip’s natural anatomy and stability are preserved. Once tissue healing and muscle rehabilitation milestones are achieved (typically within 3 to 6 months), patients can safely squat, cross legs, swim, play badminton, doubles tennis, golf, and engage in gym fitness with excellent mobility and long-term joint safety.',
+    keywords: ['squatting after hip replacement', 'sports after hip surgery', 'anterior hip approach flexibility', 'badminton tennis post-op'],
+    featured: true,
+  },
 
   // ─── 6. SECOND OPINION ───────────────────────────────────────────────────────
   {

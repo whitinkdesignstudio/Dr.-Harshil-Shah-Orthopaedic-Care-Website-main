@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Interactive3DViewer from '../components/Interactive3DViewer';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -47,16 +47,41 @@ const TREATMENT_FAQS = [
 ];
 
 export default function TreatmentsPage() {
+  const location = useLocation();
   const [activeJointTab, setActiveJointTab] = useState('knee');
   const [openFaqId, setOpenFaqId] = useState(null);
 
   const scrollToSection = (id) => {
     setActiveJointTab(id);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        const headerEl = document.querySelector('.site-header');
+        const dirEl = document.querySelector('.treatment-directory');
+        const headerH = headerEl ? headerEl.offsetHeight : 70;
+        const dirH = dirEl ? dirEl.offsetHeight : 60;
+        const totalOffset = headerH + dirH + 16;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+      }
+    }, 40);
   };
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      if (['knee', 'hip', 'shoulder', 'more'].includes(targetId)) {
+        setActiveJointTab(targetId);
+        setTimeout(() => {
+          scrollToSection(targetId);
+        }, 180);
+      }
+    }
+  }, [location.hash]);
 
   const toggleFaq = (id) => {
     setOpenFaqId((prev) => (prev === id ? null : id));
@@ -131,6 +156,7 @@ export default function TreatmentsPage() {
             <Interactive3DViewer
               initialJoint={activeJointTab}
               onSelectTreatment={(joint) => scrollToSection(joint)}
+              onJointChange={(joint) => setActiveJointTab(joint)}
             />
           </ErrorBoundary>
         </div>
