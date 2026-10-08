@@ -3,7 +3,11 @@ import react from '@vitejs/plugin-react';
 import { readdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-const repositoryBase = '/Dr.-Harshil-Shah-Orthopaedic-Care-Website-main/';
+// Dynamic base path:
+// GitHub Actions uses the repo subpath for GitHub Pages: '/Dr.-Harshil-Shah-Orthopaedic-Care-Website-main/'
+// Vercel and local dev use the root path: '/'
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+const repositoryBase = isGitHubActions ? '/Dr.-Harshil-Shah-Orthopaedic-Care-Website-main/' : '/';
 
 function getPublicAssetPaths(directory, root = directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -18,6 +22,9 @@ function getPublicAssetPaths(directory, root = directory) {
 }
 
 function prefixPublicAssetUrls() {
+  if (repositoryBase === '/') {
+    return { name: 'prefix-public-asset-urls' };
+  }
   const publicAssetPaths = getPublicAssetPaths(join(process.cwd(), 'public'));
 
   return {
