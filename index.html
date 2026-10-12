@@ -62,25 +62,78 @@
     rel="stylesheet" />
 
 
-  <!-- Structured Data: Local Medical Business -->
+  <!-- Structured Data: Local Medical Business (Enhanced per SEO/GEO SOP) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Harshil Shah",
-      "description": "Orthopaedic surgeon specialising in knee, hip and shoulder conditions including arthroscopy, joint preservation and replacement in Ahmedabad, Gujarat.",
-      "medicalSpecialty": "Orthopedic Surgery",
-      "url": "https://drharshilshah.com",
-      "telephone": "+91-78749-04030",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ahmedabad",
-        "addressRegion": "Gujarat",
-        "addressCountry": "IN"
-      },
-      "sameAs": []
+      "@graph": [
+        {
+          "@type": "Physician",
+          "@id": "https://drharshilshah.com/#physician",
+          "name": "Dr. Harshil Shah",
+          "honorificPrefix": "Dr.",
+          "jobTitle": "Orthopaedic Surgeon & Joint Specialist",
+          "description": "Orthopaedic surgeon specialising in knee, hip and shoulder conditions including robotic joint replacement, arthroscopy, and joint preservation in Ahmedabad, Gujarat.",
+          "medicalSpecialty": "Orthopedic Surgery",
+          "url": "https://drharshilshah.com",
+          "image": "https://drharshilshah.com/doctor-hero-office.png",
+          "telephone": "+91-78749-04030",
+          "email": "harshilshah199706@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Curis Hospitals, Sindhubhavan Road, Bodakdev",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "postalCode": "380054",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "23.0450",
+            "longitude": "72.5074"
+          },
+          "sameAs": [
+            "https://www.instagram.com/drharshilshah_/",
+            "https://www.linkedin.com/in/harshil-shah-45b730321/",
+            "https://www.youtube.com/@drharshilshahh",
+            "https://wa.me/917874904030"
+          ]
+        },
+        {
+          "@type": "MedicalClinic",
+          "@id": "https://drharshilshah.com/#clinic",
+          "name": "Dr. Harshil Shah Orthopaedic Clinic",
+          "url": "https://drharshilshah.com",
+          "logo": "https://drharshilshah.com/logo.png",
+          "image": "https://drharshilshah.com/doctor-hero-office.png",
+          "telephone": "+91-78749-04030",
+          "priceRange": "₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Curis Hospitals, Sindhubhavan Road, Bodakdev",
+            "addressLocality": "Ahmedabad",
+            "addressRegion": "Gujarat",
+            "postalCode": "380054",
+            "addressCountry": "IN"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "10:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "17:00",
+              "closes": "19:00"
+            }
+          ]
+        }
+      ]
     }
-    </script>
+  </script>
 </head>
 
 <body>

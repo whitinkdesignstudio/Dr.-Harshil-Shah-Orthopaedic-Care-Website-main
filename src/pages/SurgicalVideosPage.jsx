@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const VIDEO_BASE = `${import.meta.env.BASE_URL}galleri/opreation/`;
 
@@ -433,7 +434,46 @@ export default function SurgicalVideosPage() {
   const nextIdx = (activeIndex + 1) % totalHeroVideos;
 
   return (
-    <div className="surgical-page">      
+    <div className="surgical-page">
+      <SEO
+        title="Operation Theatre & Surgical Videos | Dr. Harshil Shah"
+        description="Watch operative procedure videos and surgical techniques by Dr. Harshil Shah: robotic knee replacement, ligament reconstruction, and arthroscopic joint preservation."
+        canonicalUrl="/surgical-videos"
+        keywords="surgical videos orthopaedic, knee arthroscopy video, robotic knee replacement video, Dr Harshil Shah surgery"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'ItemList',
+              name: 'Surgical Procedures & Operation Theatre Videos',
+              description: 'Intra-operative surgical recordings and clinical procedure videos.',
+              itemListElement: surgicalVideos.slice(0, 10).map((v, idx) => ({
+                '@type': 'ListItem',
+                position: idx + 1,
+                name: v.title,
+                description: v.desc
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Surgical Videos',
+                  item: 'https://drharshilshah.com/surgical-videos'
+                }
+              ]
+            }
+          ]
+        }}
+      />      
 
       {/* ============================================================
           CATEGORY FILTER TABS & COMPREHENSIVE VIDEO BENTO GRID

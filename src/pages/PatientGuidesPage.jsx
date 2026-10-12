@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import '../styles/patientGuide.css';
 import {
   ClipboardCheckLogo,
@@ -84,6 +85,48 @@ export default function PatientGuidesPage() {
 
   return (
     <div className="patient-guide-page">
+      <SEO
+        title="Patient Journey & Treatment Guide | Dr. Harshil Shah"
+        description="Step-by-step guidance for orthopaedic patients: preparation before treatment, consultation checklist, procedure care, and recovery milestones."
+        canonicalUrl="/patient-guides"
+        keywords="patient treatment guide, knee surgery preparation, post surgery recovery tips, Dr Harshil Shah Ahmedabad"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'HowTo',
+              name: 'Orthopaedic Patient Treatment & Recovery Journey',
+              description: 'Step-by-step preparation and recovery protocol for orthopaedic procedures.',
+              step: PATIENT_GUIDE_STEPS.map((s) => ({
+                '@type': 'HowToStep',
+                position: s.step,
+                name: s.title,
+                itemListElement: s.points.map((p) => ({
+                  '@type': 'HowToDirection',
+                  text: p
+                }))
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Patient Guide',
+                  item: 'https://drharshilshah.com/patient-guides'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* Hero Section */}
       <section className="pg-hero-section">
         <div className="pg-hero-container">

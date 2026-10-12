@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { faqData, FAQ_CATEGORIES } from '../data/faqData';
 
 // ─── CATEGORIES ───────────────────────────────────────────────────────────────
@@ -134,9 +135,44 @@ export default function FaqPage() {
 
   return (
     <>
-      {/* JSON-LD FAQ Schema */}
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <SEO
+        title="Frequently Asked Questions (FAQ) | Orthopaedic Surgery & Joint Care"
+        description="Comprehensive answers to 40+ common patient questions on knee replacement, shoulder arthroscopy, hip surgery, second opinions, costs, and recovery timelines in Ahmedabad."
+        canonicalUrl="/faq"
+        keywords="orthopaedic surgery FAQ, knee pain questions, recovery time hip replacement, second opinion doctor Ahmedabad, arthroscopy FAQ"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'FAQPage',
+              mainEntity: faqData.map((f) => ({
+                '@type': 'Question',
+                name: f.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: f.answer
+                }
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Frequently Asked Questions',
+                  item: 'https://drharshilshah.com/faq'
+                }
+              ]
+            }
+          ]
+        }}
       />
 
       <div className="faq-page">

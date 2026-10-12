@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Interactive3DViewer from '../components/Interactive3DViewer';
 import ErrorBoundary from '../components/ErrorBoundary';
+import SEO from '../components/SEO';
 
 const TREATMENT_FAQS = [
   {
@@ -89,6 +90,52 @@ export default function TreatmentsPage() {
 
   return (
     <div className="treatments-page">
+      <SEO
+        title="Treatments & Procedures | Knee, Hip & Shoulder Specialist Ahmedabad"
+        description="Comprehensive orthopaedic care by Dr. Harshil Shah: robotic knee replacement, hip preservation, anterior hip replacement, shoulder arthroscopy, and sports injury care in Ahmedabad."
+        canonicalUrl="/treatments"
+        keywords="robotic knee replacement Ahmedabad, hip replacement surgery, shoulder arthroscopy, ACL reconstruction Gujarat, sports injury doctor"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'MedicalWebPage',
+              name: 'Orthopaedic Treatments & Procedures',
+              url: 'https://drharshilshah.com/treatments',
+              description: 'Detailed clinical guide to surgical and non-surgical treatments for knee, hip, and shoulder joint conditions.',
+              about: ['Knee Replacement', 'Hip Replacement', 'Shoulder Arthroscopy', 'Joint Preservation']
+            },
+            {
+              '@type': 'FAQPage',
+              mainEntity: TREATMENT_FAQS.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer
+                }
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Treatments',
+                  item: 'https://drharshilshah.com/treatments'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* Hero */}
       <section className="treatment-hero">
         <div className="treatment-hero-bg-container" aria-hidden="true">

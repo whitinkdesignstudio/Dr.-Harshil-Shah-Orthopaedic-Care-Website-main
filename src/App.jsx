@@ -32,6 +32,9 @@ const SurgicalVideosPage = lazyWithRetry(() => import('./pages/SurgicalVideosPag
 const FaqPage = lazyWithRetry(() => import('./pages/FaqPage'));
 const ContactPage = lazyWithRetry(() => import('./pages/ContactPage'));
 const AppointmentPage = lazyWithRetry(() => import('./pages/AppointmentPage'));
+const PrivacyPolicyPage = lazyWithRetry(() => import('./pages/PrivacyPolicyPage'));
+const MedicalDisclaimerPage = lazyWithRetry(() => import('./pages/MedicalDisclaimerPage'));
+const NotFoundPage = lazyWithRetry(() => import('./pages/NotFoundPage'));
 
 // Lazy-load non-critical UI overlays
 const WelcomeModal = lazyWithRetry(() => import('./components/WelcomeModal'));
@@ -99,8 +102,10 @@ export default function App() {
               <Route path="/faq" element={<FaqPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/appointment" element={<AppointmentPage />} />
-              {/* Catch-all redirect to Home */}
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="/privacy" element={<PrivacyPolicyPage />} />
+              <Route path="/medical-disclaimer" element={<MedicalDisclaimerPage />} />
+              {/* Dedicated 404 page for unknown routes */}
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>

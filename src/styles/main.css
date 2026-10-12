@@ -36623,7 +36623,8 @@ html body * {
   position: relative;
 }
 
-.mock-hero-mobile-image {
+.mock-hero-mobile-image,
+.mock-hero-mobile-box {
   display: none;
 }
 
@@ -38726,7 +38727,7 @@ html body * {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 0 0 36px 0 !important;
+    padding: 36px 0 !important;
     background: #ffffff !important;
     min-height: 0 !important;
     overflow: visible !important;
@@ -38737,28 +38738,7 @@ html body * {
   }
 
   .mock-hero-media {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 440px !important;
-    height: clamp(280px, 75vw, 360px) !important;
-    margin: 0 auto 20px auto !important;
-    overflow: hidden !important;
-    border-radius: 18px !important;
-    order: 1 !important;
-    z-index: 1 !important;
-  }
-
-  .mock-hero-full-image {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center 15% !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
+    display: none !important;
   }
 
   .mock-hero-overlay {
@@ -38791,6 +38771,37 @@ html body * {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+  }
+
+  .mock-hero-mobile-box {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto 18px auto !important;
+    order: -1 !important;
+  }
+
+  .mock-hero-mobile-frame {
+    width: 100% !important;
+    max-width: clamp(210px, 58vw, 255px) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background: #f4f9fa !important;
+    border: 3px solid #ffffff !important;
+    outline: 1px solid rgba(20, 108, 114, 0.16) !important;
+    box-shadow: 0 10px 25px -4px rgba(7, 60, 67, 0.14), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .mock-hero-mobile-img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 330px !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
   .mock-hero-doctor-tag {

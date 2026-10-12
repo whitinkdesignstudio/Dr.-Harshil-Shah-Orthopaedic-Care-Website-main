@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/SEO';
 import '../styles/contactPage.css';
 import '../styles/appointmentPage.css';
 
@@ -385,6 +386,53 @@ export default function AppointmentPage() {
 
   return (
     <div className="appt-page-container contact-page-wrapper">
+      <SEO
+        title="Book an Appointment & Contact | Dr. Harshil Shah Ahmedabad"
+        description="Schedule an in-clinic consultation or second opinion review with Dr. Harshil Shah at Curis Hospitals, Ahmedabad. Call +91 78749 04030 or book online."
+        canonicalUrl="/appointment"
+        keywords="orthopaedic doctor appointment Ahmedabad, Dr Harshil Shah contact, Curis Hospitals Bodakdev, knee doctor booking"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'ContactPage',
+              name: 'Contact & Consultation Booking',
+              url: 'https://drharshilshah.com/appointment',
+              description: 'Online consultation booking and clinic contact details for Dr. Harshil Shah.'
+            },
+            {
+              '@type': 'MedicalClinic',
+              name: 'Dr. Harshil Shah Orthopaedic Clinic',
+              telephone: '+91-78749-04030',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Curis Hospitals, Sindhubhavan Road, Bodakdev',
+                addressLocality: 'Ahmedabad',
+                addressRegion: 'Gujarat',
+                postalCode: '380054',
+                addressCountry: 'IN'
+              }
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Book Appointment',
+                  item: 'https://drharshilshah.com/appointment'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* 1. CONTACT & APPOINTMENT HERO SECTION */}
       <section className="contact-hero-redesign" aria-label="Contact &amp; Appointment Header">
         <div className="contact-hero-shell">

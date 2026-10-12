@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const PATIENT_BROCHURES = [
   {
@@ -55,6 +56,45 @@ const PATIENT_BROCHURES = [
 export default function BrochuresPage() {
   return (
     <div className="brochures-page">
+      <SEO
+        title="Patient Education Brochures & Guides | Dr. Harshil Shah"
+        description="Download free medical guides and brochures authored by Dr. Harshil Shah on knee replacement, hip restoration, sports injuries, and shoulder arthroscopy."
+        canonicalUrl="/brochures"
+        keywords="orthopaedic patient guide PDF, knee surgery brochure, hip replacement guide, Dr Harshil Shah downloads"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'ItemList',
+              name: 'Orthopaedic Educational Brochures',
+              description: 'Comprehensive patient guides on joint replacement, sports surgery, and arthroscopy.',
+              itemListElement: PATIENT_BROCHURES.map((b, idx) => ({
+                '@type': 'ListItem',
+                position: idx + 1,
+                name: b.title,
+                description: b.description
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Patient Brochures',
+                  item: 'https://drharshilshah.com/brochures'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* Hero Header */}
       <section className="brochures-hero-section">
         <div className="shell">

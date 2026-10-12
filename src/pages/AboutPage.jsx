@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const experienceItems = [
   {
@@ -208,6 +209,64 @@ export default function AboutPage() {
 
   return (
     <div className="about-page mock-home">
+      <SEO
+        title="About Dr. Harshil Shah | Orthopaedic Surgeon Qualifications & Fellowships"
+        description="Learn about Dr. Harshil Shah (MBBS, MS Orthopaedics), his prestigious fellowships at Hospital for Special Surgery (HSS, New York) & MGH Boston, and his patient-first surgical philosophy."
+        canonicalUrl="/about"
+        keywords="Dr Harshil Shah, orthopaedic surgeon qualifications, HSS New York fellowship, MGH Boston, joint replacement surgeon Ahmedabad"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Person',
+              '@id': 'https://drharshilshah.com/about#person',
+              name: 'Dr. Harshil Shah',
+              jobTitle: 'Consultant Orthopaedic & Joint Surgeon',
+              worksFor: {
+                '@type': 'MedicalClinic',
+                name: 'Curis Hospitals, Ahmedabad'
+              },
+              alumniOf: [
+                {
+                  '@type': 'EducationalOrganization',
+                  name: 'NHL Municipal Medical College, Ahmedabad'
+                },
+                {
+                  '@type': 'EducationalOrganization',
+                  name: 'Hospital for Special Surgery (HSS), New York, USA'
+                },
+                {
+                  '@type': 'EducationalOrganization',
+                  name: 'Massachusetts General Hospital (MGH), Boston, USA'
+                }
+              ],
+              knowsAbout: [
+                'Robotic Knee Replacement',
+                'Hip Joint Preservation',
+                'Shoulder Arthroscopy',
+                'Sports Medicine'
+              ]
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'About Dr. Harshil Shah',
+                  item: 'https://drharshilshah.com/about'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* 1. HERO BANNER (Exact same structure and styling as Home Page) */}
       <section className="mock-hero" aria-label="Hero Banner">
         <div className="mock-hero-media">
@@ -221,6 +280,17 @@ export default function AboutPage() {
         <div className="mock-shell mock-hero-overlay">
           <div className="mock-hero-inner">
             <div className="mock-hero-left">
+              {/* Mobile Only: Centered Hero Focus Image */}
+              <div className="mock-hero-mobile-box">
+                <div className="mock-hero-mobile-frame">
+                  <img
+                    src="/galleri/about-mobile-focus.webp"
+                    alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
+                    className="mock-hero-mobile-img"
+                    loading="eager"
+                  />
+                </div>
+              </div>
 
               <h1 className="mock-hero-title">
                 Let’s get you<br />

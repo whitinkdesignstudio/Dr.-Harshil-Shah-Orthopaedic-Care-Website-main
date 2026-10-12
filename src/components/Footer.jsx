@@ -110,6 +110,8 @@ export default function Footer() {
           <p className="footer-label">Patient Help</p>
           <Link to="/appointment">Contact & Book Appointment</Link>
           <Link to="/faq">Common questions</Link>
+          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/medical-disclaimer">Medical Disclaimer</Link>
         </div>
 
         {/* Contact Col */}

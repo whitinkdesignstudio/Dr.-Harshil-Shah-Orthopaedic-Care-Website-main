@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function GalleryPage() {
   const [searchParams] = useSearchParams();
@@ -250,6 +251,40 @@ export default function GalleryPage() {
 
   return (
     <div className="gallery-page-wrapper">
+      <SEO
+        title="Clinical Gallery & Milestones | Dr. Harshil Shah Ahmedabad"
+        description="Explore the clinical and surgical gallery of Dr. Harshil Shah: robotic surgery procedures, patient mobility restorations, and academic masterclasses in Ahmedabad."
+        canonicalUrl="/gallery"
+        keywords="orthopaedic surgery gallery, robotic surgery photos Ahmedabad, knee surgery recovery, Dr Harshil Shah pictures"
+        schema={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'ImageGallery',
+              name: 'Dr. Harshil Shah Clinical Practice Gallery',
+              description: 'Visual timeline of orthopaedic surgeries, academic masterclasses, and patient mobility milestones.',
+              url: 'https://drharshilshah.com/gallery'
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://drharshilshah.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Gallery',
+                  item: 'https://drharshilshah.com/gallery'
+                }
+              ]
+            }
+          ]
+        }}
+      />
       {/* Visual Hero */}
       <section className="gallery-hero-custom">
         <div className="gallery-hero-bg-glow"></div>

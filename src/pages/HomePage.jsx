@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { faqData } from '../data/faqData';
 
 const reviewsData = [
@@ -106,6 +107,23 @@ export default function HomePage() {
 
   return (
     <div className="mock-home">
+      <SEO
+        title="Dr. Harshil Shah | Orthopaedic Surgeon — Knee, Hip & Shoulder Specialist Ahmedabad"
+        description="Dr. Harshil Shah is a premier orthopaedic surgeon in Ahmedabad, Gujarat. Specialist in robotic joint replacement, arthroscopy, joint preservation, and sports injury recovery."
+        canonicalUrl="/"
+        keywords="orthopaedic surgeon Ahmedabad, knee replacement doctor, hip specialist Gujarat, shoulder arthroscopy, Dr Harshil Shah orthopaedics"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Dr. Harshil Shah Orthopaedic Care',
+          url: 'https://drharshilshah.com/',
+          description: 'Specialist orthopaedic care for knee, hip, and shoulder conditions in Ahmedabad, Gujarat.',
+          publisher: {
+            '@type': 'Physician',
+            name: 'Dr. Harshil Shah'
+          }
+        }}
+      />
 
       <section className="mock-hero" aria-label="Hero Banner">
         <div className="mock-hero-media">
@@ -119,6 +137,17 @@ export default function HomePage() {
         <div className="mock-shell mock-hero-overlay">
           <div className="mock-hero-inner">
             <div className="mock-hero-left">
+              {/* Mobile Only: Centered Hero Focus Image */}
+              <div className="mock-hero-mobile-box">
+                <div className="mock-hero-mobile-frame">
+                  <img
+                    src="/galleri/homepage-mobile-focus.jpg"
+                    alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
+                    className="mock-hero-mobile-img"
+                    loading="eager"
+                  />
+                </div>
+              </div>
               <h1 className="mock-hero-title">
                 <span className="mock-hero-line-1" style={{ color: '#000000' }}>Joint pain shouldn't keep you</span>
                 <span className="mock-hero-line-2">from living your life.</span>
