@@ -47,10 +47,40 @@ const TREATMENT_FAQS = [
   }
 ];
 
+const moreCareData = [
+  {
+    id: 1,
+    icon: '/icons/sports-injuries.webp',
+    title: 'Sports Injury Care',
+    desc: 'Specialized assessment and return-to-sport pathways for ligament, meniscus, and joint overload injuries in active individuals.',
+  },
+  {
+    id: 2,
+    icon: '/icons/patient-first.webp',
+    title: 'Conservative Treatment',
+    desc: 'Stage-appropriate non-surgical options—including targeted physical therapy, joint preservation protocols, and lifestyle adjustments.',
+  },
+  {
+    id: 3,
+    icon: '/icons/personalized-care.webp',
+    title: 'Structured Rehabilitation',
+    desc: 'Tailored physiotherapy milestones designed with clear goals so you can track your strength and mobility progress every week.',
+  },
+];
+
 export default function TreatmentsPage() {
   const location = useLocation();
   const [activeJointTab, setActiveJointTab] = useState('knee');
   const [openFaqId, setOpenFaqId] = useState(null);
+  const [currentCareIndex, setCurrentCareIndex] = useState(0);
+
+  const prevCare = () => {
+    setCurrentCareIndex((prev) => (prev === 0 ? moreCareData.length - 1 : prev - 1));
+  };
+
+  const nextCare = () => {
+    setCurrentCareIndex((prev) => (prev === moreCareData.length - 1 ? 0 : prev + 1));
+  };
 
   const scrollToSection = (id) => {
     setActiveJointTab(id);
@@ -486,9 +516,12 @@ export default function TreatmentsPage() {
           <div className="more-care-grid">
             <article className="more-care-card">
               <div className="more-care-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
+                <img
+                  src="/icons/sports-injuries.webp"
+                  alt="Sports Injury Care"
+                  className="more-care-icon-img"
+                  loading="lazy"
+                />
               </div>
               <h3 className="more-care-title">Sports Injury Care</h3>
               <p className="more-care-desc">
@@ -498,9 +531,12 @@ export default function TreatmentsPage() {
 
             <article className="more-care-card">
               <div className="more-care-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
+                <img
+                  src="/icons/patient-first.webp"
+                  alt="Conservative Treatment"
+                  className="more-care-icon-img"
+                  loading="lazy"
+                />
               </div>
               <h3 className="more-care-title">Conservative Treatment</h3>
               <p className="more-care-desc">
@@ -510,15 +546,73 @@ export default function TreatmentsPage() {
 
             <article className="more-care-card">
               <div className="more-care-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
+                <img
+                  src="/icons/personalized-care.webp"
+                  alt="Structured Rehabilitation"
+                  className="more-care-icon-img"
+                  loading="lazy"
+                />
               </div>
               <h3 className="more-care-title">Structured Rehabilitation</h3>
               <p className="more-care-desc">
                 Tailored physiotherapy milestones designed with clear goals so you can track your strength and mobility progress every week.
               </p>
             </article>
+          </div>
+
+          {/* Mobile Single Care Slideshow (1 card at a time with controls) */}
+          <div className="more-care-mobile-slider">
+            <div className="more-care-slider-card-wrap" key={`care-${currentCareIndex}`}>
+              <article className="more-care-card more-care-card-active">
+                <div className="more-care-icon">
+                  <img
+                    src={moreCareData[currentCareIndex].icon}
+                    alt={moreCareData[currentCareIndex].title}
+                    className="more-care-icon-img"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="more-care-title">{moreCareData[currentCareIndex].title}</h3>
+                <p className="more-care-desc">
+                  {moreCareData[currentCareIndex].desc}
+                </p>
+              </article>
+            </div>
+
+            {/* Slider Controls */}
+            <div className="mock-reviews-slider-controls">
+              <button
+                type="button"
+                className="mock-slider-btn prev"
+                onClick={prevCare}
+                aria-label="Previous Option"
+              >
+                &#8592;
+              </button>
+              <div className="mock-slider-indicator">
+                <span>{currentCareIndex + 1}</span> / <span>{moreCareData.length}</span>
+              </div>
+              <button
+                type="button"
+                className="mock-slider-btn next"
+                onClick={nextCare}
+                aria-label="Next Option"
+              >
+                &#8594;
+              </button>
+            </div>
+
+            <div className="mock-slider-dots">
+              {moreCareData.map((_, dotIdx) => (
+                <button
+                  key={`care-dot-${dotIdx}`}
+                  type="button"
+                  className={`mock-slider-dot ${dotIdx === currentCareIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentCareIndex(dotIdx)}
+                  aria-label={`Go to option ${dotIdx + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

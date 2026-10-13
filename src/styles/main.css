@@ -15817,7 +15817,7 @@ button {
 /* Responsive: Mobile Breakpoint */
 @media (max-width: 768px) {
   .welcome-modal-overlay {
-    padding: 12px;
+    padding: 16px;
     align-items: center;
   }
 
@@ -15826,13 +15826,12 @@ button {
     flex-direction: column;
     grid-template-columns: none;
     width: 100%;
-    max-width: 380px;
-    max-height: calc(100dvh - 24px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    border-radius: 22px;
+    max-width: 360px;
+    max-height: calc(100dvh - 32px);
+    overflow: hidden;
+    border-radius: 24px;
     margin: auto;
+    background: #ffffff;
   }
 
   /* Close button over photo on mobile */
@@ -15841,152 +15840,127 @@ button {
     right: 12px;
     width: 34px;
     height: 34px;
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(20, 108, 114, 0.15);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
 
-  /* Visual area at top on mobile */
+  /* Visual area at top on mobile — full bleed edge-to-edge without black side bars */
   .welcome-modal-visual {
     width: 100%;
-    height: 300px;
-    min-height: 300px;
+    height: 350px;
+    min-height: 350px;
     flex-shrink: 0;
     position: relative;
-    background: linear-gradient(180deg, #232729 0%, #15181a 100%);
-    border-radius: 22px 22px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    display: block;
   }
 
   .welcome-modal-photo {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 0;
+    display: block;
   }
 
   .welcome-modal-content {
-    padding: 14px 16px 16px 16px;
+    padding: 20px 20px 22px 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    text-align: center;
+    gap: 0;
   }
 
   .welcome-modal-header {
-    margin: 0;
+    order: 1;
+    margin: 0 0 10px 0;
+    width: 100%;
   }
 
   .welcome-kicker {
-    font-size: 10px;
-    margin-bottom: 2px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    color: #146c72;
   }
 
   .welcome-title {
-    font-size: 21px;
-    margin-bottom: 3px;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    color: #0b3b43;
+    line-height: 1.2;
   }
 
-  .welcome-desc {
-    font-size: 11.5px;
-    line-height: 1.4;
+  /* Hide description, 4 feature cards, secondary button, and extra stats on mobile */
+  .welcome-desc,
+  .welcome-features-grid,
+  .welcome-btn-secondary,
+  .welcome-stat-divider,
+  .welcome-stat-col:first-child,
+  .welcome-stat-col:last-child,
+  .welcome-stat-icon,
+  .welcome-stat-text span {
+    display: none !important;
   }
 
-  /* 2x2 Feature Grid on mobile */
-  .welcome-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 7px;
-    margin-bottom: 0;
-    grid-auto-rows: minmax(58px, auto);
-    align-items: stretch;
-  }
-
-  .welcome-feature-item {
-    min-height: 58px;
-    padding: 7px 6px;
-    gap: 5px;
-    border-radius: 12px;
-    box-sizing: border-box;
-  }
-
-  .welcome-feature-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .welcome-feature-item span {
-    font-size: 10px;
-    line-height: 1.25;
-  }
-
-  /* Stacked action buttons on mobile */
-  .welcome-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .welcome-btn-primary {
-    width: 100%;
-    min-height: 42px;
-    padding: 9px 16px;
-    font-size: 13px;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  .welcome-btn-secondary {
-    width: 100%;
-    min-height: 40px;
-    padding: 8px 16px;
-    font-size: 13px;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  /* Soft background container for bottom info on mobile */
+  /* Keep only "Knee • Hip • Shoulder" cleanly positioned below Dr. Harshil Shah */
   .welcome-stats-bar {
-    background: #f1f7f8;
-    border: 1px solid #e1eef0;
-    border-radius: 12px;
-    padding: 8px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 0;
-    border-top: 1px solid #e1eef0;
+    order: 2;
+    background: #f0f8f8;
+    border: 1px solid #d8ecee;
+    border-radius: 999px;
+    padding: 6px 18px;
+    margin: 0 0 18px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
   }
 
   .welcome-stat-col {
     display: flex;
     align-items: center;
-    gap: 9px;
-    width: 100%;
-  }
-
-  .welcome-stat-col:first-child .welcome-stat-text {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-  }
-
-  .welcome-stat-icon {
-    width: 24px;
-    height: 24px;
+    justify-content: center;
+    width: auto;
+    gap: 0;
   }
 
   .welcome-stat-text strong {
-    font-size: 10.5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #146c72;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
   }
 
-  .welcome-stat-text span {
-    font-size: 9px;
+  /* Primary CTA button at the bottom */
+  .welcome-actions {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .welcome-btn-primary {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(20, 108, 114, 0.25);
   }
 }
 
@@ -18027,11 +18001,11 @@ button {
 .footer-brand .brand-footer {
   display: inline-flex !important;
   align-items: center !important;
-  background: #ffffff !important;
-  border-radius: 12px !important;
-  padding: 8px 16px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
   margin-bottom: 14px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16) !important;
+  box-shadow: none !important;
   text-decoration: none !important;
   width: fit-content !important;
 }
@@ -26265,6 +26239,10 @@ re {
   text-shadow: none;
 }
 
+.gallery-mobile-lightbox-btn {
+  display: none;
+}
+
 .gallery-bento-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 45px -10px rgba(20, 108, 114, 0.35), 0 0 0 2px rgba(20, 108, 114, 0.45);
@@ -26591,7 +26569,41 @@ re {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  /* 1. Hero: Remove image panel in "Moments from a journey of care." section */
+  .gallery-hero-visual-panel {
+    display: none !important;
+  }
+
+  .gallery-hero-custom {
+    padding: 32px 0 24px !important;
+  }
+
+  .gallery-hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0 !important;
+  }
+
+  .gallery-hero-content {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .gallery-hero-title {
+    text-align: center !important;
+    margin-bottom: 12px !important;
+  }
+
+  .gallery-hero-subtitle {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 440px !important;
+  }
+
+  /* 2. Visual Gallery & Albums Cards: Initial and Active/Expanded states */
   .gallery-modal-close {
     top: 10px !important;
     right: 10px !important;
@@ -26610,7 +26622,139 @@ re {
   .gallery-bento-card.gallery-card-small {
     grid-column: span 1 !important;
     grid-row: span 1 !important;
-    height: 240px !important;
+    height: 270px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Keep photo visible on mobile, remove hover fade */
+  .gallery-card-img,
+  .gallery-bento-card:hover .gallery-card-img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .gallery-card-tag,
+  .gallery-zoom-badge,
+  .gallery-card-gradient {
+    display: none !important;
+  }
+
+  /* Initial unexpanded state: Small white horizontal box at bottom center with ONLY heading */
+  .gallery-card-info,
+  .gallery-bento-card:hover .gallery-card-info {
+    position: absolute !important;
+    bottom: 12px !important;
+    left: 50% !important;
+    top: auto !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 4 !important;
+    background: transparent !important;
+  }
+
+  .gallery-card-info h3,
+  .gallery-bento-card:hover .gallery-card-info h3 {
+    background: #ffffff !important;
+    color: #0b2b30 !important;
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .gallery-card-info p,
+  .gallery-bento-card:hover .gallery-card-info p {
+    display: none !important;
+  }
+
+  /* Clicked / Expanded state: Full card overlay with black blur background showing heading + subtitle */
+  .gallery-bento-card.is-card-expanded .gallery-card-info,
+  .gallery-bento-card.is-card-expanded:hover .gallery-card-info {
+    position: absolute !important;
+    inset: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+    background: rgba(8, 20, 26, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border-radius: 18px !important;
+    animation: fadeIn 0.25s ease !important;
+    z-index: 5 !important;
+  }
+
+  .gallery-bento-card.is-card-expanded .gallery-card-info h3,
+  .gallery-bento-card.is-card-expanded:hover .gallery-card-info h3 {
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    white-space: normal !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+  }
+
+  .gallery-bento-card.is-card-expanded .gallery-card-info p,
+  .gallery-bento-card.is-card-expanded:hover .gallery-card-info p {
+    display: block !important;
+    color: #e2f1f3 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin: 0 0 16px 0 !important;
+    opacity: 1 !important;
+    max-width: 280px !important;
+    text-align: center !important;
+  }
+
+  .gallery-bento-card.is-card-expanded .gallery-mobile-lightbox-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background: #146c72 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 999px !important;
+    padding: 7px 16px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
   }
 }
 
@@ -33197,6 +33341,14 @@ html body * {
   border-top: 1px solid #dfeceb;
 }
 
+.about-stats-mobile {
+  display: none;
+}
+
+.about-stats-desktop {
+  display: grid;
+}
+
 .about-stat-card {
   padding: 6px 18px 8px;
   text-align: center;
@@ -33656,6 +33808,10 @@ html body * {
   color: #146c72;
   line-height: 1;
   letter-spacing: -0.02em;
+}
+
+.about-expertise-logo-wrap {
+  display: none;
 }
 
 .about-expertise-divider-vert {
@@ -34913,6 +35069,8 @@ html body * {
   padding: 32px 26px 28px !important;
   display: flex !important;
   flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
@@ -34932,13 +35090,20 @@ html body * {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-bottom: 20px !important;
+  margin: 0 auto 20px auto !important;
   transition: background 0.2s ease, color 0.2s ease !important;
 }
 
+.treatments-page .more-care-icon-img {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
 .treatments-page .more-care-card:hover .more-care-icon {
-  background: #146c72 !important;
-  color: #ffffff !important;
+  background: #e6f4f3 !important;
+  color: #146c72 !important;
 }
 
 .treatments-page .more-care-title {
@@ -34948,6 +35113,7 @@ html body * {
   color: #0f172a !important;
   line-height: 1.35 !important;
   margin: 0 0 10px 0 !important;
+  text-align: center !important;
 }
 
 .treatments-page .more-care-desc {
@@ -34956,6 +35122,7 @@ html body * {
   line-height: 1.65 !important;
   color: #475569 !important;
   margin: 0 !important;
+  text-align: center !important;
 }
 
 /* Treatments FAQ Section */
@@ -37727,7 +37894,10 @@ html body * {
 }
 
 /* --- Mobile Slideshow --- */
-.mock-reviews-mobile-slider {
+.mock-reviews-mobile-slider,
+.mock-conditions-mobile-slider,
+.mock-locations-mobile-slider,
+.more-care-mobile-slider {
   display: none;
 }
 
@@ -38065,6 +38235,8 @@ html body * {
   padding: 22px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 14px;
   transition: all 0.24s ease;
   box-shadow: 0 2px 8px rgba(15, 43, 48, 0.02);
@@ -38082,26 +38254,39 @@ html body * {
   box-shadow: 0 4px 14px rgba(20, 108, 114, 0.08);
 }
 
+.mock-loc-mobile-toggle {
+  display: none;
+}
+
+.mock-loc-details {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
 .mock-loc-top-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
   width: 100%;
   padding-bottom: 12px;
   border-bottom: 1px solid #eef4f5;
+  position: relative;
 }
 
 .mock-loc-logo-wrap {
   height: 84px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .mock-loc-logo-img {
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .mock-loc-logo-img.curis {
@@ -38132,6 +38317,9 @@ html body * {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .mock-loc-text strong {
@@ -38140,12 +38328,14 @@ html body * {
   font-weight: 700;
   color: #0f2b30;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .mock-loc-text span {
   display: block;
   font-size: 0.82rem;
   color: #526e75;
+  text-align: center;
 }
 
 /* ========================================================================= */
@@ -38727,7 +38917,7 @@ html body * {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 36px 0 !important;
+    padding: 0 0 32px 0 !important;
     background: #ffffff !important;
     min-height: 0 !important;
     overflow: visible !important;
@@ -38748,7 +38938,7 @@ html body * {
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
-    padding: 0 20px !important;
+    padding: 0 !important;
     order: 2 !important;
     pointer-events: auto !important;
   }
@@ -38771,37 +38961,44 @@ html body * {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
+  /* Full-width banner at the top outside boxed frame */
   .mock-hero-mobile-box {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: block !important;
     width: 100% !important;
-    margin: 0 auto 18px auto !important;
+    margin: 0 0 20px 0 !important;
     order: -1 !important;
+    padding: 0 !important;
   }
 
   .mock-hero-mobile-frame {
     width: 100% !important;
-    max-width: clamp(210px, 58vw, 255px) !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    background: #f4f9fa !important;
-    border: 3px solid #ffffff !important;
-    outline: 1px solid rgba(20, 108, 114, 0.16) !important;
-    box-shadow: 0 10px 25px -4px rgba(7, 60, 67, 0.14), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    display: block !important;
   }
 
   .mock-hero-mobile-img {
     width: 100% !important;
     height: auto !important;
-    max-height: 330px !important;
-    object-fit: cover !important;
+    max-height: none !important;
+    object-fit: contain !important;
     display: block !important;
+  }
+
+  .mock-hero-title,
+  .mock-hero-desc,
+  .mock-hero-actions {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
   }
 
   .mock-hero-doctor-tag {
@@ -38923,21 +39120,11 @@ html body * {
     border-top: 1px solid #eef3f4;
   }
 
-  .mock-conditions-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 440px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
   .mock-consult-steps-grid,
   .mock-video-grid,
   .mock-pubs-grid,
   .mock-awards-grid,
-  .mock-hospitals-grid,
-  .mock-locations-grid,
-  .mock-brochures-grid {
+  .mock-hospitals-grid {
     grid-template-columns: 1fr;
   }
 
@@ -39065,36 +39252,63 @@ html body * {
     text-align: center;
   }
 
+  /* Care For Your Condition: mobile 1-card slideshow */
   .mock-conditions-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 440px;
-    margin: 0 auto;
+    display: none !important;
+  }
+
+  .mock-conditions-mobile-slider {
+    display: flex !important;
+    flex-direction: column;
     width: 100%;
+    margin-top: 10px;
+  }
+
+  .mock-condition-slider-card-wrap {
+    width: 100%;
+    animation: reviewFadeIn 0.3s ease;
+  }
+
+  .mock-conditions-mobile-slider .mock-condition-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 24px 20px !important;
+    border-radius: 14px !important;
+    background: #ffffff;
+    border: 1px solid #e1ecec;
+    box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06);
   }
 
   .mock-condition-card {
-    min-width: 0;
-    padding: 24px 20px;
-    border-radius: 14px;
-    width: 100%;
-    box-sizing: border-box;
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start !important;
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .mock-condition-icon {
-    width: 76px;
-    height: 76px;
-    margin-bottom: 16px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 14px;
   }
 
   .mock-condition-icon-img {
-    width: 66px;
-    height: 66px;
+    width: 56px;
+    height: 56px;
   }
 
   .mock-condition-icon-img.is-knee-icon {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
   }
 
   .mock-condition-card strong {
@@ -39114,9 +39328,14 @@ html body * {
     font-size: 0.82rem !important;
   }
 
+  /* How I Approach Your Treatment: remove the 3 tick points on mobile */
+  .mock-approach-section .mock-checklist {
+    display: none !important;
+  }
+
   .mock-approach-grid,
   .mock-feature-duo {
-    gap: 28px;
+    gap: 24px;
   }
 
   .mock-approach-img,
@@ -39192,26 +39411,186 @@ html body * {
   }
 
   .mock-reviews-grid,
-  .mock-brochures-grid,
-  .mock-locations-grid,
   .mock-hospitals-grid {
     gap: 14px;
   }
 
-  .mock-home .mock-locations-grid {
-    grid-template-columns: 1fr !important;
+  /* Brochures in 2x2 grid on mobile */
+  .mock-brochures-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
 
-  .mock-brochures-left h2 {
-    white-space: normal;
+  .mock-guide-card {
+    padding: 14px 12px !important;
+    border-radius: 14px !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
   }
 
-  .mock-guide-cover-img {
-    height: 180px;
+  .mock-guide-card-header {
+    margin-bottom: 8px !important;
+  }
+
+  .mock-guide-icon-box {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 9px !important;
+  }
+
+  .mock-guide-icon-box svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .mock-guide-badge {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .mock-guide-content {
+    margin-bottom: 10px !important;
+  }
+
+  .mock-guide-title {
+    font-size: 0.86rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .mock-guide-desc {
+    font-size: 0.72rem !important;
+    line-height: 1.38 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .mock-guide-footer {
+    padding-top: 8px !important;
+  }
+
+  .mock-guide-dl-btn {
+    padding: 7px 8px !important;
+    font-size: 0.72rem !important;
+    justify-content: center !important;
+    gap: 5px !important;
+  }
+
+  /* Where You Can Consult Me: mobile 1-card slideshow */
+  .mock-home .mock-locations-grid,
+  .mock-locations-grid {
+    display: none !important;
+  }
+
+  .mock-locations-mobile-slider {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .mock-location-slider-card-wrap {
+    width: 100%;
+    animation: reviewFadeIn 0.3s ease;
+  }
+
+  .mock-locations-mobile-slider .mock-location-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 22px 18px !important;
+    border-radius: 14px !important;
+    background: #ffffff;
+    border: 1px solid #e1ecec;
+    box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    align-self: stretch !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-top-row {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-logo-wrap {
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-logo-img {
+    margin: 0 auto !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-text {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-details {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .mock-locations-mobile-slider .mock-loc-details span {
+    text-align: center !important;
   }
 
   .mock-location-card {
-    padding: 18px 16px;
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    align-self: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .mock-loc-mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #eef7f8;
+    color: #146c72;
+    transition: transform 0.25s ease, background 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .mock-location-card.is-expanded .mock-loc-mobile-toggle {
+    background: #146c72;
+    color: #ffffff;
+    transform: rotate(180deg);
+  }
+
+  .mock-loc-details {
+    display: none !important;
+  }
+
+  .mock-location-card.is-expanded .mock-loc-details {
+    display: block !important;
+    margin-top: 8px !important;
+    animation: fadeIn 0.2s ease;
+  }
+
+  /* Consult With Me Online: remove "If you live outside Ahmedabad..." on mobile */
+  .mock-online-consult-section .mock-consult-lead {
+    display: none !important;
   }
 
   .mock-cta-bar {
@@ -39462,7 +39841,134 @@ header#site-header.is-scrolled {
     margin-bottom: 0 !important;
   }
 
+  /* About Page Mobile Refinements */
+  .about-stats-desktop {
+    display: none !important;
+  }
 
+  .about-stats-mobile {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin: 18px 0 22px 0 !important;
+    padding: 14px 0 !important;
+    border-top: 1px solid #dfeceb !important;
+    border-bottom: 1px solid #dfeceb !important;
+    width: 100% !important;
+  }
+
+  .about-stat-card {
+    padding: 8px 4px !important;
+    text-align: center !important;
+    border-right: 1px solid #dfeceb !important;
+  }
+
+  .about-stat-card:last-child {
+    border-right: none !important;
+  }
+
+  .about-stat-card strong {
+    font-size: clamp(1.2rem, 5vw, 1.55rem) !important;
+    color: #0d7d82 !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+  }
+
+  .about-stat-card span {
+    font-size: clamp(10.5px, 2.7vw, 12.5px) !important;
+    color: #405c66 !important;
+    font-weight: 700 !important;
+    margin-top: 4px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* About Focus Cards: Single horizontal row on mobile - exact same uniform size */
+  .about-focus-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 12px !important;
+    margin: 0 -16px 16px -16px !important;
+    padding: 4px 16px 14px 16px !important;
+    width: calc(100% + 32px) !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none;
+    align-items: stretch !important;
+  }
+
+  .about-focus-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-focus-card {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start !important;
+    box-sizing: border-box !important;
+    min-height: 160px !important;
+    height: auto !important;
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .about-focus-card h3 {
+    font-size: 0.95rem !important;
+    margin: 0 0 6px !important;
+  }
+
+  .about-focus-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+
+  /* My Expertise: replace index numbers with logos on mobile */
+  .about-expertise-num {
+    display: none !important;
+  }
+
+  .about-expertise-divider-vert {
+    display: none !important;
+  }
+
+  .about-expertise-logo-wrap {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #eef7f8;
+    flex-shrink: 0;
+  }
+
+  .about-expertise-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .about-expertise-card-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .about-expertise-title {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+  }
 }
 
 /* ============================================================
@@ -39572,37 +40078,22 @@ header#site-header.is-scrolled {
 
 /* 2. Mobile Treatment Hero: Image Banner on Top, Text Below (No Overlap) */
 @media (max-width: 768px) {
+  /* 1. Mobile Treatment Hero: Remove empty bg image banner and center "Care Focused on Better Movement and Recovery" */
   .treatments-page .treatment-hero {
     display: flex !important;
     flex-direction: column !important;
-    align-items: stretch !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     min-height: auto !important;
-    padding: 0 0 32px 0 !important;
-    background-color: #f1f8fc !important;
+    padding: 38px 20px 32px 20px !important;
+    background: linear-gradient(180deg, #f0f7f8 0%, #ffffff 100%) !important;
+    border-bottom: 1px solid #e2eceb !important;
     position: relative !important;
   }
 
   .treatments-page .treatment-hero-bg-container {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: 220px !important;
-    max-height: 240px !important;
-    overflow: hidden !important;
-    margin-bottom: 22px !important;
-    display: block !important;
-    border-bottom: 1px solid rgba(20, 108, 114, 0.12) !important;
-  }
-
-  .treatments-page .treatment-hero-bg-img {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
+    display: none !important;
   }
 
   .treatments-page .treatment-hero-scrim {
@@ -39612,51 +40103,115 @@ header#site-header.is-scrolled {
   .treatments-page .treatment-hero-inner {
     position: relative !important;
     width: 100% !important;
-    padding: 0 16px !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .treatments-page .treatment-hero-copy {
-    max-width: 100% !important;
-    text-align: left !important;
-    margin: 0 !important;
+    max-width: 520px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .treatments-page .treatment-hero-copy .eyebrow {
+    margin-bottom: 8px !important;
+    justify-content: center !important;
   }
 
   .treatments-page .treatment-hero-copy h1,
   .treatments-page .treatment-hero-title,
   .treatment-hero-copy h1,
   .treatment-hero-title {
-    font-size: clamp(17px, 5.3vw, 24px) !important;
+    font-size: clamp(23px, 6.2vw, 29px) !important;
     font-weight: 800 !important;
-    line-height: 1.25 !important;
-    letter-spacing: -0.01em !important;
-    margin-bottom: 12px !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.015em !important;
+    margin: 6px 0 12px 0 !important;
+    text-align: center !important;
   }
 
   .treatments-page .treatment-hero-title .treatment-hero-line-1,
   .treatment-hero-title .treatment-hero-line-1 {
     display: block !important;
-    color: #000000 !important;
-    white-space: nowrap !important;
+    color: #0b3b43 !important;
+    white-space: normal !important;
   }
 
   .treatments-page .treatment-hero-title .treatment-hero-line-2,
   .treatment-hero-title .treatment-hero-line-2 {
     display: block !important;
     color: #146c72 !important;
-    white-space: nowrap !important;
-  }
-
-  .treatments-page .treatment-3d-title,
-  .treatment-3d-title {
-    font-size: 1.5rem !important;
-    line-height: 1.25 !important;
+    white-space: normal !important;
   }
 
   .treatments-page .treatment-hero-copy p {
     font-size: 14.5px !important;
-    line-height: 1.65 !important;
-    margin-bottom: 0 !important;
+    line-height: 1.6 !important;
+    color: #526d76 !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* 2. Explore By Joint Filters: Remove on mobile */
+  .treatments-page .treatment-directory,
+  .treatment-directory {
+    display: none !important;
+  }
+
+  /* 3. Every condition. A clear, personalized path: mobile 1-card slideshow */
+  .treatments-page .more-care-grid {
+    display: none !important;
+  }
+
+  .more-care-mobile-slider {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .more-care-slider-card-wrap {
+    width: 100%;
+    animation: reviewFadeIn 0.3s ease;
+  }
+
+  .more-care-mobile-slider .more-care-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 24px 20px !important;
+    border-radius: 14px !important;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06);
+    border: 1px solid #e1ecec;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .more-care-mobile-slider .more-care-icon {
+    margin: 0 auto 16px auto !important;
+  }
+
+  .treatments-page .more-care-title {
+    font-size: 16px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.3 !important;
+    margin: 0 0 8px 0 !important;
+    text-align: center !important;
+  }
+
+  .treatments-page .more-care-desc {
+    text-align: center !important;
   }
 
   /* FAQ on mobile */
@@ -40142,5 +40697,203 @@ header#site-header.is-scrolled {
 
   .appt-slots-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Default: Hide brochure banner image on desktop */
+.brochure-card-banner {
+  display: none;
+}
+
+/* ============================================================
+   All Patient Brochures Page - Mobile Phone View Refinements
+   (max-width: 768px)
+   Card contents strictly: Image (top) -> Heading -> 2 Buttons (Read Online & Download)
+   All other content (number badge, description, topics, file size) removed.
+   ============================================================ */
+@media (max-width: 768px) {
+  .brochures-page .patient-brochures-section {
+    padding-top: 10px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .brochures-page .patient-brochures-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .brochures-page .patient-brochure-card {
+    padding: 14px 14px 18px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    gap: 14px !important;
+    height: auto !important;
+    min-height: auto !important;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06) !important;
+    border: 1px solid rgba(20, 108, 114, 0.16) !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+  }
+
+  /* 1. Image first (Top Banner) */
+  .brochures-page .brochure-card-banner {
+    display: block !important;
+    order: 1 !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    background: #f0fdfa !important;
+    border: 1px solid rgba(20, 108, 114, 0.14) !important;
+    box-shadow: 0 4px 12px rgba(20, 108, 114, 0.08) !important;
+    margin: 0 !important;
+  }
+
+  .brochures-page .brochure-banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* 2. Heading second */
+  .brochures-page .brochure-card-body {
+    order: 2 !important;
+    flex: unset !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+  }
+
+  .brochures-page .brochure-title {
+    font-size: 17px !important;
+    font-weight: 750 !important;
+    color: #08141a !important;
+    text-align: center !important;
+    margin: 0 !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 3. 2 Buttons third (Read Online & Download) */
+  .brochures-page .brochure-card-footer {
+    order: 3 !important;
+    width: 100% !important;
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .brochures-page .brochure-card-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .brochures-page .brochure-view-btn,
+  .brochures-page .brochure-dl-btn {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 11px 12px !important;
+    border-radius: 11px !important;
+    font-size: 13px !important;
+    font-weight: 650 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  .brochures-page .brochure-view-btn {
+    background: #f8fafc !important;
+    border: 1.5px solid rgba(20, 108, 114, 0.25) !important;
+    color: #146c72 !important;
+  }
+
+  .brochures-page .brochure-view-btn:active {
+    background: #e6f4f5 !important;
+  }
+
+  .brochures-page .brochure-dl-btn {
+    background: #146c72 !important;
+    border: 1.5px solid #146c72 !important;
+    color: #ffffff !important;
+  }
+
+  .brochures-page .brochure-dl-btn:active {
+    background: #0f5459 !important;
+  }
+
+  /* 4. Remove old header, logos, and all extra content on mobile */
+  .brochures-page .brochure-card-header,
+  .brochures-page .brochure-num-pill,
+  .brochures-page .brochure-desc,
+  .brochures-page .brochure-topics-box,
+  .brochures-page .brochure-file-meta {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   Gallery Page (All Moments) - Mobile View Refinements
+   (max-width: 768px)
+   Heading pill must be clearly visible with dark bold text
+   ============================================================ */
+@media (max-width: 768px) {
+  .gallery-page-wrapper .gallery-card-info,
+  .gallery-bento-card .gallery-card-info {
+    position: absolute !important;
+    bottom: 12px !important;
+    left: 50% !important;
+    top: auto !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 6 !important;
+    background: transparent !important;
+  }
+
+  .gallery-page-wrapper .gallery-card-info h3,
+  .gallery-bento-card .gallery-card-info h3,
+  .gallery-bento-card:hover .gallery-card-info h3 {
+    background: #ffffff !important;
+    color: #08141a !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    padding: 7px 16px !important;
+    border-radius: 999px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28) !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+    display: inline-block !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .gallery-page-wrapper .gallery-card-info p,
+  .gallery-bento-card .gallery-card-info p {
+    display: none !important;
   }
 }

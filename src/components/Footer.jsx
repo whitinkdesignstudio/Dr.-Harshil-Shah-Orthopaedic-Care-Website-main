@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="footer-brand">
           <Link to="/" className="brand-footer" aria-label="Dr. Harshil Shah - Home">
             <img
-              src="/logo.png"
+              src="/galleri/Orthopedic Shield Running Logo.png"
               alt="Dr. Harshil Shah - Orthopaedic Surgeon"
               className="footer-logo-img"
             />
@@ -180,15 +180,7 @@ export default function Footer() {
 
       <div className="shell footer-bottom">
         <span>© {new Date().getFullYear()} Dr. Harshil Shah. All rights reserved.</span>
-        <button
-          type="button"
-          onClick={scrollToTop}
-          className="footer-back-to-top-btn"
-          aria-label="Scroll back to top"
-          title="Scroll back to top"
-        >
-          <span>Back to top</span>
-        </button>
+
         <span>Medical information is for general education, not a diagnosis.</span>
       </div>
     </footer>

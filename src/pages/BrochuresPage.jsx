@@ -8,6 +8,7 @@ const PATIENT_BROCHURES = [
     number: '01',
     title: 'Knee Replacement & Robotic Surgery',
     logo: '/icons/knee-pain.webp',
+    image: '/galleri/brochure/knee-replacement-guide.jpg',
     fileUrl: '/galleri/brochure/01_Understanding_Knee_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileName: '01_Understanding_Knee_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '3.0 MB PDF',
@@ -20,6 +21,7 @@ const PATIENT_BROCHURES = [
     number: '02',
     title: 'Hip Replacement & Joint Restoration',
     logo: '/icons/hip-pain.webp',
+    image: '/galleri/brochure/hip-replacement-guide.jpg',
     fileUrl: '/galleri/brochure/02_Understanding_Hip_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileName: '02_Understanding_Hip_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '2.9 MB PDF',
@@ -32,6 +34,7 @@ const PATIENT_BROCHURES = [
     number: '03',
     title: 'Knee Sports Injury & Arthroscopy',
     logo: '/icons/sports-injuries.webp',
+    image: '/galleri/brochure/knee-sports-injury-guide.jpg',
     fileUrl: '/galleri/brochure/03_Understanding_Sports_Injuries_Arthroscopy_Guide_Dr_Harshil_Shah.pdf',
     fileName: '03_Understanding_Sports_Injuries_Arthroscopy_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '3.2 MB PDF',
@@ -44,6 +47,7 @@ const PATIENT_BROCHURES = [
     number: '04',
     title: 'Shoulder Arthroscopy & Rotator Cuff Guide',
     logo: '/icons/shoulder-pain.webp',
+    image: '/galleri/brochure/shoulder-arthroscopy-guide.jpg',
     fileUrl: '/galleri/brochure/04_Understanding_Shoulder_Arthroscopy_Guide_Dr_Harshil_Shah.pdf',
     fileName: '04_Understanding_Shoulder_Arthroscopy_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '3.3 MB PDF',
@@ -115,6 +119,15 @@ export default function BrochuresPage() {
           <div className="patient-brochures-grid">
             {PATIENT_BROCHURES.map((brochure) => (
               <article key={brochure.id} className="patient-brochure-card">
+                <div className="brochure-card-banner">
+                  <img
+                    src={brochure.image || brochure.logo}
+                    alt={brochure.title}
+                    className="brochure-banner-img"
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className="brochure-card-header">
                   <div className="brochure-logo-box">
                     <img

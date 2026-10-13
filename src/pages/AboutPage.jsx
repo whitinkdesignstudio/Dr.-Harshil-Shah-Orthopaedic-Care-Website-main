@@ -70,18 +70,21 @@ const expertiseItems = [
     num: '01',
     title: 'Knee Care',
     link: '/treatments#knee',
+    icon: '/icons/knee-pain.webp',
     text: 'Ligament injuries, meniscus tears, arthritis, ACL reconstruction (all graft options + LET), robotic & muscle-sparing day-care replacement.'
   },
   {
     num: '02',
     title: 'Shoulder Care',
     link: '/treatments#shoulder',
+    icon: '/icons/shoulder-pain.webp',
     text: 'Arthroscopy, rotator cuff injury, frozen shoulder, recurrent dislocation/instability, reverse shoulder replacement.'
   },
   {
     num: '03',
     title: 'Hip Care',
     link: '/treatments#hip',
+    icon: '/icons/hip-pain.webp',
     text: 'AVN, sports-related hip pain, FAI (femoroacetabular impingement), muscle-sparing anterior approach, day-care & robotic replacement.'
   }
 ];
@@ -284,7 +287,7 @@ export default function AboutPage() {
               <div className="mock-hero-mobile-box">
                 <div className="mock-hero-mobile-frame">
                   <img
-                    src="/galleri/about-mobile-focus.webp"
+                    src="/galleri/about-mobile-focus.png"
                     alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
                     className="mock-hero-mobile-img"
                     loading="eager"
@@ -321,7 +324,18 @@ export default function AboutPage() {
           <div className="about-copy-block">
             <h2>Orthopaedic Care on Your Recovery</h2>
             <p>
-              Quality orthopaedic care begins with understanding the cause of your pain and how it affects your everyday life. The approach is centred on accurate diagnosis, clear treatment guidance, and care tailored to each patient’s condition and needs. Whether you are dealing with joint pain, sports injuries, arthritis, or another orthopaedic concern, the goal is to choose the right treatment for you, recommend surgery only when necessary, and support a safe recovery that helps you return to the activities you value.           </p>
+              Quality orthopaedic care begins with understanding the cause of your pain and how it affects your everyday life. The approach is centred on accurate diagnosis, clear treatment guidance, and care tailored to each patient’s condition and needs. Whether you are dealing with joint pain, sports injuries, arthritis, or another orthopaedic concern, the goal is to choose the right treatment for you, recommend surgery only when necessary, and support a safe recovery that helps you return to the activities you value.
+            </p>
+
+            {/* Mobile Only: Stats placed ABOVE focus cards on phones */}
+            <div className="about-stats-grid about-stats-mobile" aria-label="Surgical experience">
+              {aboutStats.map((stat) => (
+                <div key={stat.label} className="about-stat-card">
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </div>
 
             <div className="about-focus-grid">
               {aboutFocusItems.map((item) => (
@@ -334,7 +348,8 @@ export default function AboutPage() {
 
           </div>
 
-          <div className="about-stats-grid" aria-label="Surgical experience">
+          {/* Desktop Stats: Remains at the bottom of the split layout on desktop screens */}
+          <div className="about-stats-grid about-stats-desktop" aria-label="Surgical experience">
             {aboutStats.map((stat) => (
               <div key={stat.label} className="about-stat-card">
                 <strong>{stat.value}</strong>
@@ -443,6 +458,9 @@ export default function AboutPage() {
                 <div key={item.title} className="about-expertise-card">
                   <div className="about-expertise-card-header">
                     <span className="about-expertise-num">{item.num}</span>
+                    <span className="about-expertise-logo-wrap">
+                      <img src={item.icon} alt={item.title} className="about-expertise-logo-img" />
+                    </span>
                     <span className="about-expertise-divider-vert" aria-hidden="true"></span>
                     <h3 className="about-expertise-title">{item.title}</h3>
                   </div>

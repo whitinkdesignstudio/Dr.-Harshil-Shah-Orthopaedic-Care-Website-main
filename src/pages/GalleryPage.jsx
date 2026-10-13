@@ -8,10 +8,16 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState(catParam || 'all');
   const [activeModalImg, setActiveModalImg] = useState(null);
   const [visibleCardIds, setVisibleCardIds] = useState(new Set());
+  const [expandedCardId, setExpandedCardId] = useState(null);
   const cardRefs = useRef({});
   const filterScrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const handleCardClick = (item, e) => {
+    if (e && e.stopPropagation) e.stopPropagation();
+    setActiveModalImg(item);
+  };
 
   useEffect(() => {
     if (catParam) {
@@ -389,14 +395,15 @@ export default function GalleryPage() {
           <div className="gallery-bento-grid">
             {filteredItems.map((item, index) => {
               const isInView = visibleCardIds.has(item.id);
+              const isExpanded = expandedCardId === item.id;
               return (
                 <div
                   key={item.id}
                   ref={(el) => (cardRefs.current[item.id] = el)}
                   data-id={item.id}
-                  className={`gallery-bento-card gallery-card-uniform anim-${item.anim} ${isInView ? 'is-in-view' : 'is-hidden'}`}
+                  className={`gallery-bento-card gallery-card-uniform anim-${item.anim} ${isInView ? 'is-in-view' : 'is-hidden'} ${isExpanded ? 'is-card-expanded' : ''}`}
                   style={{ animationDelay: `${(index % 3) * 0.12}s` }}
-                  onClick={() => setActiveModalImg(item)}
+                  onClick={(e) => handleCardClick(item, e)}
                 >
                   <div className="gallery-card-inner">
                     <img
@@ -428,6 +435,24 @@ export default function GalleryPage() {
                     <div className="gallery-card-info">
                       <h3>{item.title}</h3>
                       <p>{item.subtitle}</p>
+                      {isExpanded && (
+                        <button
+                          type="button"
+                          className="gallery-mobile-lightbox-btn"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveModalImg(item);
+                          }}
+                        >
+                          <span>View Full Photo</span>
+                          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                          </svg>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

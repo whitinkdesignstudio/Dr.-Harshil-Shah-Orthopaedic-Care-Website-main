@@ -66,10 +66,84 @@ const reviewsData = [
   },
 ];
 
+const conditionsData = [
+  {
+    id: 'knee',
+    link: '/treatments#knee',
+    icon: '/icons/knee-pain.webp',
+    iconClass: 'mock-condition-icon-img is-knee-icon',
+    title: 'Knee Pain & Arthritis',
+    desc: 'Relief and treatment for painful, stiff, or damaged knees.',
+  },
+  {
+    id: 'hip',
+    link: '/treatments#hip',
+    icon: '/icons/hip-pain.webp',
+    iconClass: 'mock-condition-icon-img',
+    title: 'Hip Pain & Joint Care',
+    desc: 'Relief for stiffness, arthritis, avascular necrosis (AVN), and hip wear.',
+  },
+  {
+    id: 'shoulder',
+    link: '/treatments#shoulder',
+    icon: '/icons/shoulder-pain.webp',
+    iconClass: 'mock-condition-icon-img',
+    title: 'Shoulder Pain & Injuries',
+    desc: 'Care for shoulder pain, stiffness, and sports-related injuries.',
+  },
+];
+
+const locationsData = [
+  {
+    id: 'curis',
+    logo: '/curis-hospital-logo.png',
+    logoClass: 'mock-loc-logo-img curis',
+    title: 'Curis Hospitals',
+    address: 'Sindhubhavan Road, Bodakdev, Ahmedabad',
+  },
+  {
+    id: 'sterling',
+    logo: '/sterling-hospital-logo.png',
+    logoClass: 'mock-loc-logo-img sterling',
+    title: 'Sterling Hospitals',
+    address: 'Sterling Hospital Road, Memnagar, Ahmedabad',
+  },
+  {
+    id: 'lilavati',
+    logo: '/lilavati-hospital-logo.png',
+    logoClass: 'mock-loc-logo-img lilavati',
+    title: 'Kakadya & Lilavati Hospitals',
+    address: 'Bapunagar / East Ahmedabad Clinic',
+  },
+];
+
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState(null);
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [currentConditionIndex, setCurrentConditionIndex] = useState(0);
+  const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const [expandedLocation, setExpandedLocation] = useState(null);
+
+  const prevCondition = () => {
+    setCurrentConditionIndex((prev) => (prev === 0 ? conditionsData.length - 1 : prev - 1));
+  };
+
+  const nextCondition = () => {
+    setCurrentConditionIndex((prev) => (prev === conditionsData.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevLocation = () => {
+    setCurrentLocationIndex((prev) => (prev === 0 ? locationsData.length - 1 : prev - 1));
+  };
+
+  const nextLocation = () => {
+    setCurrentLocationIndex((prev) => (prev === locationsData.length - 1 ? 0 : prev + 1));
+  };
+
+  const toggleLocation = (idx) => {
+    setExpandedLocation((prev) => (prev === idx ? null : idx));
+  };
 
   const toggleFaq = (idx) => {
     setOpenFaq((prev) => (prev === idx ? null : idx));
@@ -141,7 +215,7 @@ export default function HomePage() {
               <div className="mock-hero-mobile-box">
                 <div className="mock-hero-mobile-frame">
                   <img
-                    src="/galleri/homepage-mobile-focus.jpg"
+                    src="/galleri/homepage-mobile-focus.png"
                     alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
                     className="mock-hero-mobile-img"
                     loading="eager"
@@ -225,6 +299,64 @@ Hi, I’m Dr. Harshil Shah. Whether you are dealing with persistent knee pain, a
               </span>
               <span className="mock-condition-arrow">Read More &rarr;</span>
             </Link>
+          </div>
+
+          {/* Mobile 1-by-1 Condition Slider */}
+          <div className="mock-conditions-mobile-slider">
+            <div className="mock-condition-slider-card-wrap" key={`cond-${currentConditionIndex}`}>
+              <Link to={conditionsData[currentConditionIndex].link} className="mock-condition-card mock-condition-card-active">
+                <div className="mock-condition-icon">
+                  <img
+                    src={conditionsData[currentConditionIndex].icon}
+                    alt={conditionsData[currentConditionIndex].title}
+                    className={conditionsData[currentConditionIndex].iconClass}
+                    loading="lazy"
+                  />
+                </div>
+                <strong style={{ flexGrow: 0, marginBottom: '8px', fontSize: '1.05rem', color: '#0f2b30', fontWeight: 700, whiteSpace: 'nowrap' }}>
+                  {conditionsData[currentConditionIndex].title}
+                </strong>
+                <span style={{ fontSize: '0.86rem', color: '#526e75', lineHeight: 1.5, marginBottom: '14px', flexGrow: 1, display: 'block' }}>
+                  {conditionsData[currentConditionIndex].desc}
+                </span>
+                <span className="mock-condition-arrow">Read More &rarr;</span>
+              </Link>
+            </div>
+
+            {/* Slider Controls */}
+            <div className="mock-reviews-slider-controls">
+              <button
+                type="button"
+                className="mock-slider-btn prev"
+                onClick={prevCondition}
+                aria-label="Previous Condition"
+              >
+                &#8592;
+              </button>
+              <div className="mock-slider-indicator">
+                <span>{currentConditionIndex + 1}</span> / <span>{conditionsData.length}</span>
+              </div>
+              <button
+                type="button"
+                className="mock-slider-btn next"
+                onClick={nextCondition}
+                aria-label="Next Condition"
+              >
+                &#8594;
+              </button>
+            </div>
+
+            <div className="mock-slider-dots">
+              {conditionsData.map((_, dotIdx) => (
+                <button
+                  key={`cond-dot-${dotIdx}`}
+                  type="button"
+                  className={`mock-slider-dot ${dotIdx === currentConditionIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentConditionIndex(dotIdx)}
+                  aria-label={`Go to condition ${dotIdx + 1}`}
+                />
+              ))}
+            </div>
           </div>
 
           <div className="mock-section-bottom-action">
@@ -723,7 +855,12 @@ Using modern surgical methods and proper pain control, the goal is to help you s
 
           <div className="mock-locations-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
             {/* Card 1: Curis Hospitals (Main OPD Clinic) */}
-            <div className="mock-location-card">
+            <div
+              className={`mock-location-card ${expandedLocation === 0 ? 'is-expanded' : ''}`}
+              onClick={() => toggleLocation(0)}
+              role="button"
+              tabIndex="0"
+            >
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
@@ -733,19 +870,30 @@ Using modern surgical methods and proper pain control, the goal is to help you s
                     loading="lazy"
                   />
                 </div>
+                <div className="mock-loc-mobile-toggle" aria-label="Toggle details">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points={expandedLocation === 0 ? "18 15 12 9 6 15" : "6 9 12 15 18 9"} />
+                  </svg>
+                </div>
               </div>
               <div className="mock-loc-text">
-                <strong>Curis Hospitals</strong>
-                <span>Sindhubhavan Road, Bodakdev, Ahmedabad</span>
-
-                <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '6px', lineHeight: 1.45 }}>
-                  Regular consultations, joint examinations, imaging reviews, and follow-ups.
-                </span>
+                <strong className="mock-loc-title">Curis Hospitals</strong>
+                <div className="mock-loc-details">
+                  <span>Sindhubhavan Road, Bodakdev, Ahmedabad</span>
+                  <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '6px', lineHeight: 1.45 }}>
+                    Regular consultations, joint examinations, imaging reviews, and follow-ups.
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Card 2: Sterling Hospitals (Visiting OPD Clinic) */}
-            <div className="mock-location-card">
+            <div
+              className={`mock-location-card ${expandedLocation === 1 ? 'is-expanded' : ''}`}
+              onClick={() => toggleLocation(1)}
+              role="button"
+              tabIndex="0"
+            >
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
@@ -755,18 +903,30 @@ Using modern surgical methods and proper pain control, the goal is to help you s
                     loading="lazy"
                   />
                 </div>
+                <div className="mock-loc-mobile-toggle" aria-label="Toggle details">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points={expandedLocation === 1 ? "18 15 12 9 6 15" : "6 9 12 15 18 9"} />
+                  </svg>
+                </div>
               </div>
               <div className="mock-loc-text">
-                <strong>Sterling Hospitals</strong>
-                <span>Sterling Hospital Road, Memnagar, Ahmedabad</span>
-                <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.45 }}>
-                  Focused consultations, pre-surgery evaluations, and second opinions.
-                </span>
+                <strong className="mock-loc-title">Sterling Hospitals</strong>
+                <div className="mock-loc-details">
+                  <span>Sterling Hospital Road, Memnagar, Ahmedabad</span>
+                  <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.45 }}>
+                    Focused consultations, pre-surgery evaluations, and second opinions.
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Card 3: Kakadya & Lilavati Hospitals (Specialty Clinic) */}
-            <div className="mock-location-card">
+            <div
+              className={`mock-location-card ${expandedLocation === 2 ? 'is-expanded' : ''}`}
+              onClick={() => toggleLocation(2)}
+              role="button"
+              tabIndex="0"
+            >
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
@@ -776,14 +936,83 @@ Using modern surgical methods and proper pain control, the goal is to help you s
                     loading="lazy"
                   />
                 </div>
+                <div className="mock-loc-mobile-toggle" aria-label="Toggle details">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points={expandedLocation === 2 ? "18 15 12 9 6 15" : "6 9 12 15 18 9"} />
+                  </svg>
+                </div>
               </div>
               <div className="mock-loc-text">
-                <strong>Kakadya &amp; Lilavati Hospitals</strong>
-                <span>Ahmedabad, Gujarat</span>
-                <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.45 }}>
-                  Specialty consultations for shoulder, sports injuries, and arthroscopy.
-                </span>
+                <strong className="mock-loc-title">Kakadya &amp; Lilavati Hospitals</strong>
+                <div className="mock-loc-details">
+                  <span>Ahmedabad, Gujarat</span>
+                  <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.45 }}>
+                    Specialty consultations for shoulder, sports injuries, and arthroscopy.
+                  </span>
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Mobile 1-by-1 Location Slider */}
+          <div className="mock-locations-mobile-slider">
+            <div className="mock-location-slider-card-wrap" key={`loc-${currentLocationIndex}`}>
+              <div className="mock-location-card mock-location-card-active is-expanded">
+                <div className="mock-loc-top-row">
+                  <div className="mock-loc-logo-wrap">
+                    <img
+                      src={locationsData[currentLocationIndex].logo}
+                      alt={`${locationsData[currentLocationIndex].title} Logo`}
+                      className={locationsData[currentLocationIndex].logoClass}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div className="mock-loc-text">
+                  <strong className="mock-loc-title">{locationsData[currentLocationIndex].title}</strong>
+                  <div className="mock-loc-details" style={{ display: 'block', maxHeight: 'none', opacity: 1, marginTop: '8px' }}>
+                    <span style={{ fontWeight: 600, color: '#0f2b30' }}>{locationsData[currentLocationIndex].address}</span>
+                    <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '6px', lineHeight: 1.45 }}>
+                      {locationsData[currentLocationIndex].desc}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Slider Controls */}
+            <div className="mock-reviews-slider-controls">
+              <button
+                type="button"
+                className="mock-slider-btn prev"
+                onClick={prevLocation}
+                aria-label="Previous Location"
+              >
+                &#8592;
+              </button>
+              <div className="mock-slider-indicator">
+                <span>{currentLocationIndex + 1}</span> / <span>{locationsData.length}</span>
+              </div>
+              <button
+                type="button"
+                className="mock-slider-btn next"
+                onClick={nextLocation}
+                aria-label="Next Location"
+              >
+                &#8594;
+              </button>
+            </div>
+
+            <div className="mock-slider-dots">
+              {locationsData.map((_, dotIdx) => (
+                <button
+                  key={`loc-dot-${dotIdx}`}
+                  type="button"
+                  className={`mock-slider-dot ${dotIdx === currentLocationIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentLocationIndex(dotIdx)}
+                  aria-label={`Go to location ${dotIdx + 1}`}
+                />
+              ))}
             </div>
           </div>
 
