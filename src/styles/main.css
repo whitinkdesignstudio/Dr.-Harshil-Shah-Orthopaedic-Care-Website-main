@@ -38850,6 +38850,125 @@ html body * {
 }
 
 /* ========================================================================= */
+/* HOME PAGE - CENTER ALIGNMENT STYLES                                       */
+/* ========================================================================= */
+.mock-home:not(.about-page) .mock-section-header {
+  flex-direction: column !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-section-header-left {
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 780px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.mock-home:not(.about-page) .mock-title {
+  text-align: center !important;
+}
+
+.mock-home:not(.about-page) .mock-subtitle {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 680px !important;
+}
+
+.mock-home:not(.about-page) .mock-eyebrow {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-section-header-left + .mock-btn-outline,
+.mock-home:not(.about-page) .mock-section-header .mock-btn-outline {
+  margin-top: 14px !important;
+}
+
+/* Hero Section (Desktop) */
+.mock-home:not(.about-page) .mock-hero-left {
+  text-align: center !important;
+}
+
+.mock-home:not(.about-page) .mock-hero-title {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-hero-desc {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-hero-actions {
+  justify-content: center !important;
+  display: flex !important;
+}
+
+/* Approach Section */
+.mock-home:not(.about-page) .mock-approach-right {
+  text-align: center !important;
+}
+
+.mock-home:not(.about-page) .mock-approach-right p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-checklist {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin: 0 auto !important;
+}
+
+/* Publications */
+.mock-home:not(.about-page) .mock-publications-inline-wrap {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Robotic Surgery Section */
+.mock-home:not(.about-page) .mock-robotic-content {
+  text-align: center !important;
+}
+
+.mock-home:not(.about-page) .mock-robotic-content .mock-title,
+.mock-home:not(.about-page) .mock-robotic-content p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mock-home:not(.about-page) .mock-robotic-actions {
+  justify-content: center !important;
+}
+
+/* Online Consult Section */
+.mock-home:not(.about-page) .mock-online-consult-left {
+  text-align: center !important;
+}
+
+.mock-home:not(.about-page) .mock-online-consult-left .mock-title,
+.mock-home:not(.about-page) .mock-online-consult-left p,
+.mock-home:not(.about-page) .mock-consult-lead {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ========================================================================= */
 /* RESPONSIVENESS (MOBILE & TABLET)                                          */
 /* ========================================================================= */
 @media (max-width: 1024px) {
@@ -38968,21 +39087,36 @@ html body * {
   .mock-hero-mobile-box {
     display: block !important;
     width: 100% !important;
-    margin: 0 0 20px 0 !important;
+    margin: 0 0 80px 0 !important;
     order: -1 !important;
     padding: 0 !important;
   }
 
   .mock-hero-mobile-frame {
+    position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
     border-radius: 0 !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     background: transparent !important;
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     display: block !important;
+  }
+
+  .mock-hero-mobile-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3%;
+    background: linear-gradient(to bottom, rgba(246, 250, 251, 0) 0%, rgba(246, 250, 251, 0.45) 50%, #f6fafb 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .mock-hero-mobile-img {
@@ -38991,6 +39125,8 @@ html body * {
     max-height: none !important;
     object-fit: contain !important;
     display: block !important;
+    mask-image: linear-gradient(to bottom, black 0%, black 90%, rgba(0, 0, 0, 0.6) 95%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 90%, rgba(0, 0, 0, 0.6) 95%, transparent 100%) !important;
   }
 
   .mock-hero-title,

@@ -296,8 +296,8 @@ export default function AboutPage() {
               </div>
 
               <h1 className="mock-hero-title">
-                Let’s get you<br />
-                <span>Moving again</span>
+                <span className="mock-hero-line-1">Let’s get you</span>
+                <span className="mock-hero-line-2">Moving again</span>
               </h1>
               <p className="mock-hero-desc">
                 Because recovery isn’t just about reducing pain.<br />
