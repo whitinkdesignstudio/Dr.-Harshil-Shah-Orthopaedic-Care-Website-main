@@ -10,18 +10,25 @@ export default function SEO({
   ogImage = 'https://drharshilshah.com/doctor-hero-office.png',
   schema
 }) {
-  const siteTitle = 'Dr. Harshil Shah | Orthopaedic Surgeon Ahmedabad';
-  const fullTitle = title ? `${title} | Dr. Harshil Shah` : siteTitle;
+  const defaultTitle = 'Dr. Harshil Shah | Orthopaedic Surgeon in Ahmedabad';
+  let fullTitle = title || defaultTitle;
+  if (title && !title.toLowerCase().includes('harshil shah')) {
+    if (title.length + 18 <= 60) {
+      fullTitle = `${title} | Dr. Harshil Shah`;
+    }
+  }
+
   const canonical = canonicalUrl ? `https://drharshilshah.com${canonicalUrl}` : 'https://drharshilshah.com/';
   const metaDescription =
     description ||
-    'Dr. Harshil Shah is a specialist orthopaedic surgeon in Ahmedabad, Gujarat, offering expert knee, hip, and shoulder arthroscopy, joint preservation, and robotic joint replacement.';
+    'Dr. Harshil Shah is a leading orthopaedic surgeon in Ahmedabad specializing in knee, hip & shoulder care, arthroscopy, and robotic joint replacement.';
 
   return (
     <Helmet>
       {/* Title & Standard Meta */}
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="robots" content="index, follow" />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical} />
 

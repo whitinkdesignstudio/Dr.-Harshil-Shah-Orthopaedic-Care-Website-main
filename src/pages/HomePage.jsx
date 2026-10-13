@@ -108,8 +108,8 @@ export default function HomePage() {
   return (
     <div className="mock-home">
       <SEO
-        title="Dr. Harshil Shah | Orthopaedic Surgeon — Knee, Hip & Shoulder Specialist Ahmedabad"
-        description="Dr. Harshil Shah is a premier orthopaedic surgeon in Ahmedabad, Gujarat. Specialist in robotic joint replacement, arthroscopy, joint preservation, and sports injury recovery."
+        title="Dr. Harshil Shah | Orthopaedic Surgeon in Ahmedabad"
+        description="Dr. Harshil Shah is a leading orthopaedic surgeon in Ahmedabad specializing in knee, hip & shoulder care, arthroscopy, and robotic joint replacement."
         canonicalUrl="/"
         keywords="orthopaedic surgeon Ahmedabad, knee replacement doctor, hip specialist Gujarat, shoulder arthroscopy, Dr Harshil Shah orthopaedics"
         schema={{
