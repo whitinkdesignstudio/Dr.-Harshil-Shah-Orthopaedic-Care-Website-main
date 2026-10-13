@@ -7,26 +7,24 @@ const experienceItems = [
     type: 'MEDICAL EDUCATION', tone: 'education', location: 'Ahmedabad',
     title: 'Medical Education & Orthopaedic Residency',
     paragraphs: [
-      'I completed my MBBS and internship from NHL MMC, Ahmedabad, building a strong base in patient care and surgical thinking.',
-      'My orthopaedic training at L.G. Hospital helped me gain practical experience in trauma and reconstructive surgery.'
+      'MBBS and internship completed at NHL Municipal Medical College, Ahmedabad, building a rigorous foundation in medical science and clinical examination.',
+      'Orthopaedic surgery residency at L.G. Hospital, Ahmedabad, providing extensive surgical experience in musculoskeletal trauma and reconstructive procedures.'
     ], side: 'left'
   },
   {
     type: 'FELLOWSHIP', tone: 'training', location: 'Mumbai',
     title: 'Joint Replacement Training',
     paragraphs: [
-      'I trained in joint replacement surgery at P. D. Hinduja Hospital under Dr. Sanjay Agarwala.',
-      'Also learned conservative treatment for hip AVN and knee arthritis.',
-      'This experience strengthened my skills in hip and knee replacement care and long-term recovery planning.'
+      'Fellowship training in joint replacement surgery at P. D. Hinduja Hospital, Mumbai, under Dr. Sanjay Agarwala.',
+      'Specialized in primary and complex hip and knee arthroplasty, and medical management of early hip avascular necrosis (AVN).'
     ], side: 'right'
   },
   {
     type: 'SPECIALIZED TRAINING', tone: 'sports', location: 'Mumbai',
     title: 'Sports Injury & Arthroscopy',
     paragraphs: [
-      'I trained at P. D. Hinduja Hospital under Dr. Abhay Narvekar.',
-      'Focused on knee arthroscopic and shoulder arthroscopic treatment with the most advanced technology and implants.',
-      'Gained specialized training in sports injuries, ligament repair, and joint preservation.'
+      'Specialized training in sports medicine and arthroscopy at P. D. Hinduja Hospital, Mumbai, under Dr. Abhay Narvekar.',
+      'Focused on high-precision knee and shoulder arthroscopy, cruciate ligament reconstruction, and meniscus preservation techniques.'
     ],
     side: 'left'
   },
@@ -34,35 +32,26 @@ const experienceItems = [
     type: 'SHOULDER FELLOWSHIP', tone: 'shoulder', location: 'Pune',
     title: 'Shoulder Surgery & Sports Injuries',
     paragraphs: [
-      'I pursued advanced shoulder surgery training in Pune under Dr. Ashish Babhulkar.',
-      'Specialised in shoulder arthroscopy and reverse shoulder replacement.',
-      'This helped me improve care for patients looking to return to active movement and better function.'
+      'Advanced shoulder surgery fellowship in Pune under Dr. Ashish Babhulkar.',
+      'Specialized in arthroscopic rotator cuff repair, shoulder stabilization for recurrent dislocation, and reverse shoulder replacement.'
     ], side: 'right'
   },
   {
     type: 'INTERNATIONAL FELLOWSHIP · USA', tone: 'usa', location: 'New York, USA',
-    title: 'Robotic & Revision Joint Replacement · USA',
+    title: 'Robotic & Revision Joint Replacement · HSS New York',
     paragraphs: [
-      'I trained in robotic and revision joint replacement at Hospital for Special Surgery in New York under Dr. Peter Sculco and Dr. Thomas Sculco.',
-      'This advanced learning improved my approach to complex hip and knee surgery.'
+      'International training in robotic and revision hip and knee replacement at Hospital for Special Surgery (HSS), New York, under Dr. Peter Sculco and Dr. Thomas Sculco.',
+      'Studied modern implant kinematics, robotic alignment systems, and complex revision reconstructive techniques.'
     ], side: 'left'
   },
   {
-    type: 'AFFILIATED HOSPITALS · MGH', tone: 'harvard', location: 'Boston, USA',
-    title: 'Scapulothoracic Disorders & Shoulder Sports Injury',
+    type: 'INTERNATIONAL TRAINING · USA', tone: 'harvard', location: 'Boston, USA',
+    title: 'Complex Shoulder Reconstruction & Scapulothoracic Disorders · MGH Boston',
     paragraphs: [
-      'I trained at Massachusetts General Hospital (MGH) in Boston under Dr. Bassem Elhassan.',
-      'Focused on scapulothoracic disorders, complex shoulder reconstruction, and shoulder sports injury.',
-      'This advanced experience deepened my skills in scapulothoracic disorders and specialized functional recovery.'
+      'Advanced training at Massachusetts General Hospital (MGH), Boston, under Dr. Bassem Elhassan.',
+      'Specialized focus on scapulothoracic disorders, tendon transfers, and complex shoulder reconstructive procedures.'
     ], side: 'right'
   }
-];
-
-const testimonialItems = [
-  { quote: '[details dalna baki he]', label: 'Knee Care Patient', detail: '[details dalna baki he]' },
-  { quote: '[details dalna baki he]', label: 'Hip Care Patient', detail: '[details dalna baki he]' },
-  { quote: '[details dalna baki he]', label: 'Shoulder Care Patient', detail: '[details dalna baki he]' },
-  { quote: '[details dalna baki he]', label: 'Sports Injury Patient', detail: '[details dalna baki he]' }
 ];
 
 const expertiseItems = [
@@ -71,45 +60,38 @@ const expertiseItems = [
     title: 'Knee Care',
     link: '/treatments#knee',
     icon: '/icons/knee-pain.webp',
-    text: 'Ligament injuries, meniscus tears, arthritis, ACL reconstruction (all graft options + LET), robotic & muscle-sparing day-care replacement.'
+    text: 'Ligament injuries, meniscus tears, arthritis, ACL reconstruction, robotic and joint preservation procedures.'
   },
   {
     num: '02',
     title: 'Shoulder Care',
     link: '/treatments#shoulder',
     icon: '/icons/shoulder-pain.webp',
-    text: 'Arthroscopy, rotator cuff injury, frozen shoulder, recurrent dislocation/instability, reverse shoulder replacement.'
+    text: 'Arthroscopic rotator cuff repair, shoulder stabilization for recurrent dislocation, and reverse shoulder replacement.'
   },
   {
     num: '03',
     title: 'Hip Care',
     link: '/treatments#hip',
     icon: '/icons/hip-pain.webp',
-    text: 'AVN, sports-related hip pain, FAI (femoroacetabular impingement), muscle-sparing anterior approach, day-care & robotic replacement.'
+    text: 'Avascular necrosis (AVN), femoroacetabular impingement (FAI), direct anterior approach and hip replacement.'
   }
 ];
 
 const aboutFocusItems = [
-  { title: 'Patient-First Treatment', text: 'Every treatment plan is based on your condition, lifestyle, concerns, and recovery goals.' },
-  { title: 'Clear Treatment Guidance', text: 'Your diagnosis and treatment options are explained simply, so you can make informed decisions about your care.' },
-  { title: 'Focused on Recovery', text: 'Treatment goes beyond relieving pain, with a focus on helping you regain movement and return to everyday activities.' },
-  { title: 'Evidence-Based Orthopaedic Care', text: 'Treatment decisions are guided by established medical evidence while being tailored to your individual needs.' }
-];
-
-const aboutStats = [
-  { label: 'Trauma Surgeries', value: '3000+' },
-  { label: 'Joint Replacements', value: '200+' },
-  { label: 'Arthroscopy Surgeries', value: '5000+' }
+  { title: 'Evidence-Based Decisions', text: 'Treatment recommendations follow current clinical evidence, internationally recognized guidelines (AAOS, NICE), and individualized patient risk assessment.' },
+  { title: 'Joint Preservation First', text: 'Non-surgical protocols, ligament repair, cartilage restoration, and alignment osteotomy are evaluated before considering joint replacement.' },
+  { title: 'Informed Consent', text: 'Expected benefits, potential risks, alternatives, and realistic recovery timelines are explained thoroughly before planning any procedure.' },
+  { title: 'Continuity of Care', text: 'The same consultant surgeon leads every stage of care—from clinical diagnosis and surgical execution through scheduled rehabilitation follow-up.' }
 ];
 
 const campItems = [
   {
     id: 'camp-bijainagar',
-    title: 'Free Joint Replacement & Orthopaedic Camp',
+    title: 'Orthopaedic Screening & Joint Health Camp',
     hospital: 'Shree P. K. V. Hospital and Research Centre',
-
     description:
-      'Free consultation camp conducted by Dr. Harshil Shah for patients suffering from knee, spine, trauma, shoulder, and hip conditions. Provided expert clinical evaluations, joint replacement guidance, and cashless surgical assistance.',
+      'Community orthopaedic screening and clinical consultation camp conducted by Dr. Harshil Shah for patients suffering from knee, spine, trauma, shoulder, and hip conditions. Provided specialist clinical assessments and joint care guidance.',
     photos: [
       {
         src: '/camps/bijainagar-camp-banner.jpg',
@@ -208,6 +190,16 @@ function CampSlideshow({ photos, onPhotoClick }) {
 export default function AboutPage() {
   const [selectedExperience, setSelectedExperience] = useState(0);
   const [activeCampPhoto, setActiveCampPhoto] = useState(null);
+  const [currentPhilosophyIndex, setCurrentPhilosophyIndex] = useState(0);
+
+  const prevPhilosophy = () => {
+    setCurrentPhilosophyIndex((prev) => (prev === 0 ? aboutFocusItems.length - 1 : prev - 1));
+  };
+
+  const nextPhilosophy = () => {
+    setCurrentPhilosophyIndex((prev) => (prev === aboutFocusItems.length - 1 ? 0 : prev + 1));
+  };
+
   const activeExperience = experienceItems[selectedExperience];
 
   return (
@@ -222,7 +214,7 @@ export default function AboutPage() {
           '@graph': [
             {
               '@type': 'Person',
-              '@id': 'https://drharshilshah.com/about#person',
+              '@id': 'https://www.drharshilshah.com/about#person',
               name: 'Dr. Harshil Shah',
               jobTitle: 'Consultant Orthopaedic & Joint Surgeon',
               worksFor: {
@@ -244,7 +236,7 @@ export default function AboutPage() {
                 }
               ],
               knowsAbout: [
-                'Robotic Knee Replacement',
+                'Joint Replacement',
                 'Hip Joint Preservation',
                 'Shoulder Arthroscopy',
                 'Sports Medicine'
@@ -257,13 +249,13 @@ export default function AboutPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'About Dr. Harshil Shah',
-                  item: 'https://drharshilshah.com/about'
+                  item: 'https://www.drharshilshah.com/about'
                 }
               ]
             }
@@ -296,12 +288,11 @@ export default function AboutPage() {
               </div>
 
               <h1 className="mock-hero-title">
-                <span className="mock-hero-line-1">Let’s get you</span>
-                <span className="mock-hero-line-2">Moving again</span>
+                <span className="mock-hero-line-1">Dr. Harshil Shah</span>
+                <span className="mock-hero-line-2" style={{ fontSize: '0.85em' }}>M.S. (Orth.)</span>
               </h1>
               <p className="mock-hero-desc">
-                Because recovery isn’t just about reducing pain.<br />
-                It’s about getting back to what you love.
+                Consultant Orthopaedic Surgeon &bull; Fellowship-Trained in Joint Replacement, Arthroscopy &amp; Sports Injury &bull; Ahmedabad
               </p>
 
             </div>
@@ -316,27 +307,19 @@ export default function AboutPage() {
             <div className="about-profile-body">
               <h3>Dr. Harshil Shah</h3>
               <p className="about-role">M.S. (Ortho) · Consultant Orthopaedic Surgeon</p>
-              <ul>
-              </ul>
+              <p className="about-profile-credentials" style={{ fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.55 }}>
+                Reg. No. G-36119 · Gujarat Medical Council &bull; Consulting at Curis, Sterling, Lilavati and Kakadiya Hospitals in Ahmedabad.
+              </p>
             </div>
           </div>
 
           <div className="about-copy-block">
-            <h2>Orthopaedic Care on Your Recovery</h2>
+            <h2>Clinical Philosophy</h2>
             <p>
-              Quality orthopaedic care begins with understanding the cause of your pain and how it affects your everyday life. The approach is centred on accurate diagnosis, clear treatment guidance, and care tailored to each patient’s condition and needs. Whether you are dealing with joint pain, sports injuries, arthritis, or another orthopaedic concern, the goal is to choose the right treatment for you, recommend surgery only when necessary, and support a safe recovery that helps you return to the activities you value.
+              Good orthopaedic outcomes depend as much on choosing the right treatment as on performing it well. Every plan starts from an accurate diagnosis, takes the patient&apos;s age, activity, and goals into account, and moves to surgery only when conservative measures have been thoroughly considered.
             </p>
 
-            {/* Mobile Only: Stats placed ABOVE focus cards on phones */}
-            <div className="about-stats-grid about-stats-mobile" aria-label="Surgical experience">
-              {aboutStats.map((stat) => (
-                <div key={stat.label} className="about-stat-card">
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
-
+            {/* Desktop Grid (Unchanged on PC) */}
             <div className="about-focus-grid">
               {aboutFocusItems.map((item) => (
                 <article key={item.title} className="about-focus-card">
@@ -346,16 +329,52 @@ export default function AboutPage() {
               ))}
             </div>
 
-          </div>
+            {/* Mobile 1-by-1 Slider (Conditions Treated Concept) */}
+            <div className="about-philosophy-mobile-slider">
+              <div className="about-philosophy-slider-card-wrap" key={`philo-${currentPhilosophyIndex}`}>
+                <article className="about-focus-card about-focus-card-active">
 
-          {/* Desktop Stats: Remains at the bottom of the split layout on desktop screens */}
-          <div className="about-stats-grid about-stats-desktop" aria-label="Surgical experience">
-            {aboutStats.map((stat) => (
-              <div key={stat.label} className="about-stat-card">
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
+                  <h3>{aboutFocusItems[currentPhilosophyIndex].title}</h3>
+                  <p>{aboutFocusItems[currentPhilosophyIndex].text}</p>
+                </article>
               </div>
-            ))}
+
+              {/* Slider Controls */}
+              <div className="mock-reviews-slider-controls">
+                <button
+                  type="button"
+                  className="mock-slider-btn prev"
+                  onClick={prevPhilosophy}
+                  aria-label="Previous Principle"
+                >
+                  &#8592;
+                </button>
+                <div className="mock-slider-indicator">
+                  <span>{currentPhilosophyIndex + 1}</span> / <span>{aboutFocusItems.length}</span>
+                </div>
+                <button
+                  type="button"
+                  className="mock-slider-btn next"
+                  onClick={nextPhilosophy}
+                  aria-label="Next Principle"
+                >
+                  &#8594;
+                </button>
+              </div>
+
+              <div className="mock-slider-dots">
+                {aboutFocusItems.map((_, dotIdx) => (
+                  <button
+                    key={dotIdx}
+                    type="button"
+                    className={`mock-slider-dot${dotIdx === currentPhilosophyIndex ? ' active' : ''}`}
+                    onClick={() => setCurrentPhilosophyIndex(dotIdx)}
+                    aria-label={`Go to principle ${dotIdx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

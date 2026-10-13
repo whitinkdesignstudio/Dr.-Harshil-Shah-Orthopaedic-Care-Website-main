@@ -269,7 +269,7 @@ export default function GalleryPage() {
               '@type': 'ImageGallery',
               name: 'Dr. Harshil Shah Clinical Practice Gallery',
               description: 'Visual timeline of orthopaedic surgeries, academic masterclasses, and patient mobility milestones.',
-              url: 'https://drharshilshah.com/gallery'
+              url: 'https://www.drharshilshah.com/gallery'
             },
             {
               '@type': 'BreadcrumbList',
@@ -278,13 +278,13 @@ export default function GalleryPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Gallery',
-                  item: 'https://drharshilshah.com/gallery'
+                  item: 'https://www.drharshilshah.com/gallery'
                 }
               ]
             }
@@ -297,10 +297,10 @@ export default function GalleryPage() {
         <div className="shell gallery-hero-grid">
           <div className="gallery-hero-content">
             <h1 className="gallery-hero-title">
-              Moments from a journey of care.
+              Clinical &amp; Academic Gallery
             </h1>
             <p className="gallery-hero-subtitle">
-              A comprehensive visual journey through my clinical practice, advanced joint procedures, academic forums, and surgical training milestones.
+              Surgical training fellowships, clinical masterclasses, scientific paper presentations, and anonymised operative documentation.
             </p>
           </div>
 

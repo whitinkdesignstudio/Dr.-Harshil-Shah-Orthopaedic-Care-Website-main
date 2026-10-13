@@ -13,7 +13,7 @@ const PATIENT_BROCHURES = [
     fileName: '01_Understanding_Knee_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '3.0 MB PDF',
     description: 'Detailed insights on knee arthritis grading, robotic-assisted surgical precision, prehab routines, implant longevity, and safe recovery.',
-    topics: ['Robotic Knee Replacement', 'Pre-Op Fasting & Prehab', 'Same-Day Walking (ERAS)', 'Home Recovery Protocol'],
+    topics: ['Robotic Knee Replacement', 'Pre-Op Fasting & Prehab', 'Enhanced Recovery Protocol (ERAS)', 'Home Recovery Protocol'],
     accent: '#146c72'
   },
   {
@@ -86,13 +86,13 @@ export default function BrochuresPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Patient Brochures',
-                  item: 'https://drharshilshah.com/brochures'
+                  item: 'https://www.drharshilshah.com/brochures'
                 }
               ]
             }
@@ -104,10 +104,10 @@ export default function BrochuresPage() {
         <div className="shell">
           <div className="brochures-hero-header">
             <h1 className="brochures-hero-title">
-              Downloadable <span className="text-highlight-blue">Patient Brochures</span>
+              Patient Education <span className="text-highlight-blue">Guides</span>
             </h1>
             <p className="brochures-hero-desc">
-              I have authored these clinical guides to help you and your family understand joint procedures, surgical techniques, pre-surgery preparation, and day-by-day rehabilitation.
+              Clinical guides authored to explain joint procedures, surgical techniques, pre-operative preparation, and staged rehabilitation. Medically reviewed by Dr. Harshil Shah, M.S. (Orth.).
             </p>
           </div>
         </div>

@@ -114,13 +114,13 @@ export default function PatientGuidesPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Patient Guide',
-                  item: 'https://drharshilshah.com/patient-guides'
+                  item: 'https://www.drharshilshah.com/patient-guides'
                 }
               ]
             }

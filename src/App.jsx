@@ -27,6 +27,7 @@ import HomePage from './pages/HomePage';
 const AboutPage = lazyWithRetry(() => import('./pages/AboutPage'));
 const TreatmentsPage = lazyWithRetry(() => import('./pages/TreatmentsPage'));
 const BrochuresPage = lazyWithRetry(() => import('./pages/BrochuresPage'));
+const PatientGuidesPage = lazyWithRetry(() => import('./pages/PatientGuidesPage'));
 const GalleryPage = lazyWithRetry(() => import('./pages/GalleryPage'));
 const SurgicalVideosPage = lazyWithRetry(() => import('./pages/SurgicalVideosPage'));
 const FaqPage = lazyWithRetry(() => import('./pages/FaqPage'));
@@ -37,7 +38,6 @@ const MedicalDisclaimerPage = lazyWithRetry(() => import('./pages/MedicalDisclai
 const NotFoundPage = lazyWithRetry(() => import('./pages/NotFoundPage'));
 
 // Lazy-load non-critical UI overlays
-const WelcomeModal = lazyWithRetry(() => import('./components/WelcomeModal'));
 const FloatingSocialBar = lazyWithRetry(() => import('./components/FloatingSocialBar'));
 
 // Graceful loading fallback — prevents jarring blank screens on slower devices
@@ -78,9 +78,6 @@ export default function App() {
 
       {/* Non-critical overlays — lazy, won't delay initial paint */}
       <Suspense fallback={null}>
-        <WelcomeModal />
-      </Suspense>
-      <Suspense fallback={null}>
         <FloatingSocialBar />
       </Suspense>
       <Header />
@@ -95,6 +92,8 @@ export default function App() {
               <Route path="/treatment" element={<Navigate to="/treatments" replace />} />
               <Route path="/brochures" element={<BrochuresPage />} />
               <Route path="/brochure" element={<Navigate to="/brochures" replace />} />
+              <Route path="/patient-guides" element={<PatientGuidesPage />} />
+              <Route path="/patient-guide" element={<Navigate to="/patient-guides" replace />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/operation-theatre" element={<SurgicalVideosPage />} />
               <Route path="/surgical-videos" element={<SurgicalVideosPage />} />

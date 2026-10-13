@@ -14,7 +14,7 @@ export const surgicalVideos = [
     category: 'knee',
     categoryName: 'Knee & Robotic Surgery',
     tag: 'Robotic Arthroplasty',
-    desc: 'Intra-operative robotic alignment and sub-millimeter component placement for total knee restoration.',
+    desc: 'Robotic-assisted planning and alignment for knee implant component placement.',
     badge: '01 / Robotic Knee'
   },
   {
@@ -26,7 +26,7 @@ export const surgicalVideos = [
     category: 'knee',
     categoryName: 'Knee & Robotic Surgery',
     tag: 'Arthroscopy',
-    desc: 'High-definition endoscopic visualization and tension verification for cruciate ligament reconstruction.',
+    desc: 'Endoscopic visualization and graft assessment during ligament reconstruction.',
     badge: '02 / Arthroscopy'
   },
   {
@@ -34,11 +34,11 @@ export const surgicalVideos = [
     file: 'IMG_3815.MP4',
     src: `${VIDEO_BASE}IMG_3815.MP4`,
     poster: `${VIDEO_BASE}thumbnails/IMG_3815.webp`,
-    title: 'Minimally Invasive Joint Preservation',
+    title: 'Joint Preservation Technique',
     category: 'knee',
     categoryName: 'Knee & Robotic Surgery',
     tag: 'Joint Preservation',
-    desc: 'Targeted bone and cartilage preservation to support early weight-bearing and accelerated mobility.',
+    desc: 'Targeted bone and cartilage preservation principles in suitable surgical candidates.',
     badge: '03 / Joint Preservation'
   },
   {
@@ -50,7 +50,7 @@ export const surgicalVideos = [
     category: 'hip',
     categoryName: 'Hip & Reconstruction',
     tag: 'Hip Surgery',
-    desc: 'Precision acetabular reaming and anatomical implant orientation for optimal stability and range of motion.',
+    desc: 'Precision acetabular reaming and anatomical implant orientation during total hip arthroplasty.',
     badge: '04 / Hip Reconstruction'
   },
   {
@@ -62,7 +62,7 @@ export const surgicalVideos = [
     category: 'hip',
     categoryName: 'Hip & Reconstruction',
     tag: 'Muscle-Sparing',
-    desc: 'Sparing key musculature to facilitate rapid same-day rehabilitation and reduced post-operative discomfort.',
+    desc: 'Direct anterior approach to the hip joint accessed through the natural muscular interval.',
     badge: '05 / Muscle Sparing'
   },
   {
@@ -74,7 +74,7 @@ export const surgicalVideos = [
     category: 'shoulder',
     categoryName: 'Shoulder & Sports Medicine',
     tag: 'Shoulder Arthroscopy',
-    desc: 'Keyhole suture anchor placement and rotator cuff tendon reattachment with dynamic tensioning.',
+    desc: 'Keyhole suture anchor placement and rotator cuff tendon repair under arthroscopic view.',
     badge: '06 / Shoulder Care'
   },
   {
@@ -86,7 +86,7 @@ export const surgicalVideos = [
     category: 'shoulder',
     categoryName: 'Shoulder & Sports Medicine',
     tag: 'Shoulder Instability',
-    desc: 'Labral repair and anatomical capsule restoration for recurrent shoulder instability and sports recovery.',
+    desc: 'Labral repair and anatomical capsule restoration for recurrent shoulder instability.',
     badge: '07 / Shoulder Stabilization'
   },
   {
@@ -98,7 +98,7 @@ export const surgicalVideos = [
     category: 'knee',
     categoryName: 'Knee & Robotic Surgery',
     tag: 'Robotic Surgery',
-    desc: 'Live stereotactic boundary tracking ensuring zero collateral ligament compromise during bone preparation.',
+    desc: 'Robotic boundary control designed to protect surrounding soft tissue during bone preparation.',
     badge: '08 / Robotic Precision'
   },
   {
@@ -178,11 +178,11 @@ export const surgicalVideos = [
     file: 'IMG_5525.MP4',
     src: `${VIDEO_BASE}IMG_5525.MP4`,
     poster: `${VIDEO_BASE}thumbnails/IMG_5525.webp`,
-    title: 'Day-Care Joint Replacement Protocol',
+    title: 'Enhanced Recovery Joint Replacement Protocol',
     category: 'knee',
     categoryName: 'Knee & Robotic Surgery',
-    tag: 'Rapid Recovery',
-    desc: 'Fast-track surgical execution enabling walking within 3-4 hours post-procedure under ERAS guidelines.',
+    tag: 'ERAS Pathway',
+    desc: 'Enhanced recovery protocol: anaesthesia and pain-control steps that allow early mobilisation in suitable patients.',
     badge: '15 / ERAS Pathway'
   },
   {
@@ -461,13 +461,13 @@ export default function SurgicalVideosPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Surgical Videos',
-                  item: 'https://drharshilshah.com/surgical-videos'
+                  item: 'https://www.drharshilshah.com/surgical-videos'
                 }
               ]
             }
@@ -482,11 +482,13 @@ export default function SurgicalVideosPage() {
         <div className="shell">
           <div className="surgical-section-heading">
             <div className="eyebrow">
-              <span></span> Categorized Video Library
+              <span></span> Educational Resource
             </div>
-            <h2 className="surgical-section-title">Explore by Surgical Specialty</h2>
+            <h1 className="surgical-section-title">
+              Surgical Technique Videos
+            </h1>
             <p className="surgical-section-subtitle">
-              Click on any procedure video below to inspect anatomical milestones, surgical techniques, and keyhole arthroscopy methods.
+              Educational recordings demonstrating orthopaedic and joint procedures. All media is anonymised and presented purely for patient education and clinical understanding.
             </p>
 
             {/* Filter Tabs Carousel Track */}

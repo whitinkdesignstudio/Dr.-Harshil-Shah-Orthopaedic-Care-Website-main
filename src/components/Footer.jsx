@@ -93,6 +93,30 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+
+          <div style={{ marginTop: '14px' }}>
+            <a
+              href="https://maps.app.goo.gl/v94sN3JMwJMwKZYi6?g_st=iw"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                fontSize: '0.82rem',
+                color: '#ffffff',
+                background: 'rgba(255, 255, 255, 0.12)',
+                padding: '6px 12px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontWeight: 500,
+                border: '1px solid rgba(255, 255, 255, 0.2)'
+              }}
+            >
+              <span>Find us on Google Maps</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </div>
 
         {/* Explore Col */}
@@ -149,7 +173,7 @@ export default function Footer() {
           </a>
           <a
             className="footer-contact-email"
-            href="mailto:harshilshah199706@gmail.com"
+            href="mailto:appointments@drharshilshah.com"
           >
             <span className="footer-contact-icon">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -158,19 +182,15 @@ export default function Footer() {
               </svg>
             </span>
             <span className="footer-contact-text">
-              harshilshah199706@gmail.com
+              appointments@drharshilshah.com
             </span>
           </a>
 
-          {/* Timing & Emergency placed under email */}
-          <span className="footer-hours-text" style={{ marginTop: '12px' }}>
-            Mon – Sat: 10:00 AM – 1:00 PM &bull; 5:00 PM – 7:00 PM
-          </span>
           <a
             href="tel:+917874904030"
             className="footer-emergency-link"
             title="Call +91 78749 04030 for emergency assistance"
-            style={{ marginTop: '8px' }}
+            style={{ marginTop: '12px' }}
           >
             <span className="footer-emergency-pulse" aria-hidden="true"></span>
             <span>24 Hours Open for Emergency</span>
@@ -178,10 +198,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="shell footer-bottom">
-        <span>© {new Date().getFullYear()} Dr. Harshil Shah. All rights reserved.</span>
-
-        <span>Medical information is for general education, not a diagnosis.</span>
+      <div className="shell footer-bottom" style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'center', alignItems: 'center' }}>
+        <span style={{ fontWeight: 600, color: '#e2e8f0' }}>Dr. Harshil Shah, M.S. (Orth.) · Reg. No. G-36119 (Gujarat Medical Council)</span>
+        <span>© {new Date().getFullYear()} Dr. Harshil Shah. All rights reserved. Medical information is for patient education and does not replace a clinical consultation.</span>
+        <span style={{ fontSize: '0.78rem', color: '#94a3b8' }}>Complies with NMC Guidelines on Ethical Advertising and Public Communication (2026).</span>
       </div>
     </footer>
   );

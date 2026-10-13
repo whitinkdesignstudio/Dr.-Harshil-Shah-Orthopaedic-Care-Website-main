@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://drharshilshah.com/sitemap.xml
+Sitemap: https://www.drharshilshah.com/sitemap.xml
 
 # -------------------------------------------------------------
 # AI Search & Retrieval Crawlers (Explicitly Allowed for GEO)

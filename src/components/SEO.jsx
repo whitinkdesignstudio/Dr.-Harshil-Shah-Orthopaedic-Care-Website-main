@@ -7,7 +7,7 @@ export default function SEO({
   keywords,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://drharshilshah.com/doctor-hero-office.png',
+  ogImage = 'https://www.drharshilshah.com/doctor-hero-office.png',
   schema
 }) {
   const defaultTitle = 'Dr. Harshil Shah | Orthopaedic Surgeon in Ahmedabad';
@@ -18,23 +18,24 @@ export default function SEO({
     }
   }
 
-  const canonical =
-    typeof window !== 'undefined' && window.location?.href
-      ? window.location.href
-      : canonicalUrl
-        ? `https://drharshilshah.com${canonicalUrl}`
-        : 'https://drharshilshah.com/';
+  const cleanPath = canonicalUrl
+    ? (canonicalUrl.startsWith('/') ? canonicalUrl : `/${canonicalUrl}`)
+    : typeof window !== 'undefined' && window.location?.pathname
+      ? (window.location.pathname.replace(/\/+$/, '') || '/')
+      : '/';
+
+  const canonical = `https://www.drharshilshah.com${cleanPath === '/' ? '/' : cleanPath}`;
 
   const metaDescription =
     description ||
-    'Dr. Harshil Shah is a leading orthopaedic surgeon in Ahmedabad specializing in knee, hip & shoulder care, arthroscopy, and robotic joint replacement.';
+    'Dr. Harshil Shah, M.S. (Orth.), is a fellowship-trained orthopaedic surgeon in Ahmedabad specializing in knee, hip & shoulder care, arthroscopy, and joint replacement.';
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
 
     const canonicalLinks = document.querySelectorAll('link[rel="canonical"]');
-    if (canonicalLinks.length > 0 && window.location?.href) {
-      canonicalLinks[0].setAttribute('href', window.location.href);
+    if (canonicalLinks.length > 0) {
+      canonicalLinks[0].setAttribute('href', canonical);
       for (let i = 1; i < canonicalLinks.length; i++) {
         canonicalLinks[i].parentNode?.removeChild(canonicalLinks[i]);
       }
@@ -57,7 +58,7 @@ export default function SEO({
         }
       }
     }
-  }, [fullTitle, metaDescription, keywords, canonicalUrl]);
+  }, [fullTitle, metaDescription, keywords, canonical]);
 
   return (
     <Helmet>
@@ -67,7 +68,7 @@ export default function SEO({
       <meta name="robots" content="index, follow" />
       <meta http-equiv="X-Robots-Tag" content="index, follow" />
       <meta name="publisher" content="Dr. Harshil Shah" />
-      <link rel="publisher" href="https://drharshilshah.com/" />
+      <link rel="publisher" href="https://www.drharshilshah.com/" />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical} />
 

@@ -63,15 +63,25 @@ export default function PrivacyPolicyPage() {
 
       <section style={{ marginBottom: '28px', lineHeight: 1.7 }}>
         <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#146c72', marginBottom: '10px' }}>
-          4. Contact Our Clinic Desk
+          4. Digital Personal Data Protection (DPDP) Act, 2023 Compliance
+        </h2>
+        <p>
+          All electronic patient records and personal health data collected through this website are processed in accordance with India’s Digital Personal Data Protection (DPDP) Act, 2023. You have the right to request access, correction, or deletion of your uploaded health records by contacting our clinic data desk.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: '28px', lineHeight: 1.7 }}>
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#146c72', marginBottom: '10px' }}>
+          5. Contact Our Clinic Desk & Data Controller
         </h2>
         <p>
           If you have questions regarding your data or wish to update your records, please contact our clinic desk:
         </p>
         <p style={{ marginTop: '8px' }}>
+          <strong>Practitioner:</strong> Dr. Harshil Shah, M.S. (Orth.) · Reg. No. G-36119 (Gujarat Medical Council)<br />
           <strong>Address:</strong> Curis Hospitals, Sindhubhavan Road, Bodakdev, Ahmedabad, Gujarat 380054<br />
           <strong>Phone:</strong> <a href="tel:+917874904030" style={{ color: '#146c72' }}>+91 78749 04030</a><br />
-          <strong>Email:</strong> <a href="mailto:harshilshah199706@gmail.com" style={{ color: '#146c72' }}>harshilshah199706@gmail.com</a>
+          <strong>Email:</strong> <a href="mailto:appointments@drharshilshah.com" style={{ color: '#146c72' }}>appointments@drharshilshah.com</a>
         </p>
       </section>
 

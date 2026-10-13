@@ -57,7 +57,16 @@ export default function MedicalDisclaimerPage() {
           4. Individual Clinical Outcomes
         </h2>
         <p>
-          Orthopaedic recovery times, surgical outcomes, and pain relief levels vary depending on individual patient anatomy, age, bone quality, adherence to physical therapy, and overall health status. Testimonials and recovery stories shared represent individual experiences and do not guarantee identical outcomes for every patient.
+          Orthopaedic recovery times, surgical outcomes, and pain relief levels vary depending on individual patient anatomy, age, bone quality, adherence to physical therapy, and overall health status. No clinical procedure guarantees identical outcomes for every patient.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: '28px', lineHeight: 1.7 }}>
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 600, color: '#146c72', marginBottom: '10px' }}>
+          5. NMC Ethical Guidelines Compliance
+        </h2>
+        <p>
+          This website strictly adheres to the National Medical Commission (NMC) Guidelines on Ethical Advertising and Public Communication (2026). All information provided on this platform is solely for patient education, public health awareness, and clinical transparency. It does not solicit patients, promote commercial incentives, or make unverified claims.
         </p>
       </section>
 

@@ -161,13 +161,13 @@ export default function FaqPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Frequently Asked Questions',
-                  item: 'https://drharshilshah.com/faq'
+                  item: 'https://www.drharshilshah.com/faq'
                 }
               ]
             }
@@ -183,10 +183,10 @@ export default function FaqPage() {
             <div className="faq-hero-left">
 
               <h1 id="faq-h1" className="faq-hero-heading">
-                Have Questions Before Your Visit?
+                Frequently Asked Questions
               </h1>
               <p className="faq-hero-desc">
-                Feeling a little unsure about your treatment, first appointment, reports, surgery, or recovery? You’re not alone. Many patients have the same questions and concerns before meeting their doctor.
+                Practical information regarding orthopaedic consultations, diagnostic imaging, joint procedures, and rehabilitation milestones. For condition-specific guidance, an in-person clinical assessment is recommended.
               </p>
 
 

@@ -11,7 +11,7 @@ export default function AppointmentPage() {
     name: '',
     phone: '',
     email: '',
-    service: 'Knee Care & Arthroscopy',
+    service: '',
     consultType: 'In-Clinic Consultation',
     date: '',
     time: '',
@@ -397,7 +397,7 @@ export default function AppointmentPage() {
             {
               '@type': 'ContactPage',
               name: 'Contact & Consultation Booking',
-              url: 'https://drharshilshah.com/appointment',
+              url: 'https://www.drharshilshah.com/appointment',
               description: 'Online consultation booking and clinic contact details for Dr. Harshil Shah.'
             },
             {
@@ -420,13 +420,13 @@ export default function AppointmentPage() {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://drharshilshah.com/'
+                  item: 'https://www.drharshilshah.com/'
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'Book Appointment',
-                  item: 'https://drharshilshah.com/appointment'
+                  item: 'https://www.drharshilshah.com/appointment'
                 }
               ]
             }
@@ -501,8 +501,8 @@ export default function AppointmentPage() {
               </div>
               <div className="appt-call-copy" style={{ minWidth: 0 }}>
                 <small>Email consultation & reports</small>
-                <a href="mailto:harshilshah199706@gmail.com" className="appt-call-link appt-email-link" title="Email Dr. Harshil Shah">
-                  harshilshah199706@gmail.com
+                <a href="mailto:appointments@drharshilshah.com" className="appt-call-link appt-email-link" title="Email Dr. Harshil Shah">
+                  appointments@drharshilshah.com
                 </a>
               </div>
             </div>
