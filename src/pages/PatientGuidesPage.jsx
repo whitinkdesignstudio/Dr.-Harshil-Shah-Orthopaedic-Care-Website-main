@@ -87,7 +87,7 @@ export default function PatientGuidesPage() {
     <div className="patient-guide-page">
       <SEO
         title="Patient Journey & Treatment Guide | Dr. Harshil Shah"
-        description="Step-by-step guidance for orthopaedic patients: preparation before treatment, consultation checklist, procedure care, and recovery milestones."
+        description="Step-by-step orthopaedic patient guide by Dr. Harshil Shah: pre-surgery preparation, consultation checklist, hospital care, and recovery milestones."
         canonicalUrl="/patient-guides"
         keywords="patient treatment guide, knee surgery preparation, post surgery recovery tips, Dr Harshil Shah Ahmedabad"
         schema={{

@@ -210,8 +210,8 @@ export default function AboutPage() {
   return (
     <div className="about-page mock-home">
       <SEO
-        title="About Dr. Harshil Shah | Orthopaedic Surgeon Qualifications & Fellowships"
-        description="Learn about Dr. Harshil Shah (MBBS, MS Orthopaedics), his prestigious fellowships at Hospital for Special Surgery (HSS, New York) & MGH Boston, and his patient-first surgical philosophy."
+        title="About Dr. Harshil Shah | Orthopaedic Surgeon Ahmedabad"
+        description="Learn about Dr. Harshil Shah (MBBS, MS Orthopaedics), his fellowships at HSS New York and MGH Boston, and his patient-first orthopaedic care in Ahmedabad."
         canonicalUrl="/about"
         keywords="Dr Harshil Shah, orthopaedic surgeon qualifications, HSS New York fellowship, MGH Boston, joint replacement surgeon Ahmedabad"
         schema={{

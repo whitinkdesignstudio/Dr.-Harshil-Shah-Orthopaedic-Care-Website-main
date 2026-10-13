@@ -13,7 +13,23 @@
   <meta name="keywords"
     content="orthopaedic surgeon Ahmedabad, knee specialist Gujarat, hip replacement, shoulder arthroscopy, Dr Harshil Shah, joint replacement surgeon" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://drharshilshah.com/" />
+  <meta http-equiv="X-Robots-Tag" content="index, follow" />
+  <meta name="publisher" content="Dr. Harshil Shah" />
+  <link rel="publisher" href="https://drharshilshah.com/" />
+  <link rel="canonical" id="canonical-link" href="https://drharshilshah.com/" />
+  <script>
+    (function () {
+      function syncCanonical() {
+        var canonicalEl = document.getElementById('canonical-link') || document.querySelector('link[rel="canonical"]');
+        if (canonicalEl && window.location && window.location.href) {
+          canonicalEl.setAttribute('href', window.location.href);
+        }
+      }
+      syncCanonical();
+      window.addEventListener('hashchange', syncCanonical);
+      window.addEventListener('popstate', syncCanonical);
+    })();
+  </script>
 
   <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
   <meta property="og:type" content="website" />

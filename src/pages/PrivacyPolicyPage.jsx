@@ -13,8 +13,8 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="policy-page" style={{ padding: '60px 20px', maxWidth: '850px', margin: '0 auto', color: '#1f2937' }}>
       <SEO
-        title="Privacy Policy — Patient Confidentiality & Data Protection"
-        description="Learn how Dr. Harshil Shah's clinic safeguards your medical intake data, appointment submissions, and patient confidentiality."
+        title="Privacy Policy | Dr. Harshil Shah Orthopaedic Clinic"
+        description="Learn how Dr. Harshil Shah's orthopaedic clinic in Ahmedabad safeguards your medical records, online appointment details, and patient privacy."
         canonicalUrl="/privacy"
         schema={schema}
       />

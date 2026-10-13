@@ -253,7 +253,7 @@ export default function GalleryPage() {
     <div className="gallery-page-wrapper">
       <SEO
         title="Clinical Gallery & Milestones | Dr. Harshil Shah Ahmedabad"
-        description="Explore the clinical and surgical gallery of Dr. Harshil Shah: robotic surgery procedures, patient mobility restorations, and academic masterclasses in Ahmedabad."
+        description="Explore the clinical and surgical gallery of Dr. Harshil Shah featuring robotic joint surgeries, patient recovery milestones, and workshops in Ahmedabad."
         canonicalUrl="/gallery"
         keywords="orthopaedic surgery gallery, robotic surgery photos Ahmedabad, knee surgery recovery, Dr Harshil Shah pictures"
         schema={{

@@ -437,7 +437,7 @@ export default function SurgicalVideosPage() {
     <div className="surgical-page">
       <SEO
         title="Operation Theatre & Surgical Videos | Dr. Harshil Shah"
-        description="Watch operative procedure videos and surgical techniques by Dr. Harshil Shah: robotic knee replacement, ligament reconstruction, and arthroscopic joint preservation."
+        description="Watch surgical procedure videos by Dr. Harshil Shah in Ahmedabad, including robotic knee replacement, ligament reconstruction, and joint arthroscopy."
         canonicalUrl="/surgical-videos"
         keywords="surgical videos orthopaedic, knee arthroscopy video, robotic knee replacement video, Dr Harshil Shah surgery"
         schema={{

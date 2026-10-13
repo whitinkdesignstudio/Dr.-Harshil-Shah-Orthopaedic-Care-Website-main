@@ -91,8 +91,8 @@ export default function TreatmentsPage() {
   return (
     <div className="treatments-page">
       <SEO
-        title="Treatments & Procedures | Knee, Hip & Shoulder Specialist Ahmedabad"
-        description="Comprehensive orthopaedic care by Dr. Harshil Shah: robotic knee replacement, hip preservation, anterior hip replacement, shoulder arthroscopy, and sports injury care in Ahmedabad."
+        title="Orthopaedic Treatments | Dr. Harshil Shah Ahmedabad"
+        description="Explore specialist orthopaedic treatments by Dr. Harshil Shah in Ahmedabad: robotic knee replacement, hip replacement, arthroscopy, and sports injury care."
         canonicalUrl="/treatments"
         keywords="robotic knee replacement Ahmedabad, hip replacement surgery, shoulder arthroscopy, ACL reconstruction Gujarat, sports injury doctor"
         schema={{

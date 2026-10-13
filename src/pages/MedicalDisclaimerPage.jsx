@@ -13,7 +13,7 @@ export default function MedicalDisclaimerPage() {
   return (
     <div className="policy-page" style={{ padding: '60px 20px', maxWidth: '850px', margin: '0 auto', color: '#1f2937' }}>
       <SEO
-        title="Medical Disclaimer — Healthcare Information Notice"
+        title="Medical Disclaimer | Dr. Harshil Shah Orthopaedics"
         description="Medical information provided on this website is for educational purposes only and cannot replace professional clinical consultation or diagnosis."
         canonicalUrl="/medical-disclaimer"
         schema={schema}

@@ -21,7 +21,7 @@ export default function NotFoundPage() {
     }}>
       <SEO
         title="Page Not Found (404)"
-        description="The page you are looking for does not exist or has been moved. Explore treatments or contact Dr. Harshil Shah's clinic."
+        description="The page you are looking for does not exist or has been moved. Explore orthopaedic treatments or book a consultation with Dr. Harshil Shah today."
         canonicalUrl="/404"
         schema={schema}
       />

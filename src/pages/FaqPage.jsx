@@ -136,8 +136,8 @@ export default function FaqPage() {
   return (
     <>
       <SEO
-        title="Frequently Asked Questions (FAQ) | Orthopaedic Surgery & Joint Care"
-        description="Comprehensive answers to 40+ common patient questions on knee replacement, shoulder arthroscopy, hip surgery, second opinions, costs, and recovery timelines in Ahmedabad."
+        title="Orthopaedic Surgery FAQs | Dr. Harshil Shah Ahmedabad"
+        description="Find clear answers to common patient questions on knee replacement, hip surgery, shoulder arthroscopy, recovery timelines, and joint care in Ahmedabad."
         canonicalUrl="/faq"
         keywords="orthopaedic surgery FAQ, knee pain questions, recovery time hip replacement, second opinion doctor Ahmedabad, arthroscopy FAQ"
         schema={{
