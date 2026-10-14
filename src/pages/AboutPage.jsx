@@ -262,42 +262,14 @@ export default function AboutPage() {
           ]
         }}
       />
-      {/* 1. HERO BANNER (Exact same structure and styling as Home Page) */}
-      <section className="mock-hero" aria-label="Hero Banner">
-        <div className="mock-hero-media">
-          <img
-            src="/galleri/docter img/about.png"
-            alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
-            className="mock-hero-full-image"
-            loading="eager"
-          />
-        </div>
-        <div className="mock-shell mock-hero-overlay">
-          <div className="mock-hero-inner">
-            <div className="mock-hero-left">
-              {/* Mobile Only: Centered Hero Focus Image */}
-              <div className="mock-hero-mobile-box">
-                <div className="mock-hero-mobile-frame">
-                  <img
-                    src="/galleri/about-mobile-focus.png"
-                    alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
-                    className="mock-hero-mobile-img"
-                    loading="eager"
-                  />
-                </div>
-              </div>
-
-              <h1 className="mock-hero-title">
-                <span className="mock-hero-line-1">Dr. Harshil Shah</span>
-                <span className="mock-hero-line-2" style={{ fontSize: '0.85em' }}>M.S. (Orth.)</span>
-              </h1>
-              <p className="mock-hero-desc">
-                Consultant Orthopaedic Surgeon &bull; Fellowship-Trained in Joint Replacement, Arthroscopy &amp; Sports Injury &bull; Ahmedabad
-              </p>
-
-            </div>
-          </div>
-        </div>
+      {/* Hero Banner */}
+      <section className="about-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+        <img
+          src="/galleri/hero-section-about-page.png"
+          alt="About Dr. Harshil Shah"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          loading="eager"
+        />
       </section>
 
       <section className="about-content-section">

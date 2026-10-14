@@ -111,45 +111,14 @@ export default function HomePage() {
         }}
       />
 
-      <section className="mock-hero" aria-label="Hero Banner">
-        <div className="mock-hero-media">
-          <img
-            src="/galleri/docter img/homepage.png"
-            alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
-            className="mock-hero-full-image"
-            loading="eager"
-          />
-        </div>
-        <div className="mock-shell mock-hero-overlay">
-          <div className="mock-hero-inner">
-            <div className="mock-hero-left">
-              {/* Mobile Only: Centered Hero Focus Image */}
-              <div className="mock-hero-mobile-box">
-                <div className="mock-hero-mobile-frame">
-                  <img
-                    src="/galleri/homepage-mobile-focus.png"
-                    alt="Dr. Harshil Shah - Expert Orthopaedic Surgeon"
-                    className="mock-hero-mobile-img"
-                    loading="eager"
-                  />
-                </div>
-              </div>
-
-              <h1 className="mock-hero-title">
-                <span className="mock-hero-line-1">Knee, Hip &amp; Shoulder Surgery</span>
-                <span className="mock-hero-line-2">in Ahmedabad</span>
-              </h1>
-              <p className="mock-hero-desc" style={{ maxWidth: '620px' }}>
-                Dr. Harshil Shah, M.S. (Orth.), is a fellowship-trained orthopaedic surgeon specializing in joint replacement, arthroscopy, and joint preservation. Advanced international and national clinical training includes the Hospital for Special Surgery, New York, and Massachusetts General Hospital, Boston.
-              </p>
-
-              {/* Verified Credential Strip */}
-              <div className="mock-hero-credentials" style={{ fontSize: '0.78rem', color: '#526e75', lineHeight: 1.6, borderTop: '1px solid rgba(20, 108, 114, 0.15)', paddingTop: '14px', marginTop: '22px', maxWidth: '620px' }}>
-                <strong>Training &amp; Affiliations:</strong> P. D. Hinduja Hospital, Mumbai &bull; Hospital for Special Surgery, New York &bull; Massachusetts General Hospital, Boston &bull; Consulting at Curis &amp; Sterling Hospitals, Ahmedabad
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Hero Banner */}
+      <section className="home-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+        <img
+          src="/galleri/homepage-herosection.png"
+          alt="Dr. Harshil Shah - Knee, Hip & Shoulder Surgery"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          loading="eager"
+        />
       </section>
 
       {/* =========================================================================
