@@ -643,7 +643,7 @@ export default function SurgicalVideosPage() {
                 </Link>
 
                 <a
-                  href="https://wa.me/917874904030?text=Hello%2C%20I%20have%20questions%20regarding%20surgical%20options."
+                  href="https://wa.me/919316753985?text=Hello%2C%20I%20have%20questions%20regarding%20surgical%20options."
                   target="_blank"
                   rel="noreferrer"
                   className="surgical-cta-whatsapp"

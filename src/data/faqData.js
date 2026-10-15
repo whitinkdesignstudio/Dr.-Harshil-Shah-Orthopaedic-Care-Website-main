@@ -21,7 +21,7 @@ export const faqData = [
     category: 'Appointments',
     question: 'How do I book an appointment with Dr. Harshil Shah?',
     answer:
-      'You can schedule a consultation by completing the online appointment form on this website or by contacting the clinic via phone or WhatsApp at +91 78749 04030. The clinic desk will assist you in confirming a suitable date and consultation slot.',
+      'You can schedule a consultation by completing the online appointment form on this website or by contacting the clinic via phone or WhatsApp at +91 93167 53985. The clinic desk will assist you in confirming a suitable date and consultation slot.',
     keywords: ['book appointment', 'online consultation', 'WhatsApp booking', 'Dr Harshil Shah appointment', 'Ahmedabad clinic'],
     featured: true,
   },
@@ -86,7 +86,7 @@ export const faqData = [
     category: 'Appointments',
     question: 'What should I do if my joint pain or injury requires urgent attention?',
     answer:
-      'For acute, severe pain or sudden injuries, contact the clinic line at +91 78749 04030 to check for an expedited consultation slot. If you experience major trauma, visible deformity, numbness, weakness, loss of sensation, a cold or pale limb, or breathing difficulty, proceed directly to the nearest hospital emergency department.',
+      'For acute, severe pain or sudden injuries, contact the clinic line at +91 93167 53985 to check for an expedited consultation slot. If you experience major trauma, visible deformity, numbness, weakness, loss of sensation, a cold or pale limb, or breathing difficulty, proceed directly to the nearest hospital emergency department.',
     keywords: ['urgent orthopaedic appointment', 'acute joint pain', 'emergency bone injury'],
   },
 

@@ -3,7 +3,7 @@ import React from 'react';
 export default function FloatingSocialBar() {
   return (
     <a
-      href="https://wa.me/917874904030"
+      href="https://wa.me/919316753985"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with Dr. Harshil Shah"

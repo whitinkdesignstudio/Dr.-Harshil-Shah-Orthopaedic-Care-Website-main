@@ -5,23 +5,23 @@ export default function Topbar() {
     <div className="topbar">
       <div className="shell topbar-inner">
         <div className="topbar-primary">
-          <a href="tel:+917874904030" className="topbar-phone" title="Call +91 78749 04030">
+          <a href="tel:+919316753985" className="topbar-phone" title="Call +91 93167 53985">
             <span className="topbar-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M7.1 3.8 4.8 5.1c-.7.4-1 1.2-.8 2 1.1 5.8 5.7 10.4 11.5 11.5.8.2 1.6-.1 2-.8l1.3-2.3-4-1.9-1.2 1.7a11.8 11.8 0 0 1-5-5L10.3 9 8.4 5Z" />
               </svg>
             </span>
-            <span className="topbar-phone-text">+91 78749 04030</span>
+            <span className="topbar-phone-text">+91 93167 53985</span>
           </a>
           <span className="topbar-divider" aria-hidden="true"></span>
-          <a href="mailto:harshilshah199706@gmail.com" className="topbar-email" title="Email harshilshah199706@gmail.com">
+          <a href="mailto:drharshilshah25@gmail.com" className="topbar-email" title="Email drharshilshah25@gmail.com">
             <span className="topbar-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2.5" />
                 <path d="m4.5 7 7.5 6 7.5-6" />
               </svg>
             </span>
-            <span className="topbar-email-text">harshilshah199706@gmail.com</span>
+            <span className="topbar-email-text">drharshilshah25@gmail.com</span>
           </a>
         </div>
         <div className="topbar-actions">

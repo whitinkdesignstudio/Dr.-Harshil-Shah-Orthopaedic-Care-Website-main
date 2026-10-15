@@ -80,8 +80,8 @@ export default function PrivacyPolicyPage() {
         <p style={{ marginTop: '8px' }}>
           <strong>Practitioner:</strong> Dr. Harshil Shah, M.S. (Orth.) · Reg. No. G-36119 (Gujarat Medical Council)<br />
           <strong>Address:</strong> Curis Hospitals, Sindhubhavan Road, Bodakdev, Ahmedabad, Gujarat 380054<br />
-          <strong>Phone:</strong> <a href="tel:+917874904030" style={{ color: '#146c72' }}>+91 78749 04030</a><br />
-          <strong>Email:</strong> <a href="mailto:appointments@drharshilshah.com" style={{ color: '#146c72' }}>appointments@drharshilshah.com</a>
+          <strong>Phone:</strong> <a href="tel:+919316753985" style={{ color: '#146c72' }}>+91 93167 53985</a><br />
+          <strong>Email:</strong> <a href="mailto:drharshilshah25@gmail.com" style={{ color: '#146c72' }}>drharshilshah25@gmail.com</a>
         </p>
       </section>
 

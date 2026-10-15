@@ -307,7 +307,7 @@ export default function FaqPage() {
                     <span className="mock-btn-primary-arrow">&rarr;</span>
                   </Link>
                   <a
-                    href="https://wa.me/917874904030?text=Hello%2C%20I%20would%20like%20help%20regarding%20an%20orthopaedic%20consultation."
+                    href="https://wa.me/919316753985?text=Hello%2C%20I%20would%20like%20help%20regarding%20an%20orthopaedic%20consultation."
                     target="_blank"
                     rel="noreferrer"
                     className="mock-btn-whatsapp"

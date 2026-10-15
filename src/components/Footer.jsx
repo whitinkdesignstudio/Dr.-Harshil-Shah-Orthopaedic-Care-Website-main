@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Social Links Row in Footer */}
           <div className="footer-social-row" style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
             <a
-              href="https://wa.me/917874904030"
+              href="https://wa.me/919316753985"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -160,7 +160,7 @@ export default function Footer() {
           </a>
           <a
             className="footer-contact-link"
-            href="tel:+917874904030"
+            href="tel:+919316753985"
           >
             <span className="footer-contact-icon">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -168,12 +168,12 @@ export default function Footer() {
               </svg>
             </span>
             <span className="footer-contact-text">
-              +91 78749 04030
+              +91 93167 53985
             </span>
           </a>
           <a
             className="footer-contact-email"
-            href="mailto:appointments@drharshilshah.com"
+            href="mailto:drharshilshah25@gmail.com"
           >
             <span className="footer-contact-icon">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -182,14 +182,14 @@ export default function Footer() {
               </svg>
             </span>
             <span className="footer-contact-text">
-              appointments@drharshilshah.com
+              drharshilshah25@gmail.com
             </span>
           </a>
 
           <a
-            href="tel:+917874904030"
+            href="tel:+919316753985"
             className="footer-emergency-link"
-            title="Call +91 78749 04030 for emergency assistance"
+            title="Call +91 93167 53985 for emergency assistance"
             style={{ marginTop: '12px' }}
           >
             <span className="footer-emergency-pulse" aria-hidden="true"></span>

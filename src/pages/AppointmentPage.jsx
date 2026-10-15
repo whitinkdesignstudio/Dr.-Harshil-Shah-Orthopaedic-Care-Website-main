@@ -377,7 +377,7 @@ export default function AppointmentPage() {
     } catch (error) {
       console.error('EmailJS appointment submission failed:', error);
       setErrorMessage(
-        'Unable to submit your request at this moment. Please call the clinic directly at +91 78749 04030 for immediate booking.'
+        'Unable to submit your request at this moment. Please call the clinic directly at +91 93167 53985 for immediate booking.'
       );
     } finally {
       setLoading(false);
@@ -388,7 +388,7 @@ export default function AppointmentPage() {
     <div className="appt-page-container contact-page-wrapper">
       <SEO
         title="Book an Appointment & Contact | Dr. Harshil Shah Ahmedabad"
-        description="Schedule an in-clinic consultation or second opinion review with Dr. Harshil Shah at Curis Hospitals, Ahmedabad. Call +91 78749 04030 or book online."
+        description="Schedule an in-clinic consultation or second opinion review with Dr. Harshil Shah at Curis Hospitals, Ahmedabad. Call +91 93167 53985 or book online."
         canonicalUrl="/appointment"
         keywords="orthopaedic doctor appointment Ahmedabad, Dr Harshil Shah contact, Curis Hospitals Bodakdev, knee doctor booking"
         schema={{
@@ -403,7 +403,7 @@ export default function AppointmentPage() {
             {
               '@type': 'MedicalClinic',
               name: 'Dr. Harshil Shah Orthopaedic Clinic',
-              telephone: '+91-78749-04030',
+              telephone: '+91-93167-53985',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Curis Hospitals, Sindhubhavan Road, Bodakdev',
@@ -485,8 +485,8 @@ export default function AppointmentPage() {
               </div>
               <div className="appt-call-copy">
                 <small>Need urgent scheduling assistance?</small>
-                <a href="tel:+917874904030" className="appt-call-link">
-                  +91 78749 04030
+                <a href="tel:+919316753985" className="appt-call-link">
+                  +91 93167 53985
                 </a>
               </div>
             </div>
@@ -501,8 +501,8 @@ export default function AppointmentPage() {
               </div>
               <div className="appt-call-copy" style={{ minWidth: 0 }}>
                 <small>Email consultation & reports</small>
-                <a href="mailto:appointments@drharshilshah.com" className="appt-call-link appt-email-link" title="Email Dr. Harshil Shah">
-                  appointments@drharshilshah.com
+                <a href="mailto:drharshilshah25@gmail.com" className="appt-call-link appt-email-link" title="Email Dr. Harshil Shah">
+                  drharshilshah25@gmail.com
                 </a>
               </div>
             </div>
@@ -679,7 +679,7 @@ export default function AppointmentPage() {
                       </svg>
                     </button>
                     <a
-                      href="https://wa.me/917874904030"
+                      href="https://wa.me/919316753985"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="appt-btn-secondary"

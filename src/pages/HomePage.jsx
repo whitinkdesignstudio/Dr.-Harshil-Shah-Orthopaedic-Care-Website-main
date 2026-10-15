@@ -855,7 +855,7 @@ export default function HomePage() {
                   <span className="mock-btn-primary-arrow">&rarr;</span>
                 </Link>
                 <a
-                  href="https://wa.me/917874904030?text=Hello%20Dr.%20Harshil%20Shah,%20I%20would%20like%20to%20consult%20online"
+                  href="https://wa.me/919316753985?text=Hello%20Dr.%20Harshil%20Shah,%20I%20would%20like%20to%20consult%20online"
                   target="_blank"
                   rel="noreferrer"
                   className="mock-btn-whatsapp"
