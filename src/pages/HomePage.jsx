@@ -9,26 +9,23 @@ const conditionsData = [
   {
     id: 'knee',
     link: '/treatments#knee',
-    icon: '/icons/knee-pain.webp',
-    iconClass: 'mock-condition-icon-img is-knee-icon',
-    title: 'Knee Conditions & Care',
-    desc: 'Osteoarthritis, ACL & ligament injuries, meniscus tears, and cartilage restoration.',
+    image: '/galleri/brochure/knee-replacement-guide.jpg',
+    title: 'Knee Conditions',
+    desc: 'Osteoarthritis, ACL & multi-ligament injuries, meniscus tears, cartilage defects, and malalignment.',
   },
   {
     id: 'hip',
     link: '/treatments#hip',
-    icon: '/icons/hip-pain.webp',
-    iconClass: 'mock-condition-icon-img',
-    title: 'Hip Conditions & AVN',
-    desc: 'Avascular necrosis (AVN), hip osteoarthritis, FAI, and joint preservation.',
+    image: '/galleri/brochure/hip-replacement-guide.jpg',
+    title: 'Hip Conditions',
+    desc: 'Osteoarthritis, avascular necrosis (AVN), femoroacetabular impingement (FAI), and joint preservation.',
   },
   {
     id: 'shoulder',
     link: '/treatments#shoulder',
-    icon: '/icons/shoulder-pain.webp',
-    iconClass: 'mock-condition-icon-img',
-    title: 'Shoulder & Sports Injuries',
-    desc: 'Rotator cuff tears, recurrent dislocation, frozen shoulder, and arthroscopy.',
+    image: '/galleri/brochure/shoulder-arthroscopy-guide.jpg',
+    title: 'Shoulder Conditions',
+    desc: 'Rotator cuff tears, recurrent instability, frozen shoulder, cuff-tear arthropathy, and arthritis.',
   },
 ];
 
@@ -126,88 +123,56 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="mock-treatments-section" id="conditions" aria-label="Conditions I Treat">
         <div className="mock-shell">
-          <div className="mock-section-header">
-            <div className="mock-section-header-left">
-              <h2 className="mock-title">Conditions Treated</h2>
-              <p style={{ color: '#526e75', fontSize: '0.95rem', marginTop: '6px', maxWidth: '750px', lineHeight: 1.6 }}>
+          <div className="mock-section-header" style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+            <div className="mock-section-header-left" style={{ textAlign: 'left', alignItems: 'flex-start', marginLeft: 0 }}>
+              <h2 className="mock-title" style={{ textAlign: 'left', marginLeft: 0 }}>Conditions Treated</h2>
+              <p style={{ color: '#526e75', fontSize: '0.95rem', marginTop: '6px', maxWidth: '750px', lineHeight: 1.6, textAlign: 'left', marginLeft: 0 }}>
                 Assessment begins with accurate clinical diagnosis, not the procedure. Most joint problems are first managed with medication, structured physiotherapy, and activity modifications; surgery is advised when these no longer control symptoms or when the injury will not heal without it.
               </p>
             </div>
           </div>
 
           <div className="mock-conditions-grid">
-            {/* Card 1: Knee */}
-            <Link to="/treatments#knee" className="mock-condition-card">
-              <div className="mock-condition-icon">
-                <img
-                  src="/icons/knee-pain.webp"
-                  alt="Knee Conditions & Care"
-                  className="mock-condition-icon-img is-knee-icon"
-                  loading="lazy"
-                />
-              </div>
-              <strong style={{ flexGrow: 0, marginBottom: '8px', fontSize: '1.05rem', color: '#0f2b30', fontWeight: 700, whiteSpace: 'nowrap' }}>Knee Conditions</strong>
-              <span style={{ fontSize: '0.86rem', color: '#526e75', lineHeight: 1.5, marginBottom: '14px', flexGrow: 1, display: 'block' }}>
-                Osteoarthritis, ACL &amp; multi-ligament injuries, meniscus tears, cartilage defects, and malalignment.
-              </span>
-              <span className="mock-condition-arrow">Read More &rarr;</span>
-            </Link>
-
-            {/* Card 2: Hip */}
-            <Link to="/treatments#hip" className="mock-condition-card">
-              <div className="mock-condition-icon">
-                <img
-                  src="/icons/hip-pain.webp"
-                  alt="Hip Conditions & AVN"
-                  className="mock-condition-icon-img"
-                  loading="lazy"
-                />
-              </div>
-              <strong style={{ flexGrow: 0, marginBottom: '8px', fontSize: '1.05rem', color: '#0f2b30', fontWeight: 700, whiteSpace: 'nowrap' }}>Hip Conditions</strong>
-              <span style={{ fontSize: '0.86rem', color: '#526e75', lineHeight: 1.5, marginBottom: '14px', flexGrow: 1, display: 'block' }}>
-                Osteoarthritis, avascular necrosis (AVN), femoroacetabular impingement (FAI), and joint preservation.
-              </span>
-              <span className="mock-condition-arrow">Read More &rarr;</span>
-            </Link>
-
-            {/* Card 3: Shoulder */}
-            <Link to="/treatments#shoulder" className="mock-condition-card">
-              <div className="mock-condition-icon">
-                <img
-                  src="/icons/shoulder-pain.webp"
-                  alt="Shoulder & Sports Injuries"
-                  className="mock-condition-icon-img"
-                  loading="lazy"
-                />
-              </div>
-              <strong style={{ flexGrow: 0, marginBottom: '8px', fontSize: '1.05rem', color: '#0f2b30', fontWeight: 700, whiteSpace: 'nowrap' }}>Shoulder Conditions</strong>
-              <span style={{ fontSize: '0.86rem', color: '#526e75', lineHeight: 1.5, marginBottom: '14px', flexGrow: 1, display: 'block' }}>
-                Rotator cuff tears, recurrent instability, frozen shoulder, cuff-tear arthropathy, and arthritis.
-              </span>
-              <span className="mock-condition-arrow">Read More &rarr;</span>
-            </Link>
-            
+            {conditionsData.map((cond) => (
+              <Link key={cond.id} to={cond.link} className="mock-condition-card">
+                <div className="mock-condition-img-wrap">
+                  <img
+                    src={cond.image}
+                    alt={cond.title}
+                    className="mock-condition-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mock-condition-content">
+                  <strong className="mock-condition-title">{cond.title}</strong>
+                  <p className="mock-condition-desc">{cond.desc}</p>
+                  <span className="mock-condition-arrow">Read More &rarr;</span>
+                </div>
+              </Link>
+            ))}
           </div>
 
           {/* Mobile 1-by-1 Condition Slider */}
           <div className="mock-conditions-mobile-slider">
             <div className="mock-condition-slider-card-wrap" key={`cond-${currentConditionIndex}`}>
               <Link to={conditionsData[currentConditionIndex].link} className="mock-condition-card mock-condition-card-active">
-                <div className="mock-condition-icon">
+                <div className="mock-condition-img-wrap">
                   <img
-                    src={conditionsData[currentConditionIndex].icon}
+                    src={conditionsData[currentConditionIndex].image}
                     alt={conditionsData[currentConditionIndex].title}
-                    className={conditionsData[currentConditionIndex].iconClass}
+                    className="mock-condition-img"
                     loading="lazy"
                   />
                 </div>
-                <strong style={{ flexGrow: 0, marginBottom: '8px', fontSize: '1.05rem', color: '#0f2b30', fontWeight: 700, whiteSpace: 'nowrap' }}>
-                  {conditionsData[currentConditionIndex].title}
-                </strong>
-                <span style={{ fontSize: '0.86rem', color: '#526e75', lineHeight: 1.5, marginBottom: '14px', flexGrow: 1, display: 'block' }}>
-                  {conditionsData[currentConditionIndex].desc}
-                </span>
-                <span className="mock-condition-arrow">Read More &rarr;</span>
+                <div className="mock-condition-content">
+                  <strong className="mock-condition-title">
+                    {conditionsData[currentConditionIndex].title}
+                  </strong>
+                  <p className="mock-condition-desc">
+                    {conditionsData[currentConditionIndex].desc}
+                  </p>
+                  <span className="mock-condition-arrow">Read More &rarr;</span>
+                </div>
               </Link>
             </div>
 
@@ -277,10 +242,10 @@ export default function HomePage() {
             </div>
 
             {/* Right Content */}
-            <div className="mock-approach-right">
+            <div className="mock-approach-right" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
               
-              <h2 className="mock-title">Clinical Approach</h2>
-              <p>
+              <h2 className="mock-title" style={{ textAlign: 'left', marginLeft: 0 }}>Clinical Approach</h2>
+              <p style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto' }}>
                 Orthopaedic decision-making centres on establishing an accurate clinical diagnosis, exhaustively exploring non-surgical therapies, and recommending surgery only when it demonstrably restores function and adds long-term value.
               </p>
 

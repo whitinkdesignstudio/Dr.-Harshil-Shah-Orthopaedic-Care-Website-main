@@ -1173,8 +1173,7 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
           </div>
         )}
 
-        {/* Ambient Neon Orbit Ring & Grid */}
-        <div className="viewer-orbital-grid" aria-hidden="true" />
+        {/* Ambient Center Glow */}
         <div className="viewer-center-glow" aria-hidden="true" />
 
         {/* Drag Hint Badge */}

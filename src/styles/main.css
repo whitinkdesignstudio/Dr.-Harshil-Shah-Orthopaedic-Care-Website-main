@@ -23260,16 +23260,7 @@ button {
 }
 
 .viewer-orbital-grid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
-  border: 1.5px dashed rgba(59, 179, 188, 0.3);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: rotateOrbitClockwise 30s linear infinite;
+  display: none !important;
 }
 
 .viewer-center-glow {
@@ -33136,6 +33127,41 @@ html body * {
   color: #0d7d82;
 }
 
+.about-page,
+.about-page .section-title,
+.about-page .section-subtitle,
+.about-page .about-copy-block,
+.about-page .about-copy-block h2,
+.about-page .about-copy-block p,
+.about-page .about-focus-grid,
+.about-page .about-focus-card,
+.about-page .about-focus-card h3,
+.about-page .about-focus-card p,
+.about-page .about-profile-card,
+.about-page .about-profile-body,
+.about-page .about-profile-body h3,
+.about-page .about-profile-body p,
+.about-page .about-role,
+.about-page .about-profile-credentials,
+.about-page .about-experience-section,
+.about-page .about-experience-selector,
+.about-page .about-experience-selector-title,
+.about-page .about-experience-detail,
+.about-page .about-experience-copy,
+.about-page .about-experience-copy p,
+.about-page .about-camp-section,
+.about-page .about-camp-box,
+.about-page .about-camp-right,
+.about-page .about-camp-title,
+.about-page .about-camp-hospital-text,
+.about-page .about-camp-desc,
+.about-page .about-treatment-section,
+.about-page .about-expertise-card,
+.about-page .about-expertise-title,
+.about-page .about-expertise-desc {
+  text-align: left !important;
+}
+
 .about-page .section-title {
   margin: 0 0 12px !important;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
@@ -33144,6 +33170,7 @@ html body * {
   letter-spacing: -0.015em !important;
   color: #0f172a !important;
   font-weight: 700 !important;
+  text-align: left !important;
 }
 
 .about-page .section-subtitle {
@@ -33152,6 +33179,7 @@ html body * {
   font-size: 1rem;
   line-height: 1.65;
   color: #526d76;
+  text-align: left !important;
 }
 
 .about-banner-section {
@@ -35063,57 +35091,62 @@ html body * {
 .treatments-page .more-care-card {
   position: relative !important;
   background: #ffffff !important;
-  border: 1px solid #e2e8f0 !important;
-  border-top: 4px solid #146c72 !important;
+  border: 1px solid #e2eef0 !important;
   border-radius: 16px !important;
-  padding: 32px 26px 28px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
+  align-items: stretch !important;
+  text-align: left !important;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease !important;
 }
 
 .treatments-page .more-care-card:hover {
-  transform: translateY(-4px) !important;
+  transform: translateY(-5px) !important;
   box-shadow: 0 12px 28px rgba(20, 108, 114, 0.12) !important;
-  border-color: #cbd5e1 !important;
+  border-color: #146c72 !important;
 }
 
-.treatments-page .more-care-icon {
-  width: 48px !important;
-  height: 48px !important;
-  border-radius: 12px !important;
-  background: #e6f4f3 !important;
-  color: #146c72 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 auto 20px auto !important;
-  transition: background 0.2s ease, color 0.2s ease !important;
+.treatments-page .more-care-img-wrap {
+  width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden !important;
+  background: #f0f7f8 !important;
+  position: relative !important;
+  border-bottom: 1px solid #eaf2f3 !important;
 }
 
-.treatments-page .more-care-icon-img {
-  width: 32px !important;
-  height: 32px !important;
-  object-fit: contain !important;
+.treatments-page .more-care-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
   display: block !important;
+  transition: transform 0.4s ease !important;
 }
 
-.treatments-page .more-care-card:hover .more-care-icon {
-  background: #e6f4f3 !important;
-  color: #146c72 !important;
+.treatments-page .more-care-card:hover .more-care-img {
+  transform: scale(1.05) !important;
+}
+
+.treatments-page .more-care-body {
+  padding: 22px 22px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  text-align: left !important;
 }
 
 .treatments-page .more-care-title {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
-  font-size: 20px !important;
+  font-size: 1.12rem !important;
   font-weight: 700 !important;
-  color: #0f172a !important;
+  color: #0f2b30 !important;
   line-height: 1.35 !important;
   margin: 0 0 10px 0 !important;
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .treatments-page .more-care-desc {
@@ -35122,7 +35155,7 @@ html body * {
   line-height: 1.65 !important;
   color: #475569 !important;
   margin: 0 !important;
-  text-align: center !important;
+  text-align: left !important;
 }
 
 /* Treatments FAQ Section */
@@ -36979,58 +37012,85 @@ html body * {
 .mock-condition-card {
   background: #ffffff;
   border: 1px solid #e2eef0;
-  border-radius: 14px;
-  padding: 30px 24px;
-  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
   text-decoration: none;
-  transition: all 0.24s ease;
+  transition: all 0.28s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 14px rgba(15, 43, 48, 0.03);
+  box-shadow: 0 4px 16px rgba(15, 43, 48, 0.04);
 }
 
 .mock-condition-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: #146c72;
-  box-shadow: 0 10px 24px rgba(20, 108, 114, 0.1);
+  box-shadow: 0 12px 28px rgba(20, 108, 114, 0.12);
 }
 
-.mock-condition-icon {
-  width: 68px;
-  height: 68px;
-  margin-bottom: 18px;
-  color: #146c72;
+.mock-condition-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f0f7f8;
+  position: relative;
+  border-bottom: 1px solid #eaf2f3;
+}
+
+.mock-condition-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mock-condition-card:hover .mock-condition-img {
+  transform: scale(1.05);
+}
+
+.mock-condition-content {
+  padding: 22px 22px 24px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
 }
 
-.mock-condition-card strong {
-  font-size: 0.85rem;
+.mock-condition-card strong,
+.mock-condition-title {
+  font-size: 1.12rem;
   font-weight: 700;
   color: #0f2b30;
-  margin-bottom: 14px;
-  line-height: 1.3;
+  margin-bottom: 8px;
+  line-height: 1.35;
+  display: block;
+}
+
+.mock-condition-desc {
+  font-size: 0.88rem;
+  color: #526e75;
+  line-height: 1.55;
+  margin-bottom: 16px;
   flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+  display: block;
 }
 
 .mock-condition-arrow {
   color: #146c72;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 700;
   transition: all 0.2s ease;
   margin-top: auto;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .mock-condition-card:hover .mock-condition-arrow {
   color: #0e555a;
-  text-decoration: underline;
+  transform: translateX(4px);
 }
 
 /* ========================================================================= */
@@ -39075,14 +39135,46 @@ html body * {
   }
 }
 
-/* Approach Section */
+/* Conditions Treated Section: Left align */
+.mock-home:not(.about-page) #conditions .mock-section-header,
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header {
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+.mock-home:not(.about-page) #conditions .mock-section-header-left,
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header-left {
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+.mock-home:not(.about-page) #conditions .mock-title,
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-title {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+.mock-home:not(.about-page) #conditions .mock-section-header-left p,
+.mock-home:not(.about-page) .mock-treatments-section#conditions p {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+/* Approach Section: Left align */
 .mock-home:not(.about-page) .mock-approach-right {
-  text-align: center !important;
+  text-align: left !important;
+}
+
+.mock-home:not(.about-page) .mock-approach-right .mock-title {
+  text-align: left !important;
+  margin-left: 0 !important;
 }
 
 .mock-home:not(.about-page) .mock-approach-right p {
-  text-align: center !important;
-  margin-left: auto !important;
+  text-align: left !important;
+  margin-left: 0 !important;
   margin-right: auto !important;
 }
 
@@ -39091,7 +39183,7 @@ html body * {
   flex-direction: column !important;
   align-items: flex-start !important;
   text-align: left !important;
-  margin: 0 auto !important;
+  margin-left: 0 !important;
 }
 
 /* Publications */
@@ -39613,56 +39705,34 @@ html body * {
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-    padding: 24px 20px !important;
-    border-radius: 14px !important;
+    padding: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
     background: #ffffff;
     border: 1px solid #e1ecec;
     box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06);
   }
 
-  .mock-condition-card {
-    flex: 0 0 250px !important;
-    min-width: 250px !important;
-    max-width: 260px !important;
-    scroll-snap-align: start !important;
-    padding: 20px 18px !important;
-    border-radius: 14px !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
+  .mock-conditions-mobile-slider .mock-condition-content {
+    padding: 18px 18px 20px !important;
   }
 
-  .mock-condition-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 14px;
-  }
-
-  .mock-condition-icon-img {
-    width: 56px;
-    height: 56px;
-  }
-
-  .mock-condition-icon-img.is-knee-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .mock-condition-card strong {
-    font-size: 0.95rem !important;
+  .mock-condition-card strong,
+  .mock-condition-title {
+    font-size: 1.05rem !important;
     margin-bottom: 6px !important;
     line-height: 1.35 !important;
-    white-space: nowrap !important;
   }
 
+  .mock-condition-desc,
   .mock-condition-card>span:not(.mock-condition-arrow) {
-    font-size: 0.82rem !important;
-    line-height: 1.45 !important;
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
     margin-bottom: 12px !important;
   }
 
   .mock-condition-arrow {
-    font-size: 0.82rem !important;
+    font-size: 0.84rem !important;
   }
 
   /* How I Approach Your Treatment: remove the 3 tick points on mobile */
@@ -40121,74 +40191,74 @@ header#site-header.is-scrolled {
 
 /* Phone-specific rules (<= 768px) for About Page */
 @media (max-width: 768px) {
-  /* 1. All Section Headings & Subtitles Centered on Phone */
+  /* 1. All Section Headings & Subtitles Left-aligned on Phone */
   .about-page .section-title,
   .about-page .about-copy-block h2,
   .about-page .section-subtitle {
-    text-align: center !important;
-    margin-left: auto !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
   }
 
-  /* 2. Hero Section Centered on Phone */
+  /* 2. Hero Section Left-aligned on Phone */
   .about-page .mock-hero-left {
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
 
   .about-page .mock-hero-mobile-box {
-    margin: 0 0 70px 0 !important; /* 👈 [HERO] Hero image aur "Dr. Harshil Shah" ke beech ka gap */
+    margin: 0 0 70px 0 !important;
   }
 
   .about-page .mock-hero-title,
   .about-page .mock-hero-desc {
-    text-align: center !important;
-    margin-left: auto !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
   }
 
-  /* 3. Profile Card Centered */
+  /* 3. Profile Card Left-aligned */
   .about-page .about-profile-card {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     padding: 24px 20px !important;
     box-sizing: border-box !important;
   }
 
   .about-page .about-profile-card img {
-    margin: 0 auto 16px auto !important; /* 👈 [PROFILE CARD] Doctor photo aur "Dr. Harshil Shah" ke beech ka gap */
+    margin: 0 0 16px 0 !important;
   }
 
   .about-page .about-profile-body {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     width: 100% !important;
   }
 
   .about-page .about-profile-body h3,
   .about-page .about-profile-body p,
   .about-page .about-role {
-    text-align: center !important;
-    margin-left: auto !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
   }
 
   /* 4. Clinical Philosophy Copy Block & 1-by-1 Mobile Slider (Conditions Concept) */
   .about-page .about-copy-block {
-    text-align: center !important;
+    text-align: left !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     width: 100% !important;
   }
 
   .about-page .about-copy-block p {
-    text-align: center !important;
-    margin-left: auto !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
     max-width: 520px !important;
   }
@@ -40198,7 +40268,7 @@ header#site-header.is-scrolled {
     display: none !important;
   }
 
-  /* Show Mobile Philosophy 1-by-1 Slider */
+  /* Show Mobile Philosophy 1-by-1 Slider: Centered controls & arrows, left-aligned content */
   .about-page .about-philosophy-mobile-slider {
     display: flex !important;
     flex-direction: column !important;
@@ -40215,7 +40285,7 @@ header#site-header.is-scrolled {
 
   .about-page .about-philosophy-mobile-slider .about-focus-card {
     width: 100% !important;
-    max-width: 360px !important;
+    max-width: 100% !important;
     min-height: 180px !important;
     padding: 24px 20px !important;
     border-radius: 16px !important;
@@ -40224,9 +40294,45 @@ header#site-header.is-scrolled {
     box-shadow: 0 6px 20px rgba(15, 43, 48, 0.06) !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     box-sizing: border-box !important;
+  }
+
+  .about-page .mock-reviews-slider-controls,
+  .about-page .about-philosophy-mobile-slider .mock-reviews-slider-controls {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 20px auto 0 !important;
+    text-align: center !important;
+  }
+
+  .about-page .mock-slider-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .about-page .mock-slider-indicator {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .about-page .mock-slider-dots,
+  .about-page .about-philosophy-mobile-slider .mock-slider-dots {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 12px auto 0 !important;
+    text-align: center !important;
   }
 
   .about-philosophy-badge {
@@ -40249,7 +40355,7 @@ header#site-header.is-scrolled {
     font-weight: 800 !important;
     color: #0d2c32 !important;
     margin: 0 0 10px 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .about-page .about-philosophy-mobile-slider .about-focus-card p {
@@ -40257,7 +40363,7 @@ header#site-header.is-scrolled {
     color: #526e75 !important;
     line-height: 1.55 !important;
     margin: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   /* 5. Experience Section: Centered on mobile */
@@ -40326,21 +40432,22 @@ header#site-header.is-scrolled {
 
   /* 6. Community Health / Camps Centered */
   .about-page .about-camp-section .section-title {
-    text-align: center !important;
+    text-align: left !important;
+    margin-left: 0 !important;
   }
 
   .about-page .about-camp-box {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
 
   .about-page .about-camp-right {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     padding: 20px 16px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -40349,14 +40456,15 @@ header#site-header.is-scrolled {
   .about-page .about-camp-title,
   .about-page .about-camp-hospital-text,
   .about-page .about-camp-desc {
-    text-align: center !important;
-    margin-left: auto !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
   }
 
   /* 7. My Expertise Section: Modern Polished Mobile Cards */
   .about-page .about-treatment-section .section-title {
-    text-align: center !important;
+    text-align: left !important;
+    margin-left: 0 !important;
     margin-bottom: 24px !important;
   }
 
@@ -40663,33 +40771,53 @@ header#site-header.is-scrolled {
     max-width: 100% !important;
     min-width: 100% !important;
     box-sizing: border-box !important;
-    padding: 24px 20px !important;
-    border-radius: 14px !important;
-    background: #ffffff;
-    box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06);
-    border: 1px solid #e1ecec;
+    padding: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(15, 43, 48, 0.06) !important;
+    border: 1px solid #e1ecec !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: stretch !important;
+    text-align: left !important;
   }
 
-  .more-care-mobile-slider .more-care-icon {
-    margin: 0 auto 16px auto !important;
+  .more-care-mobile-slider .more-care-img-wrap {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    overflow: hidden !important;
+    background: #f0f7f8 !important;
+    border-bottom: 1px solid #eaf2f3 !important;
+  }
+
+  .more-care-mobile-slider .more-care-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .more-care-mobile-slider .more-care-body {
+    padding: 18px 18px 22px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
   }
 
   .treatments-page .more-care-title {
-    font-size: 16px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
     line-height: 1.3 !important;
     margin: 0 0 8px 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .treatments-page .more-care-desc {
-    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    text-align: left !important;
+    margin: 0 !important;
   }
 
   /* FAQ on mobile */

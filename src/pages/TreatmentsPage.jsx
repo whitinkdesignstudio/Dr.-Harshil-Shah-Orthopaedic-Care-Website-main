@@ -50,19 +50,19 @@ const TREATMENT_FAQS = [
 const moreCareData = [
   {
     id: 1,
-    icon: '/icons/sports-injuries.webp',
+    image: '/galleri/brochure/sports-injury-care-guide.jpg',
     title: 'Sports Injury Care',
     desc: 'Specialized assessment and return-to-sport pathways for ligament, meniscus, and joint overload injuries in active individuals.',
   },
   {
     id: 2,
-    icon: '/icons/patient-first.webp',
+    image: '/galleri/brochure/conservative-treatment-guide.jpg',
     title: 'Conservative Treatment',
     desc: 'Stage-appropriate non-surgical options—including targeted physical therapy, joint preservation protocols, and lifestyle adjustments.',
   },
   {
     id: 3,
-    icon: '/icons/personalized-care.webp',
+    image: '/galleri/brochure/structured-rehabilitation-guide.jpg',
     title: 'Structured Rehabilitation',
     desc: 'Tailored physiotherapy milestones designed with clear goals so you can track your strength and mobility progress every week.',
   },
@@ -514,68 +514,42 @@ export default function TreatmentsPage() {
             </p>
           </div>
           <div className="more-care-grid">
-            <article className="more-care-card">
-              <div className="more-care-icon">
-                <img
-                  src="/icons/sports-injuries.webp"
-                  alt="Sports Injury Care"
-                  className="more-care-icon-img"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="more-care-title">Sports Injury Care</h3>
-              <p className="more-care-desc">
-                Specialized assessment and return-to-sport pathways for ligament, meniscus, and joint overload injuries in active individuals.
-              </p>
-            </article>
-
-            <article className="more-care-card">
-              <div className="more-care-icon">
-                <img
-                  src="/icons/patient-first.webp"
-                  alt="Conservative Treatment"
-                  className="more-care-icon-img"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="more-care-title">Conservative Treatment</h3>
-              <p className="more-care-desc">
-                Stage-appropriate non-surgical options—including targeted physical therapy, joint preservation protocols, and lifestyle adjustments.
-              </p>
-            </article>
-
-            <article className="more-care-card">
-              <div className="more-care-icon">
-                <img
-                  src="/icons/personalized-care.webp"
-                  alt="Structured Rehabilitation"
-                  className="more-care-icon-img"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="more-care-title">Structured Rehabilitation</h3>
-              <p className="more-care-desc">
-                Tailored physiotherapy milestones designed with clear goals so you can track your strength and mobility progress every week.
-              </p>
-            </article>
+            {moreCareData.map((care) => (
+              <article key={care.id} className="more-care-card">
+                <div className="more-care-img-wrap">
+                  <img
+                    src={care.image}
+                    alt={care.title}
+                    className="more-care-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="more-care-body">
+                  <h3 className="more-care-title">{care.title}</h3>
+                  <p className="more-care-desc">{care.desc}</p>
+                </div>
+              </article>
+            ))}
           </div>
 
           {/* Mobile Single Care Slideshow (1 card at a time with controls) */}
           <div className="more-care-mobile-slider">
             <div className="more-care-slider-card-wrap" key={`care-${currentCareIndex}`}>
               <article className="more-care-card more-care-card-active">
-                <div className="more-care-icon">
+                <div className="more-care-img-wrap">
                   <img
-                    src={moreCareData[currentCareIndex].icon}
+                    src={moreCareData[currentCareIndex].image}
                     alt={moreCareData[currentCareIndex].title}
-                    className="more-care-icon-img"
+                    className="more-care-img"
                     loading="lazy"
                   />
                 </div>
-                <h3 className="more-care-title">{moreCareData[currentCareIndex].title}</h3>
-                <p className="more-care-desc">
-                  {moreCareData[currentCareIndex].desc}
-                </p>
+                <div className="more-care-body">
+                  <h3 className="more-care-title">{moreCareData[currentCareIndex].title}</h3>
+                  <p className="more-care-desc">
+                    {moreCareData[currentCareIndex].desc}
+                  </p>
+                </div>
               </article>
             </div>
 
