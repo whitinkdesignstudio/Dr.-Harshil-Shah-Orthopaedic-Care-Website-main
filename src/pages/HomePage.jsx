@@ -9,21 +9,21 @@ const conditionsData = [
   {
     id: 'knee',
     link: '/treatments#knee',
-    image: '/galleri/brochure/knee-replacement-guide.jpg',
+    image: '/galleri/brochure/knee-replacement-guide.webp',
     title: 'Knee Conditions',
     desc: 'Osteoarthritis, ACL & multi-ligament injuries, meniscus tears, cartilage defects, and malalignment.',
   },
   {
     id: 'hip',
     link: '/treatments#hip',
-    image: '/galleri/brochure/hip-replacement-guide.jpg',
+    image: '/galleri/brochure/hip-replacement-guide.webp',
     title: 'Hip Conditions',
     desc: 'Osteoarthritis, avascular necrosis (AVN), femoroacetabular impingement (FAI), and joint preservation.',
   },
   {
     id: 'shoulder',
     link: '/treatments#shoulder',
-    image: '/galleri/brochure/shoulder-arthroscopy-guide.jpg',
+    image: '/galleri/brochure/shoulder-arthroscopy-guide.webp',
     title: 'Shoulder Conditions',
     desc: 'Rotator cuff tears, recurrent instability, frozen shoulder, cuff-tear arthropathy, and arthritis.',
   },
@@ -32,21 +32,21 @@ const conditionsData = [
 const locationsData = [
   {
     id: 'curis',
-    logo: '/curis-hospital-logo.png',
+    logo: '/curis-hospital-logo.webp',
     logoClass: 'mock-loc-logo-img curis',
     title: 'Curis Hospitals',
     address: 'Sindhubhavan Road, Bodakdev, Ahmedabad',
   },
   {
     id: 'sterling',
-    logo: '/sterling-hospital-logo.png',
+    logo: '/sterling-hospital-logo.webp',
     logoClass: 'mock-loc-logo-img sterling',
     title: 'Sterling Hospitals',
     address: 'Sterling Hospital Road, Memnagar, Ahmedabad',
   },
   {
     id: 'lilavati',
-    logo: '/lilavati-hospital-logo.png',
+    logo: '/lilavati-hospital-logo.webp',
     logoClass: 'mock-loc-logo-img lilavati',
     title: 'Kakadya & Lilavati Hospitals',
     address: 'Bapunagar / East Ahmedabad Clinic',
@@ -111,9 +111,9 @@ export default function HomePage() {
       {/* Hero Banner */}
       <section className="home-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.png" />
+          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" />
           <img
-            src="/galleri/homepage-herosection.png"
+            src="/galleri/homepage-herosection.webp"
             alt="Dr. Harshil Shah - Knee, Hip & Shoulder Surgery"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"
@@ -305,7 +305,7 @@ export default function HomePage() {
             <h2 className="mock-title mock-publications-title">Research & Clinical Publications</h2>
             <div className="mock-toi-inline-card">
               <img
-                src="/times-of-india-health.png"
+                src="/times-of-india-health.webp"
                 alt="The Times of India Health+"
                 className="mock-toi-logo-img-sm"
                 loading="lazy"
@@ -336,7 +336,7 @@ export default function HomePage() {
             <div className="mock-award-card is-primary-award" style={{ display: 'grid', gridTemplateColumns: 'minmax(240px, 420px) minmax(0, 1fr)', gap: '22px', alignItems: 'center' }}>
               <div className="mock-award-photo-wrap" style={{ marginBottom: 0, height: '230px' }}>
                 <img
-                  src="/toi-healthcare-leaders-award.jpg"
+                  src="/toi-healthcare-leaders-award.webp"
                   alt="Dr. Harshil Shah receiving Times of India Healthcare Leaders Award 2026"
                   className="mock-award-photo-img"
                   loading="lazy"
@@ -441,7 +441,7 @@ export default function HomePage() {
                 <div className="mock-split-guide-card">
                   <div className="mock-split-thumb-wrap">
                     <img
-                      src="/galleri/brochure/knee-replacement-guide.jpg"
+                      src="/galleri/brochure/knee-replacement-guide.webp"
                       alt="Understanding Knee Replacement Guide Cover"
                       className="mock-split-thumb-img"
                       loading="lazy"
@@ -471,7 +471,7 @@ export default function HomePage() {
                 <div className="mock-split-guide-card">
                   <div className="mock-split-thumb-wrap">
                     <img
-                      src="/galleri/brochure/hip-replacement-guide.jpg"
+                      src="/galleri/brochure/hip-replacement-guide.webp"
                       alt="Understanding Hip Replacement Guide Cover"
                       className="mock-split-thumb-img"
                       loading="lazy"
@@ -501,7 +501,7 @@ export default function HomePage() {
                 <div className="mock-split-guide-card">
                   <div className="mock-split-thumb-wrap">
                     <img
-                      src="/galleri/brochure/knee-sports-injury-guide.jpg"
+                      src="/galleri/brochure/knee-sports-injury-guide.webp"
                       alt="Sports Injuries & Arthroscopy Guide Cover"
                       className="mock-split-thumb-img"
                       loading="lazy"
@@ -531,7 +531,7 @@ export default function HomePage() {
                 <div className="mock-split-guide-card">
                   <div className="mock-split-thumb-wrap">
                     <img
-                      src="/galleri/brochure/shoulder-arthroscopy-guide.jpg"
+                      src="/galleri/brochure/shoulder-arthroscopy-guide.webp"
                       alt="Shoulder Care & Arthroscopy Guide Cover"
                       className="mock-split-thumb-img"
                       loading="lazy"
@@ -589,7 +589,7 @@ export default function HomePage() {
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
-                    src="/curis-hospital-logo.png"
+                    src="/curis-hospital-logo.webp"
                     alt="Curis Hospitals Logo"
                     className="mock-loc-logo-img curis"
                     loading="lazy"
@@ -622,7 +622,7 @@ export default function HomePage() {
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
-                    src="/sterling-hospital-logo.png"
+                    src="/sterling-hospital-logo.webp"
                     alt="Sterling Hospitals Logo"
                     className="mock-loc-logo-img sterling"
                     loading="lazy"
@@ -655,7 +655,7 @@ export default function HomePage() {
               <div className="mock-loc-top-row">
                 <div className="mock-loc-logo-wrap">
                   <img
-                    src="/lilavati-hospital-logo.png"
+                    src="/lilavati-hospital-logo.webp"
                     alt="Lilavati Hospital Logo"
                     className="mock-loc-logo-img lilavati"
                     loading="lazy"

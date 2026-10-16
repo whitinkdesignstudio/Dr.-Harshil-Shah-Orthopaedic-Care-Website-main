@@ -50,19 +50,19 @@ const TREATMENT_FAQS = [
 const moreCareData = [
   {
     id: 1,
-    image: '/galleri/brochure/sports-injury-care-guide.jpg',
+    image: '/galleri/brochure/sports-injury-care-guide.webp',
     title: 'Sports Injury Care',
     desc: 'Specialized assessment and return-to-sport pathways for ligament, meniscus, and joint overload injuries in active individuals.',
   },
   {
     id: 2,
-    image: '/galleri/brochure/conservative-treatment-guide.jpg',
+    image: '/galleri/brochure/conservative-treatment-guide.webp',
     title: 'Conservative Treatment',
     desc: 'Stage-appropriate non-surgical options—including targeted physical therapy, joint preservation protocols, and lifestyle adjustments.',
   },
   {
     id: 3,
-    image: '/galleri/brochure/structured-rehabilitation-guide.jpg',
+    image: '/galleri/brochure/structured-rehabilitation-guide.webp',
     title: 'Structured Rehabilitation',
     desc: 'Tailored physiotherapy milestones designed with clear goals so you can track your strength and mobility progress every week.',
   },
@@ -169,9 +169,9 @@ export default function TreatmentsPage() {
       {/* Hero Banner */}
       <section className="treatment-hero-image-banner" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/treatmentpage-phone-banner.png" />
+          <source media="(max-width: 768px)" srcSet="/galleri/treatmentpage-phone-banner.webp" />
           <img
-            src="/galleri/Treatment-banner-pc.png"
+            src="/galleri/Treatment-banner-pc.webp"
             alt="Care Focused on Better Movement and Recovery - Dr. Harshil Shah"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"

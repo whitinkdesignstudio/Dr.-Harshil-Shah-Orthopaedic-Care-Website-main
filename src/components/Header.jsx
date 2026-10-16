@@ -83,7 +83,7 @@ export default function Header() {
           {/* FAR LEFT: Brand Logo */}
           <Link to="/" className="brand" aria-label="Dr. Harshil Shah - Home">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Dr. Harshil Shah - M.S Orthopaedic, FIJR, FIAS"
               className="brand-logo-img"
             />
@@ -275,7 +275,7 @@ export default function Header() {
 
         <div style={{ marginBottom: '24px', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="Dr. Harshil Shah"
             className="brand-logo-img brand-logo-drawer"
           />

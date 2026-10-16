@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="footer-brand">
           <Link to="/" className="brand-footer" aria-label="Dr. Harshil Shah - Home">
             <img
-              src="/galleri/Orthopedic Shield Running Logo.png"
+              src="/galleri/Orthopedic Shield Running Logo.webp"
               alt="Dr. Harshil Shah - Orthopaedic Surgeon"
               className="footer-logo-img"
             />

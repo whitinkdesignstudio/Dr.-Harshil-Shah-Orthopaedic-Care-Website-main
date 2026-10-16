@@ -16668,7 +16668,7 @@ button {
 .rehab-section {
   width: 100%;
   min-height: auto !important;
-  background: #0d1b2a url('/rehab-bg.png') no-repeat left center;
+  background: #0d1b2a url('/rehab-bg.webp') no-repeat left center;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -16869,7 +16869,7 @@ button {
   min-height: 520px;
   margin: 0 auto;
   background-color: #ffffff;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 36%, #ffffff 54%, #ffffff 100%), url('/doctor-listening-bg.png');
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 36%, #ffffff 54%, #ffffff 100%), url('/doctor-listening-bg.webp');
   background-repeat: no-repeat;
   background-position: left top;
   background-size: auto 100%;
@@ -16990,7 +16990,7 @@ button {
 @media (max-width: 960px) {
   .doctor-box-card {
     grid-template-columns: 1fr !important;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.08) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_37_22 AM.png') !important;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.08) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_37_22 AM.webp') !important;
     background-position: center -25px !important;
     background-size: 108% auto !important;
     background-repeat: no-repeat !important;
@@ -17064,7 +17064,7 @@ button {
   width: 100%;
   min-height: auto !important;
   background-color: #f7f9fa !important;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), url('/ortho-anatomy-bg.png') !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), url('/ortho-anatomy-bg.webp') !important;
   background-size: cover !important;
   background-position: left top !important;
   background-repeat: no-repeat !important;
@@ -17160,7 +17160,7 @@ button {
 
   .rehab-section {
     background-color: #f8fafc !important;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.12) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_36_52 AM.png') !important;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.12) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_36_52 AM.webp') !important;
     background-position: center top !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -17238,7 +17238,7 @@ button {
 
   .advanced-ortho-section {
     background-color: #f7f9fa !important;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_37_01 AM.png') !important;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), url('/reponsive igm/ChatGPT Image Aug 22, 2026, 10_37_01 AM.webp') !important;
     background-position: center top !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;

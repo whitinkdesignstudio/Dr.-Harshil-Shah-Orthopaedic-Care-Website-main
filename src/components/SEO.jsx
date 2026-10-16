@@ -7,7 +7,7 @@ export default function SEO({
   keywords,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://www.drharshilshah.com/doctor-hero-office.png',
+  ogImage = 'https://www.drharshilshah.com/doctor-hero-office.webp',
   schema
 }) {
   const defaultTitle = 'Dr. Harshil Shah | Orthopaedic Surgeon in Ahmedabad';

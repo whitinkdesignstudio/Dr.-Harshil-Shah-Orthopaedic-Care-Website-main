@@ -94,13 +94,13 @@ const campItems = [
       'Community orthopaedic screening and clinical consultation camp conducted by Dr. Harshil Shah for patients suffering from knee, spine, trauma, shoulder, and hip conditions. Provided specialist clinical assessments and joint care guidance.',
     photos: [
       {
-        src: '/camps/bijainagar-camp-banner.jpg',
+        src: '/camps/bijainagar-camp-banner.webp',
         title: 'Camp Banner & Consultation Venue',
         subtitle: 'Dr. Harshil Shah at Shree P. K. V. Hospital, Bijainagar',
         tag: 'Camp Banner'
       },
       {
-        src: '/camps/bijainagar-camp-team.png',
+        src: '/camps/bijainagar-camp-team.webp',
         title: 'Hospital Felicitation & Reception',
         subtitle: 'Felicitation by hospital organizers and medical staff at Bijainagar',
         tag: 'Community Program'
@@ -265,9 +265,9 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="about-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/aboutpage-banner-mobile.png" />
+          <source media="(max-width: 768px)" srcSet="/galleri/aboutpage-banner-mobile.webp" />
           <img
-            src="/galleri/hero-section-about-page.png"
+            src="/galleri/hero-section-about-page.webp"
             alt="About Dr. Harshil Shah"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"

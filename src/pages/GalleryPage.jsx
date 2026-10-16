@@ -157,7 +157,7 @@ export default function GalleryPage() {
     },
     {
       id: 17,
-      src: `${DOCTOR_IMG_BASE}WhatsApp Image 2026-08-24 at 12.48.02 PM.jpeg`,
+      src: `${DOCTOR_IMG_BASE}WhatsApp Image 2026-08-24 at 12.48.02 PM.webp`,
       tag: 'Academic & Training',
       title: 'International Faculty Interaction',
       subtitle: 'Exchanging clinical insights with global specialists',
@@ -217,7 +217,7 @@ export default function GalleryPage() {
     },
     {
       id: 26,
-      src: `${DOCTOR_IMG_BASE}IMG_2517.jpg`,
+      src: `${DOCTOR_IMG_BASE}IMG_2517.webp`,
       tag: 'Patient Care',
       title: 'Clinical Joint Assessment & Mobility Check',
       subtitle: 'Hands-on knee evaluation, ligament assessment and personalized patient recovery guidance',

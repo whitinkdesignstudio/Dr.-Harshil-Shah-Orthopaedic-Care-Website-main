@@ -678,32 +678,32 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
 
     // Prepare Textures
     const textures = {
-      kneeBoneBase: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Base_color.png'),
-      kneeBoneNormal: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Normal_OpenGL.png'),
-      kneeBoneRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Roughness.png'),
-      kneeBoneAO: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Mixed_AO.png'),
+      kneeBoneBase: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Base_color.webp'),
+      kneeBoneNormal: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Normal_OpenGL.webp'),
+      kneeBoneRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Roughness.webp'),
+      kneeBoneAO: loadTexture(textureLoader, '/knee-anatomy/textures/bone_Mixed_AO.webp'),
 
-      kneeOpacityBase: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Base_color.png'),
-      kneeOpacityNormal: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Normal_OpenGL.png'),
-      kneeOpacityRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Roughness.png'),
-      kneeOpacityAO: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Mixed_AO.png'),
+      kneeOpacityBase: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Base_color.webp'),
+      kneeOpacityNormal: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Normal_OpenGL.webp'),
+      kneeOpacityRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Roughness.webp'),
+      kneeOpacityAO: loadTexture(textureLoader, '/knee-anatomy/textures/Opacyty_Mixed_AO.webp'),
 
-      kneeMashBase: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Base_color.png'),
-      kneeMashNormal: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Normal_OpenGL.png'),
-      kneeMashRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Roughness.png'),
-      kneeMashAO: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Mixed_AO.png'),
+      kneeMashBase: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Base_color.webp'),
+      kneeMashNormal: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Normal_OpenGL.webp'),
+      kneeMashRoughness: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Roughness.webp'),
+      kneeMashAO: loadTexture(textureLoader, '/knee-anatomy/textures/mash_Mixed_AO.webp'),
 
-      shoulderBoneBase: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Base_color.png'),
-      shoulderBoneNormal: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Normal_OpenGL.png'),
-      shoulderBoneRoughness: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Roughness.png'),
-      shoulderBoneAO: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Mixed_AO.png'),
+      shoulderBoneBase: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Base_color.webp'),
+      shoulderBoneNormal: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Normal_OpenGL.webp'),
+      shoulderBoneRoughness: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Roughness.webp'),
+      shoulderBoneAO: loadTexture(textureLoader, '/shoulder-joint/textures/bone_Mixed_AO.webp'),
 
-      shoulderMusculesBase: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Base_color.png'),
-      shoulderMusculesNormal: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Normal_OpenGL.png'),
-      shoulderMusculesRoughness: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Roughness.png'),
-      shoulderMusculesAO: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Mixed_AO.png'),
+      shoulderMusculesBase: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Base_color.webp'),
+      shoulderMusculesNormal: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Normal_OpenGL.webp'),
+      shoulderMusculesRoughness: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Roughness.webp'),
+      shoulderMusculesAO: loadTexture(textureLoader, '/shoulder-joint/textures/muscules_Mixed_AO.webp'),
 
-      hipBase: loadTexture(textureLoader, '/hip-bone-3d-scan/textures/hip_bone_texture_opt.jpg')
+      hipBase: loadTexture(textureLoader, '/hip-bone-3d-scan/textures/hip_bone_texture_opt.webp')
     };
 
     // Check if model already cached for instant loading

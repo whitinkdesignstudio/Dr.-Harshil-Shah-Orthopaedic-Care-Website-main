@@ -15,7 +15,7 @@ const PATIENT_GUIDE_STEPS = [
     title: 'Before Treatment',
     subtitle: 'Prepare well for a smooth and safe treatment experience.',
     LogoComponent: ClipboardCheckLogo,
-    photo: '/guide-assets/2x-step-1-checklist.png',
+    photo: '/guide-assets/2x-step-1-checklist.webp',
     alt: 'Before Treatment Checklist and Notes',
     points: [
       'Carry your medical reports & previous scans (if any).',
@@ -28,7 +28,7 @@ const PATIENT_GUIDE_STEPS = [
     title: 'On the Day of Treatment',
     subtitle: 'Arrive on time and get ready for your procedure.',
     LogoComponent: HospitalLogo,
-    photo: '/guide-assets/2x-step-2-reception.png',
+    photo: '/guide-assets/2x-step-2-reception.webp',
     alt: 'Clinic Reception and Check-In Desk',
     points: [
       'Reach the clinic 15 minutes early.',
@@ -41,7 +41,7 @@ const PATIENT_GUIDE_STEPS = [
     title: 'During Treatment',
     subtitle: 'Your treatment is planned for your comfort and safety.',
     LogoComponent: StethoscopeLogo,
-    photo: '/guide-assets/2x-step-3-during.png',
+    photo: '/guide-assets/2x-step-3-during.webp',
     alt: 'Professional Orthopaedic Care and Procedure',
     points: [
       "You'll be guided by the medical team throughout.",
@@ -54,7 +54,7 @@ const PATIENT_GUIDE_STEPS = [
     title: 'After Treatment',
     subtitle: 'Take care and follow the instructions for a safe recovery.',
     LogoComponent: MedicineLogo,
-    photo: '/guide-assets/2x-step-4-medicine.png',
+    photo: '/guide-assets/2x-step-4-medicine.webp',
     alt: 'Prescribed Medications and Post-treatment Recovery',
     points: [
       'Use prescribed medicines as directed.',
@@ -67,7 +67,7 @@ const PATIENT_GUIDE_STEPS = [
     title: 'Follow-Up & Recovery',
     subtitle: 'Stay on track for the best long-term results.',
     LogoComponent: CalendarLogo,
-    photo: '/guide-assets/2x-step-5-recovery.png',
+    photo: '/guide-assets/2x-step-5-recovery.webp',
     alt: 'Rehabilitation and Physiotherapy Exercises',
     points: [
       'Do your home exercises and physiotherapy (if advised).',

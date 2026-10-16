@@ -68,7 +68,7 @@ const SLIDES = [
         subtitle: 'Recovery Support'
       }
     ],
-    image: '/rehab-knee-hero.jpg',
+    image: '/rehab-knee-hero.webp',
     alt: 'Knee Joint Rehabilitation Runner',
     imgWidth: 2560,
     imgHeight: 998,

@@ -18,7 +18,7 @@
   background-color: #f0f7f8;
   background-image: 
     linear-gradient(to right, #f0f7f8 0%, #f0f7f8 35%, rgba(240, 247, 248, 0.5) 60%, transparent 80%),
-    url('/guide-assets/2x-hero-doctor-knee.png');
+    url('/guide-assets/2x-hero-doctor-knee.webp');
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
   background-size: 100% 100%, auto 100%;
