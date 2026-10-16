@@ -34832,6 +34832,25 @@ html body * {
   color: #0f172a !important;
 }
 
+/* Treatment Hero Desktop Image Banner vs Mobile Switch */
+.treatment-hero-desktop-only {
+  display: block !important;
+}
+
+.treatment-hero-mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .treatment-hero-desktop-only {
+    display: none !important;
+  }
+
+  .treatment-hero-mobile-only {
+    display: flex !important;
+  }
+}
+
 /* Hero Section */
 .treatments-page .treatment-hero h1 {
   font-size: clamp(28px, 3.5vw, 40px) !important;
@@ -37004,9 +37023,8 @@ html body * {
 .mock-conditions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 1080px;
-  margin: 0 auto;
+  gap: 24px;
+  width: 100%;
 }
 
 .mock-condition-card {
@@ -37018,6 +37036,8 @@ html body * {
   transition: all 0.28s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
   box-shadow: 0 4px 16px rgba(15, 43, 48, 0.04);
 }
 

@@ -166,8 +166,18 @@ export default function TreatmentsPage() {
           ]
         }}
       />
-      {/* Hero */}
-      <section className="treatment-hero">
+      {/* Hero Banner (Desktop / PC) */}
+      <section className="treatment-hero-image-banner treatment-hero-desktop-only" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+        <img
+          src="/galleri/Treatment-banner-pc.png"
+          alt="Care Focused on Better Movement and Recovery - Dr. Harshil Shah"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+          loading="eager"
+        />
+      </section>
+
+      {/* Hero Banner (Mobile - displayed until phone banner image is provided) */}
+      <section className="treatment-hero treatment-hero-mobile-only">
         <div className="treatment-hero-bg-container" aria-hidden="true">
           <img
             src="/treatments-hero-banner.webp"
