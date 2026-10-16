@@ -63,8 +63,8 @@ export default defineConfig(({ command }) => ({
     // Target modern browsers for smaller output
     target: 'es2020',
 
-    // Warn on chunks > 600 KB
-    chunkSizeWarningLimit: 600,
+    // Warn on chunks > 1000 KB
+    chunkSizeWarningLimit: 1000,
 
     // Split CSS per chunk for better caching
     cssCodeSplit: true,

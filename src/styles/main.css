@@ -34832,25 +34832,6 @@ html body * {
   color: #0f172a !important;
 }
 
-/* Treatment Hero Desktop Image Banner vs Mobile Switch */
-.treatment-hero-desktop-only {
-  display: block !important;
-}
-
-.treatment-hero-mobile-only {
-  display: none !important;
-}
-
-@media (max-width: 768px) {
-  .treatment-hero-desktop-only {
-    display: none !important;
-  }
-
-  .treatment-hero-mobile-only {
-    display: flex !important;
-  }
-}
-
 /* Hero Section */
 .treatments-page .treatment-hero h1 {
   font-size: clamp(28px, 3.5vw, 40px) !important;
@@ -41326,149 +41307,177 @@ header#site-header.is-scrolled {
   }
 }
 
-/* Default: Hide brochure banner image on desktop */
-.brochure-card-banner {
-  display: none;
+/* ============================================================
+   All Patient Brochures Page - Unified Clean Card Style (PC & Mobile)
+   Card contents strictly: Image (top) -> Heading -> 2 Buttons (Read Online & Download)
+   All other content (number badge, description, topics, file size) removed on all screens.
+   ============================================================ */
+
+.brochures-page .patient-brochures-section {
+  padding-top: 15px !important;
+  padding-bottom: 40px !important;
 }
 
-/* ============================================================
-   All Patient Brochures Page - Mobile Phone View Refinements
-   (max-width: 768px)
-   Card contents strictly: Image (top) -> Heading -> 2 Buttons (Read Online & Download)
-   All other content (number badge, description, topics, file size) removed.
-   ============================================================ */
-@media (max-width: 768px) {
-  .brochures-page .patient-brochures-section {
-    padding-top: 10px !important;
-    padding-bottom: 30px !important;
-  }
+.brochures-page .patient-brochures-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 22px !important;
+}
 
+@media (max-width: 1080px) {
   .brochures-page .patient-brochures-grid {
-    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .brochures-page .patient-brochures-grid {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
   }
+}
 
-  .brochures-page .patient-brochure-card {
-    padding: 14px 14px 18px !important;
-    border-radius: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    text-align: center !important;
-    gap: 14px !important;
-    height: auto !important;
-    min-height: auto !important;
-    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06) !important;
-    border: 1px solid rgba(20, 108, 114, 0.16) !important;
-    background: #ffffff !important;
-    overflow: hidden !important;
-  }
+.brochures-page .patient-brochure-card {
+  padding: 16px 16px 20px !important;
+  border-radius: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  text-align: center !important;
+  gap: 16px !important;
+  height: 100% !important;
+  min-height: auto !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06) !important;
+  border: 1px solid rgba(20, 108, 114, 0.16) !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease !important;
+}
 
-  /* 1. Image first (Top Banner) */
-  .brochures-page .brochure-card-banner {
-    display: block !important;
-    order: 1 !important;
-    width: 100% !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    background: #f0fdfa !important;
-    border: 1px solid rgba(20, 108, 114, 0.14) !important;
-    box-shadow: 0 4px 12px rgba(20, 108, 114, 0.08) !important;
-    margin: 0 !important;
-  }
+.brochures-page .patient-brochure-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 36px rgba(20, 108, 114, 0.14) !important;
+  border-color: #146c72 !important;
+}
 
-  .brochures-page .brochure-banner-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
+/* 1. Image first (Top Banner) */
+.brochures-page .brochure-card-banner {
+  display: block !important;
+  order: 1 !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #f0fdfa !important;
+  border: 1px solid rgba(20, 108, 114, 0.14) !important;
+  box-shadow: 0 4px 12px rgba(20, 108, 114, 0.08) !important;
+  margin: 0 !important;
+}
 
-  /* 2. Heading second */
-  .brochures-page .brochure-card-body {
-    order: 2 !important;
-    flex: unset !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 4px !important;
-  }
+.brochures-page .brochure-banner-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s ease !important;
+}
 
-  .brochures-page .brochure-title {
-    font-size: 17px !important;
-    font-weight: 750 !important;
-    color: #08141a !important;
-    text-align: center !important;
-    margin: 0 !important;
-    line-height: 1.35 !important;
-  }
+.brochures-page .patient-brochure-card:hover .brochure-banner-img {
+  transform: scale(1.05) !important;
+}
 
-  /* 3. 2 Buttons third (Read Online & Download) */
-  .brochures-page .brochure-card-footer {
-    order: 3 !important;
-    width: 100% !important;
-    border-top: none !important;
-    padding-top: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
+/* 2. Heading second */
+.brochures-page .brochure-card-body {
+  order: 2 !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+}
 
-  .brochures-page .brochure-card-actions {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
-  }
+.brochures-page .brochure-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  color: #08141a !important;
+  text-align: center !important;
+  margin: 0 !important;
+  line-height: 1.35 !important;
+}
 
-  .brochures-page .brochure-view-btn,
-  .brochures-page .brochure-dl-btn {
-    width: 100% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 11px 12px !important;
-    border-radius: 11px !important;
-    font-size: 13px !important;
-    font-weight: 650 !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-    text-decoration: none !important;
-    letter-spacing: 0.01em !important;
-  }
+/* 3. 2 Buttons third (Read Online & Download) */
+.brochures-page .brochure-card-footer {
+  order: 3 !important;
+  width: 100% !important;
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin: 0 !important;
+  margin-top: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
 
-  .brochures-page .brochure-view-btn {
-    background: #f8fafc !important;
-    border: 1.5px solid rgba(20, 108, 114, 0.25) !important;
-    color: #146c72 !important;
-  }
+.brochures-page .brochure-card-actions {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
 
-  .brochures-page .brochure-view-btn:active {
-    background: #e6f4f5 !important;
-  }
+.brochures-page .brochure-view-btn,
+.brochures-page .brochure-dl-btn {
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 11px 12px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  letter-spacing: 0.01em !important;
+  transition: all 0.2s ease !important;
+}
 
-  .brochures-page .brochure-dl-btn {
-    background: #146c72 !important;
-    border: 1.5px solid #146c72 !important;
-    color: #ffffff !important;
-  }
+.brochures-page .brochure-view-btn {
+  background: #f8fafc !important;
+  border: 1.5px solid rgba(20, 108, 114, 0.25) !important;
+  color: #146c72 !important;
+}
 
-  .brochures-page .brochure-dl-btn:active {
-    background: #0f5459 !important;
-  }
+.brochures-page .brochure-view-btn:hover,
+.brochures-page .brochure-view-btn:active {
+  background: #e6f4f5 !important;
+  border-color: #146c72 !important;
+}
 
-  /* 4. Remove old header, logos, and all extra content on mobile */
-  .brochures-page .brochure-card-header,
-  .brochures-page .brochure-num-pill,
-  .brochures-page .brochure-desc,
-  .brochures-page .brochure-topics-box,
-  .brochures-page .brochure-file-meta {
-    display: none !important;
-  }
+.brochures-page .brochure-dl-btn {
+  background: #146c72 !important;
+  border: 1.5px solid #146c72 !important;
+  color: #ffffff !important;
+}
+
+.brochures-page .brochure-dl-btn:hover,
+.brochures-page .brochure-dl-btn:active {
+  background: #0f5459 !important;
+  border-color: #0f5459 !important;
+}
+
+/* 4. Remove old header, logos, and all extra content on ALL screens */
+.brochures-page .brochure-card-header,
+.brochures-page .brochure-num-pill,
+.brochures-page .brochure-desc,
+.brochures-page .brochure-topics-box,
+.brochures-page .brochure-file-meta {
+  display: none !important;
 }
 
 /* ============================================================

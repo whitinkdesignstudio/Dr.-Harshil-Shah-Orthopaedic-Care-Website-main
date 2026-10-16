@@ -166,40 +166,17 @@ export default function TreatmentsPage() {
           ]
         }}
       />
-      {/* Hero Banner (Desktop / PC) */}
-      <section className="treatment-hero-image-banner treatment-hero-desktop-only" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
-        <img
-          src="/galleri/Treatment-banner-pc.png"
-          alt="Care Focused on Better Movement and Recovery - Dr. Harshil Shah"
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-          loading="eager"
-        />
-      </section>
-
-      {/* Hero Banner (Mobile - displayed until phone banner image is provided) */}
-      <section className="treatment-hero treatment-hero-mobile-only">
-        <div className="treatment-hero-bg-container" aria-hidden="true">
+      {/* Hero Banner */}
+      <section className="treatment-hero-image-banner" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+        <picture style={{ display: 'block', width: '100%' }}>
+          <source media="(max-width: 768px)" srcSet="/galleri/treatmentpage-phone-banner.png" />
           <img
-            src="/treatments-hero-banner.webp"
-            alt=""
-            className="treatment-hero-bg-img"
+            src="/galleri/Treatment-banner-pc.png"
+            alt="Care Focused on Better Movement and Recovery - Dr. Harshil Shah"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            loading="eager"
           />
-          <div className="treatment-hero-scrim"></div>
-        </div>
-        <div className="shell treatment-hero-inner">
-          <div className="treatment-hero-copy">
-            <div className="eyebrow">
-              <span></span> My Treatment Approach
-            </div>
-            <h1 className="treatment-hero-title">
-              <span className="treatment-hero-line-1" style={{ color: '#000000', display: 'block' }}>Care Focused on</span>
-              <span className="treatment-hero-line-2" style={{ color: '#146c72', display: 'block' }}>Better Movement and Recovery</span>
-            </h1>
-            <p>
-              I provide tailored knee, hip, and shoulder treatments designed around your symptoms, everyday routine, and long-term mobility goals.
-            </p>
-          </div>
-        </div>
+        </picture>
       </section>
 
       {/* Real 3D Interactive Joint Anatomy Explorer */}
