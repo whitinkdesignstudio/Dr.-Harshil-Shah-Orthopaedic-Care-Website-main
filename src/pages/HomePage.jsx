@@ -321,11 +321,11 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="mock-awards-section" id="awards" aria-label="Honors & Recognition">
         <div className="mock-shell">
-          <div className="mock-section-header">
-            <div className="mock-section-header-left">
+          <div className="mock-section-header" style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+            <div className="mock-section-header-left" style={{ textAlign: 'left', alignItems: 'flex-start', marginLeft: 0 }}>
               
-              <h2 className="mock-title">Recognitions &amp; Honors</h2>
-              <p className="mock-subtitle">
+              <h2 className="mock-title" style={{ textAlign: 'left', marginLeft: 0 }}>Recognitions &amp; Honors</h2>
+              <p className="mock-subtitle" style={{ textAlign: 'left', marginLeft: 0 }}>
                 Recognitions and advanced surgical fellowships that reflect my ongoing commitment to providing you with the highest standard of care.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="mock-daycare-section" id="day-care" aria-label="Enhanced Recovery After Surgery">
         <div className="mock-shell">
-          <h2 className="mock-title" style={{ textAlign: 'center', color: '#000000' }}>Enhanced Recovery Pathway (ERAS)</h2>
+          <h2 className="mock-title" style={{ textAlign: 'left', color: '#000000', marginLeft: 0 }}>Enhanced Recovery Pathway (ERAS)</h2>
         <br />
           <div className="mock-daycare-box">
             
@@ -568,10 +568,10 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="mock-locations-section" id="locations" aria-label="Where You Can Visit Me">
         <div className="mock-shell">
-          <div className="mock-section-header">
-            <div className="mock-section-header-left">
-              <h2 className="mock-title">Consultation Locations</h2>
-              <p className="mock-subtitle">
+          <div className="mock-section-header" style={{ alignItems: 'flex-start', textAlign: 'left' }}>
+            <div className="mock-section-header-left" style={{ textAlign: 'left', alignItems: 'flex-start', marginLeft: 0 }}>
+              <h2 className="mock-title" style={{ textAlign: 'left', marginLeft: 0 }}>Consultation Locations</h2>
+              <p className="mock-subtitle" style={{ textAlign: 'left', marginLeft: 0 }}>
                 In-person clinical consultations, physical examinations, and comprehensive imaging reviews available across hospital locations in Ahmedabad.
               </p>
             </div>
@@ -756,10 +756,10 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="mock-faqs-section" id="faqs" aria-label="Frequently Asked Questions">
         <div className="mock-shell">
-          <div className="mock-section-header">
-            <div className="mock-section-header-left">
-              <h2 className="mock-title">Frequently Asked Questions</h2>
-              <p className="mock-subtitle">
+          <div className="mock-section-header" style={{ alignItems: 'center', textAlign: 'center' }}>
+            <div className="mock-section-header-left" style={{ textAlign: 'center', alignItems: 'center', margin: '0 auto' }}>
+              <h2 className="mock-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+              <p className="mock-subtitle" style={{ textAlign: 'center', margin: '0 auto' }}>
                 Here are simple, clear answers to the questions my patients ask most often before consultation and treatment.
               </p>
             </div>

@@ -198,13 +198,8 @@ export default function FaqPage() {
         </section>
 
         {/* ── MAIN EXPLORER ────────────────────────────────────────────────── */}
-        <section className="faq-explorer" aria-labelledby="faq-explorer-heading">
+        <section className="faq-explorer" aria-labelledby="faq-h1">
           <div className="shell faq-explorer-main">
-
-            {/* Header */}
-            <div className="faq-explorer-header">
-              <h2 id="faq-explorer-heading">Frequently Asked Questions</h2>
-            </div>
 
             {/* Single Line Selection Box */}
             <div className="faq-topics-box-container">

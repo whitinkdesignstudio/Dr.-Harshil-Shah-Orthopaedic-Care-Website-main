@@ -294,23 +294,14 @@ export default function GalleryPage() {
       {/* Visual Hero */}
       <section className="gallery-hero-custom">
         <div className="gallery-hero-bg-glow"></div>
-        <div className="shell gallery-hero-grid">
-          <div className="gallery-hero-content">
+        <div className="shell gallery-hero-grid" style={{ gridTemplateColumns: '1fr', textAlign: 'left' }}>
+          <div className="gallery-hero-content" style={{ maxWidth: '850px' }}>
             <h1 className="gallery-hero-title">
               Clinical &amp; Academic Gallery
             </h1>
             <p className="gallery-hero-subtitle">
               Surgical training fellowships, clinical masterclasses, scientific paper presentations, and anonymised operative documentation.
             </p>
-          </div>
-
-          <div className="gallery-hero-visual-panel" aria-hidden="true">
-            <div className="gallery-hero-showcase-card">
-              <div className="hero-3d-models-wrap">
-                <img className="hero-3d-img hero-3d-shoulder" src="/shoulder-3d.webp" alt="3D Shoulder Joint" />
-                <img className="hero-3d-img hero-3d-knee" src="/knee-3d.webp" alt="3D Knee Joint" />
-              </div>
-            </div>
           </div>
         </div>
       </section>

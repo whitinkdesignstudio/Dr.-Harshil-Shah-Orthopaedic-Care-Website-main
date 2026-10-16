@@ -39136,29 +39136,40 @@ html body * {
   }
 }
 
-/* Conditions Treated Section: Left align */
+/* Conditions Treated, Awards, Day Care, Locations Sections: Left align */
 .mock-home:not(.about-page) #conditions .mock-section-header,
-.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header {
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header,
+.mock-home:not(.about-page) #awards .mock-section-header,
+.mock-home:not(.about-page) #locations .mock-section-header {
   align-items: flex-start !important;
   text-align: left !important;
   margin-left: 0 !important;
 }
 
 .mock-home:not(.about-page) #conditions .mock-section-header-left,
-.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header-left {
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-section-header-left,
+.mock-home:not(.about-page) #awards .mock-section-header-left,
+.mock-home:not(.about-page) #locations .mock-section-header-left {
   align-items: flex-start !important;
   text-align: left !important;
   margin-left: 0 !important;
 }
 
 .mock-home:not(.about-page) #conditions .mock-title,
-.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-title {
+.mock-home:not(.about-page) .mock-treatments-section#conditions .mock-title,
+.mock-home:not(.about-page) #awards .mock-title,
+.mock-home:not(.about-page) #day-care .mock-title,
+.mock-home:not(.about-page) #locations .mock-title {
   text-align: left !important;
   margin-left: 0 !important;
 }
 
 .mock-home:not(.about-page) #conditions .mock-section-header-left p,
-.mock-home:not(.about-page) .mock-treatments-section#conditions p {
+.mock-home:not(.about-page) .mock-treatments-section#conditions p,
+.mock-home:not(.about-page) #awards .mock-section-header-left p,
+.mock-home:not(.about-page) #awards .mock-subtitle,
+.mock-home:not(.about-page) #locations .mock-section-header-left p,
+.mock-home:not(.about-page) #locations .mock-subtitle {
   text-align: left !important;
   margin-left: 0 !important;
 }
