@@ -167,12 +167,14 @@ export default function TreatmentsPage() {
         }}
       />
       {/* Hero Banner */}
-      <section className="treatment-hero-image-banner" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+      {/* Hero Banner */}
+      <section className="treatment-hero-image-banner" aria-label="Treatments Hero Banner" style={{ width: '100%', lineHeight: 0, overflow: 'hidden' }}>
         <picture style={{ display: 'block', width: '100%' }}>
           <source media="(max-width: 768px)" srcSet="/galleri/treatmentpage-phone-banner.webp" />
           <img
             src="/galleri/Treatment-banner-pc.webp"
             alt="Care Focused on Better Movement and Recovery - Dr. Harshil Shah"
+            className="treatment-hero-img-element"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"
           />

@@ -326,9 +326,9 @@ export default function AppointmentPage() {
     setErrorMessage('');
     setLoading(true);
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_8d1fhan';
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_eaqfqj4';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'pGa_19T2bUwL6yFQN';
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xg2o73v';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '6yrefhb';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '62iYneEHF5-reC68e';
 
     const formattedDate = formatAppointmentDate(formData.date);
     const formattedTime = formatAppointmentTime(formData.time);

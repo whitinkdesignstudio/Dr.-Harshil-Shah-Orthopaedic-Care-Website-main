@@ -41543,3 +41543,12 @@ header#site-header.is-scrolled {
     display: none !important;
   }
 }
+
+/* Treatment Page: PC Banner Top & Bottom Crop (Only on screens > 768px) */
+@media (min-width: 769px) {
+  .treatment-hero-image-banner .treatment-hero-img-element {
+    clip-path: inset(40px 0 40px 0) !important;
+    margin-top: -40px !important;
+    margin-bottom: -40px !important;
+  }
+}
