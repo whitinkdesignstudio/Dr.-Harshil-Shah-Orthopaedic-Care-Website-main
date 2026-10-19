@@ -265,10 +265,10 @@ export default function AboutPage() {
       {/* Hero Banner */}
       <section className="about-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" />
+          <source media="(max-width: 768px)" srcSet="/galleri/aboutpage-banner-mobile.webp" />
           <img
-            src="/galleri/homepage-herosection.webp"
-            alt="About Dr. Harshil Shah"
+            src="/galleri/hero-section-about-page.webp"
+            alt="About Dr. Harshil Shah - Consultant Orthopaedic Surgeon"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"
           />

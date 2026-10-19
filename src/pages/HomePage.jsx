@@ -111,10 +111,10 @@ export default function HomePage() {
       {/* Hero Banner */}
       <section className="home-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/aboutpage-banner-mobile.webp" />
+          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" />
           <img
-            src="/galleri/hero-section-about-page.webp"
-            alt="Dr. Harshil Shah - Knee, Hip & Shoulder Surgery"
+            src="/galleri/homepage-herosection.webp"
+            alt="Dr. Harshil Shah - Hip, Knee &amp; Shoulder Surgeon"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"
           />
