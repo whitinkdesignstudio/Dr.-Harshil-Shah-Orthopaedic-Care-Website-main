@@ -101,7 +101,7 @@ export default function AppointmentForm() {
     setSubmitting(true);
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xg2o73v';
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '6yrefhb';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_xiclvpk';
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '62iYneEHF5-reC68e';
 
     const templateParams = {
