@@ -112,7 +112,6 @@ export default function WelcomeModal() {
             </h2>
             <p id="welcome-modal-desc" className="welcome-desc">
               Focused orthopaedic care for knee, hip and shoulder conditions with clear guidance from diagnosis through recovery.
-              Focused on orthopaedic care for knee, hip and shoulder conditions with clear guidance from diagnosis through recovery.
             </p>
           </div>
 
@@ -201,7 +200,7 @@ export default function WelcomeModal() {
               </div>
               <div className="welcome-stat-text">
                 <strong>Knee • Hip • Shoulder</strong>
-                <span>Specialized Care</span>
+                <span>Specialised Care</span>
               </div>
             </div>
 

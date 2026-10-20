@@ -36,6 +36,7 @@ const locationsData = [
     logoClass: 'mock-loc-logo-img curis',
     title: 'Curis Hospitals',
     address: 'Sindhubhavan Road, Bodakdev, Ahmedabad',
+    desc: 'Regular consultations, joint examinations, imaging reviews, and follow-ups.',
   },
   {
     id: 'sterling',
@@ -43,13 +44,15 @@ const locationsData = [
     logoClass: 'mock-loc-logo-img sterling',
     title: 'Sterling Hospitals',
     address: 'Sterling Hospital Road, Memnagar, Ahmedabad',
+    desc: 'Focused consultations, pre-surgery evaluations, and second opinions.',
   },
   {
     id: 'lilavati',
     logo: '/lilavati-hospital-logo.webp',
     logoClass: 'mock-loc-logo-img lilavati',
-    title: 'Kakadya & Lilavati Hospitals',
+    title: 'Kakadiya & Lilavati Hospitals',
     address: 'Bapunagar / East Ahmedabad Clinic',
+    desc: 'Specialty consultations for shoulder, sports injuries, and arthroscopy.',
   },
 ];
 
@@ -645,7 +648,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Card 3: Kakadya & Lilavati Hospitals (Specialty Clinic) */}
+            {/* Card 3: Kakadiya & Lilavati Hospitals (Specialty Clinic) */}
             <div
               className={`mock-location-card ${expandedLocation === 2 ? 'is-expanded' : ''}`}
               onClick={() => toggleLocation(2)}
@@ -668,7 +671,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="mock-loc-text">
-                <strong className="mock-loc-title">Kakadya &amp; Lilavati Hospitals</strong>
+                <strong className="mock-loc-title">Kakadiya &amp; Lilavati Hospitals</strong>
                 <div className="mock-loc-details">
                   <span>Ahmedabad, Gujarat</span>
                   <span style={{ display: 'block', fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.45 }}>

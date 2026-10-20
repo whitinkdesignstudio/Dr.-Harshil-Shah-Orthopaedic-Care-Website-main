@@ -658,7 +658,7 @@ export default function AppointmentPage() {
                       <line x1="12" y1="8" x2="12.01" y2="8" />
                     </svg>
                     <p>
-                      A confirmation email has been dispatched. I or my clinic desk will contact you on <strong>{submittedData.patient_phone}</strong> to confirm your final consultation schedule.
+                      A confirmation email has been dispatched. Our clinic desk or I will contact you at <strong>{submittedData.patient_phone}</strong> to confirm your final consultation schedule.
                     </p>
                   </div>
 
@@ -1129,7 +1129,7 @@ export default function AppointmentPage() {
               </div>
               <h3 className="visit-step-title">Note Your Key Questions</h3>
               <p className="visit-step-desc">
-                Write down when pain triggers, daily activities affected, and what outcome goals you want to achieve.
+                Write down what triggers your pain, daily activities affected, and what outcome goals you want to achieve.
               </p>
 
             </div>

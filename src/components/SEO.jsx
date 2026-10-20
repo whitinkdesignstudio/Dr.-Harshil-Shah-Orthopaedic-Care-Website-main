@@ -28,7 +28,7 @@ export default function SEO({
 
   const metaDescription =
     description ||
-    'Dr. Harshil Shah, M.S. (Orth.), is a fellowship-trained orthopaedic surgeon in Ahmedabad specializing in knee, hip & shoulder care, arthroscopy, and joint replacement.';
+    'Dr. Harshil Shah, M.S. (Orth.), is a fellowship-trained orthopaedic surgeon in Ahmedabad specialising in knee, hip & shoulder care, arthroscopy, and joint replacement.';
 
   useEffect(() => {
     if (typeof document === 'undefined') return;

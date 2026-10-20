@@ -70,7 +70,7 @@ export const faqData = [
     category: 'Appointments',
     question: 'How should outstation patients plan their visit to Ahmedabad for consultation?',
     answer:
-      'Patients traveling from outside Ahmedabad are encouraged to contact the clinic beforehand. Sharing previous reports and scan summaries in advance allows me to coordinate consultation timing and any necessary on-day evaluations efficiently.',
+      'Patients traveling from outside Ahmedabad are encouraged to contact the clinic beforehand. Sharing previous reports and scan summaries in advance allows Dr. Shah to coordinate consultation timing and any necessary on-day evaluations efficiently.',
     keywords: ['outstation patient appointment', 'Ahmedabad orthopaedic visit', 'travel consultation planning'],
   },
   {
@@ -332,7 +332,7 @@ export const faqData = [
     category: 'Recovery',
     question: 'How can I manage pain and swelling at home after surgery?',
     answer:
-      'Pain and swelling are typically managed using prescribed medications, intermittent cold therapy (15–20 minutes at a time), elevating the limb above heart level during rest, and performing gentle circulatory exercises such as ankle pumps as instructed by me during your care.',
+      'Pain and swelling are typically managed using prescribed medications, intermittent cold therapy (15–20 minutes at a time), elevating the limb above heart level during rest, and performing gentle circulatory exercises such as ankle pumps as instructed by Dr. Shah during your care.',
     keywords: ['manage pain at home', 'swelling control after surgery', 'ice therapy post-op'],
   },
   {
@@ -373,7 +373,7 @@ export const faqData = [
     category: 'Recovery',
     question: 'When will my surgical stitches be removed?',
     answer:
-      'I routinely employ an advanced stitchless (subcuticular) closure technique using dissolvable internal sutures and specialized skin adhesives under waterproof dressings. This means there are no external threads, metal staples, or clips that need to be painfully removed. The internal stitches absorb naturally on their own beneath the skin, leaving a fine cosmetic scar. Your waterproof dressing is typically checked or removed during your first follow-up clinic visit at 10 to 14 days.',
+      'Dr. Shah routinely employs an advanced stitchless (subcuticular) closure technique using dissolvable internal sutures and specialized skin adhesives under waterproof dressings. This means there are no external threads, metal staples, or clips that need to be painfully removed. The internal stitches absorb naturally on their own beneath the skin, leaving a fine cosmetic scar. Your waterproof dressing is typically checked or removed during your first follow-up clinic visit at 10 to 14 days.',
     keywords: ['stitch removal timing', 'stitchless surgery', 'dissolvable sutures', 'no staples knee surgery'],
     featured: true,
   },
@@ -543,7 +543,7 @@ export const faqData = [
     category: 'Follow-up Care',
     question: 'How often will I need follow-up visits during my recovery?',
     answer:
-      'Follow-up schedules vary according to the procedure and individual recovery. I will advise when reviews are required, with common milestones after joint surgery including visits around 2 weeks, 6 weeks, 3 months, and periodically thereafter as needed.',
+      'Follow-up schedules vary according to the procedure and individual recovery. Dr. Shah will advise when reviews are required, with common milestones after joint surgery including visits around 2 weeks, 6 weeks, 3 months, and periodically thereafter as needed.',
     keywords: ['follow-up visit schedule', 'post-op review frequency', 'recovery checkups'],
   },
   {

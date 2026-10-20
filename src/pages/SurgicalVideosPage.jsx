@@ -131,8 +131,8 @@ export const surgicalVideos = [
     src: `${VIDEO_BASE}IMG_4875.MP4`,
     poster: `${VIDEO_BASE}thumbnails/IMG_4875.webp`,
     title: 'Meniscal Repair & Biological Augmentation',
-    category: 'shoulder',
-    categoryName: 'Shoulder & Sports Medicine',
+    category: 'knee',
+    categoryName: 'Knee & Robotic Surgery',
     tag: 'Sports Injury',
     desc: 'Inside-out meniscal suture repair saving natural cushioning to prevent premature arthritis.',
     badge: '11 / Sports Recovery'
@@ -225,9 +225,9 @@ export const surgicalVideos = [
 
 const categories = [
   { id: 'all', label: 'All Procedures', shortLabel: 'All Procedures', count: 18 },
-  { id: 'knee', label: 'Knee & Robotic Surgery', shortLabel: 'Knee & Robotic', count: 7 },
+  { id: 'knee', label: 'Knee & Robotic Surgery', shortLabel: 'Knee & Robotic', count: 8 },
   { id: 'hip', label: 'Hip & Reconstruction', shortLabel: 'Hip & Joint', count: 4 },
-  { id: 'shoulder', label: 'Shoulder & Sports Medicine', shortLabel: 'Shoulder & Sports', count: 4 },
+  { id: 'shoulder', label: 'Shoulder & Sports Medicine', shortLabel: 'Shoulder & Sports', count: 3 },
   { id: 'theatre', label: 'Surgical Theatre & Techniques', shortLabel: 'Surgical Theatre', count: 3 }
 ];
 

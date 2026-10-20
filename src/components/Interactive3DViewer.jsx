@@ -207,7 +207,7 @@ const JOINT_HOTSPOTS = {
       category: 'Dynamic Stabilizer',
       pos: [0.25, 1.15, 0.12],
       condition: 'Rotator Cuff Tear / Shoulder Impingement',
-      desc: 'Primary dynamic tendon holding the humeral head centered in the shallow socket during arm elevation.',
+      desc: 'Primary dynamic tendon holding the humeral head centred in the shallow socket during arm elevation.',
       treatment: 'Arthroscopic double-row rotator cuff repair.'
     },
     {

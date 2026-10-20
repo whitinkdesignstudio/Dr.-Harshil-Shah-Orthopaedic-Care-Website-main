@@ -20,7 +20,7 @@ const REVIEWS = [
     meta: '2 reviews',
     rating: 5,
     time: '4 months ago',
-    text: '“Dr. Harshil shah ek behtareen orthopedic surgeon hain. Unhone meri surgery bahut safalta-purvak ki. Unka treatment aur nature dono hi bahut supportive hain.”'
+    text: '“Dr. Harshil Shah ek behtareen orthopedic surgeon hain. Unhone meri surgery bahut safalta-purvak ki. Unka treatment aur nature dono hi bahut supportive hain.”'
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const REVIEWS = [
     meta: '1 review',
     rating: 5,
     time: '3 months ago',
-    text: 'Dr Harshil shah is very nice doctor to do operations and treatments also.'
+    text: 'Dr. Harshil Shah is a very nice doctor to do operations and treatments also.'
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const REVIEWS = [
     meta: '5 reviews · 11 photos',
     rating: 5,
     time: '3 months ago',
-    text: 'Best doctor and bast treatment. Good facility happy 😊'
+    text: 'Best doctor and best treatment. Good facility happy 😊'
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const REVIEWS = [
     meta: '2 reviews',
     rating: 5,
     time: '2 months ago',
-    text: 'Best doctor best treatment thank you sir my life change.'
+    text: 'Best doctor, best treatment. Thank you sir, my life changed.'
   }
 ];
 

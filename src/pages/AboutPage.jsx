@@ -283,7 +283,7 @@ export default function AboutPage() {
               <h3>Dr. Harshil Shah</h3>
               <p className="about-role">M.S. (Ortho) · Consultant Orthopaedic Surgeon</p>
               <p className="about-profile-credentials" style={{ fontSize: '0.82rem', color: '#526e75', marginTop: '8px', lineHeight: 1.55 }}>
-                Reg. No. G-36119 Gujarat Medical Council Consulting at Curis, Sterling, Lilavati and Kakadiya Hospitals in Ahmedabad.
+                Reg. No. G-36119 (Gujarat Medical Council). Consulting at Curis, Sterling, Lilavati and Kakadiya Hospitals in Ahmedabad.
               </p>
             </div>
           </div>
