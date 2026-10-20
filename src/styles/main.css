@@ -23494,13 +23494,16 @@ button {
   margin-bottom: 2px;
 }
 
-.popover-title {
+.popover-title,
+.viewer-hotspot-popover .popover-title,
+.treatments-page .viewer-hotspot-popover .popover-title,
+.treatments-page h4.popover-title {
   font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif !important;
-  font-size: 16px;
-  font-weight: 800;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.25;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
 }
 
 .popover-desc {

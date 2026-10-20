@@ -1287,7 +1287,7 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
               <span className="popover-num-badge">{activeHotspot.num}</span>
               <div>
                 <span className="popover-badge">{activeHotspot.category}</span>
-                <h4 className="popover-title">{activeHotspot.name}</h4>
+                <h4 className="popover-title" style={{ color: '#ffffff' }}>{activeHotspot.name}</h4>
               </div>
             </div>
             <p className="popover-desc">{activeHotspot.desc}</p>
@@ -1303,20 +1303,6 @@ export default function Interactive3DViewer({ initialJoint = 'knee', onSelectTre
                 <span className="treatment-val">{activeHotspot.treatment}</span>
               </div>
             )}
-            <div className="popover-cta-row">
-              <a
-                href="#appointment"
-                className="popover-consult-btn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (onSelectTreatment) onSelectTreatment(selectedJoint);
-                  const el = document.getElementById('appointment') || document.querySelector('.appointment-section');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Discuss with Dr. Harshil
-              </a>
-            </div>
           </div>
         )}
       </div>
