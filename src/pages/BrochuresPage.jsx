@@ -21,7 +21,7 @@ const PATIENT_BROCHURES = [
     number: '02',
     title: 'Hip Replacement & Joint Restoration',
     logo: '/icons/hip-pain.webp',
-    image: '/galleri/brochure/hip-replacement-guide.webp',
+    image: '/galleri/brochure/hip-conditions-ground.webp',
     fileUrl: '/galleri/brochure/02_Understanding_Hip_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileName: '02_Understanding_Hip_Replacement_Guide_Dr_Harshil_Shah.pdf',
     fileSize: '2.9 MB PDF',

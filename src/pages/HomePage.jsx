@@ -16,7 +16,7 @@ const conditionsData = [
   {
     id: 'hip',
     link: '/treatments#hip',
-    image: '/galleri/brochure/hip-replacement-guide.webp',
+    image: '/galleri/brochure/hip-conditions-ground.webp',
     title: 'Hip Conditions',
     desc: 'Osteoarthritis, avascular necrosis (AVN), femoroacetabular impingement (FAI), and joint preservation.',
   },
@@ -226,6 +226,74 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* =========================================================================
+          DAY CARE JOINT CARE & REPLACEMENT (FAST-TRACK PATHWAY - LEFT ALIGNED)
+          ========================================================================= */}
+      <section className="daycare-left-section" id="day-care" aria-label="Day Care Joint Care & Replacement">
+        <div className="mock-shell">
+          <div className="daycare-left-wrapper">
+            {/* Left-Aligned Heading & Subtitle */}
+            <div className="daycare-header-block">
+              <h2 className="daycare-left-title">Day Care Replacement</h2>
+              <p className="daycare-left-sub">
+                A fast-track approach to joint replacement and arthroscopic procedures (knee, hip, shoulder &amp; sports) designed to support early mobilisation, effective pain management and a planned recovery pathway for suitable patients.
+              </p>
+            </div>
+
+            {/* 3 Columns with Vertical Dividers */}
+            <div className="daycare-left-columns-row">
+              <div className="daycare-left-col">
+                <h3 className="daycare-left-col-heading">Early mobilisation</h3>
+                <p className="daycare-left-col-text">Start movement with clinical guidance.</p>
+              </div>
+
+              <div className="daycare-left-vert-line" />
+
+              <div className="daycare-left-col">
+                <h3 className="daycare-left-col-heading">Personalised pain management</h3>
+                <p className="daycare-left-col-text">Get an individual care and recovery plan.</p>
+              </div>
+
+              <div className="daycare-left-vert-line" />
+
+              <div className="daycare-left-col">
+                <h3 className="daycare-left-col-heading">Careful patient assessment</h3>
+                <p className="daycare-left-col-text">Suitability is determined from medical history, examination and investigations.</p>
+              </div>
+            </div>
+
+            {/* Process Timeline Bar: 01 — 02 — 03 */}
+            <div className="daycare-left-timeline-bar">
+              <div className="daycare-left-timeline-item">
+                <span className="daycare-left-num">01</span>
+                <span className="daycare-left-item-label">Pre-operative assessment</span>
+              </div>
+
+              <div className="daycare-left-timeline-track" />
+
+              <div className="daycare-left-timeline-item">
+                <span className="daycare-left-num">02</span>
+                <span className="daycare-left-item-label">Joint procedure &amp; care</span>
+              </div>
+
+              <div className="daycare-left-timeline-track" />
+
+              <div className="daycare-left-timeline-item">
+                <span className="daycare-left-num">03</span>
+                <span className="daycare-left-item-label">Recovery &amp; follow-up</span>
+              </div>
+            </div>
+
+            {/* Left-Aligned Action Button */}
+            <div className="daycare-left-action">
+              <Link to="/appointment" className="mock-btn-primary daycare-left-btn">
+                <span>Book a Consultation</span>
+                <span className="mock-btn-primary-arrow">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* =========================================================================
           4. HOW I APPROACH YOUR TREATMENT (MY APPROACH)
@@ -361,9 +429,9 @@ export default function HomePage() {
 
 
       {/* =========================================================================
-          7. DAY CARE JOINT REPLACEMENT (CIRCULAR SHOWCASE WITH ATTRACTIVE ROUND BADGES)
+          7. ENHANCED RECOVERY PATHWAY (ERAS)
           ========================================================================= */}
-      <section className="mock-daycare-section" id="day-care" aria-label="Enhanced Recovery After Surgery">
+      <section className="mock-daycare-section" id="eras" aria-label="Enhanced Recovery After Surgery">
         <div className="mock-shell">
           <h2 className="mock-title" style={{ textAlign: 'left', color: '#000000', marginLeft: 0 }}>Enhanced Recovery Pathway (ERAS)</h2>
         <br />
@@ -474,7 +542,7 @@ export default function HomePage() {
                 <div className="mock-split-guide-card">
                   <div className="mock-split-thumb-wrap">
                     <img
-                      src="/galleri/brochure/hip-replacement-guide.webp"
+                      src="/galleri/brochure/hip-conditions-ground.webp"
                       alt="Understanding Hip Replacement Guide Cover"
                       className="mock-split-thumb-img"
                       loading="lazy"
