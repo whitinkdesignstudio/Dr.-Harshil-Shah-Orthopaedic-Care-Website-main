@@ -184,7 +184,9 @@ export default function HeroSlider() {
                       src={slide.image}
                       alt={slide.alt}
                       className={`medical-integrated-img ${slide.imgClass || ''}`}
-                      loading="eager"
+                      loading={idx === 0 ? 'eager' : 'lazy'}
+                      fetchPriority={idx === 0 ? 'high' : 'low'}
+                      decoding="async"
                       width={slide.imgWidth}
                       height={slide.imgHeight}
                     />

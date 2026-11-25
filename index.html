@@ -81,6 +81,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Preload LCP hero images (desktop + mobile) for fast First Paint -->
+  <link
+    rel="preload"
+    as="image"
+    href="/galleri/homepage-herosection.webp"
+    media="(min-width: 769px)"
+    fetchpriority="high"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href="/galleri/home-phone-version-banner.webp"
+    media="(max-width: 768px)"
+    fetchpriority="high"
+  />
+
   <!--
       Fonts: load only the weights actually used in the site.
       Cormorant Garamond: 400, 600 (regular + semibold, plus italic variants)
@@ -89,7 +105,16 @@
     -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
 
 
   <!-- Structured Data: Local Medical Business (Enhanced per SEO/GEO SOP) -->

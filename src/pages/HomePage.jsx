@@ -124,6 +124,8 @@ export default function HomePage() {
             alt="Dr. Harshil Shah - Hip, Knee &amp; Shoulder Surgeon"
             style={{ width: '100%', height: 'auto', display: 'block' }}
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </picture>
       </section>
