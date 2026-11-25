@@ -118,7 +118,7 @@ export default function HomePage() {
           Dr. Harshil Shah – Orthopaedic, Hip, Knee &amp; Shoulder Surgeon in Ahmedabad
         </h1>
         <picture style={{ display: 'block', width: '100%' }}>
-          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" />
+          <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" width="824" height="298" />
           <img
             src="/galleri/homepage-herosection.webp"
             alt="Dr. Harshil Shah - Hip, Knee &amp; Shoulder Surgeon"
@@ -126,6 +126,8 @@ export default function HomePage() {
             loading="eager"
             fetchPriority="high"
             decoding="async"
+            width="2172"
+            height="724"
           />
         </picture>
       </section>
@@ -152,7 +154,7 @@ export default function HomePage() {
                     src={cond.image}
                     alt={cond.title}
                     className="mock-condition-img"
-                    loading="lazy"
+                    loading={cond.id === 'knee' ? 'eager' : 'lazy'}
                     width="400"
                     height="250"
                   />
@@ -175,7 +177,9 @@ export default function HomePage() {
                     src={conditionsData[currentConditionIndex].image}
                     alt={conditionsData[currentConditionIndex].title}
                     className="mock-condition-img"
-                    loading="lazy"
+                    loading={currentConditionIndex === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={currentConditionIndex === 0 ? 'high' : 'auto'}
+                    decoding="async"
                     width="400"
                     height="250"
                   />
@@ -787,6 +791,8 @@ export default function HomePage() {
                       alt={`${locationsData[currentLocationIndex].title} Logo`}
                       className={locationsData[currentLocationIndex].logoClass}
                       loading="lazy"
+                      width="140"
+                      height="45"
                     />
                   </div>
                 </div>

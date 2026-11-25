@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (GTM-TDTGKL7X) -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TDTGKL7X"></script>
+  <!-- Google tag (GTM-TDTGKL7X) dataLayer init -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -93,6 +92,13 @@
     rel="preload"
     as="image"
     href="/galleri/home-phone-version-banner.webp"
+    media="(max-width: 768px)"
+    fetchpriority="high"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href="/galleri/brochure/knee-replacement-guide.webp"
     media="(max-width: 768px)"
     fetchpriority="high"
   />
@@ -212,20 +218,41 @@
     }
   </script>
 
-  <!-- Meta Pixel Code -->
+  <!-- Deferred 3rd-party Analytics (GTM + Meta Pixel) so FCP/LCP are unblocked -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1836117594471066');
-    fbq('track', 'PageView');
+    (function () {
+      var loaded = false;
+      function loadThirdPartyTags() {
+        if (loaded) return;
+        loaded = true;
+
+        // Google Tag Manager (GTM-TDTGKL7X)
+        var gtm = document.createElement('script');
+        gtm.async = true;
+        gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TDTGKL7X';
+        document.head.appendChild(gtm);
+
+        // Meta Pixel Code
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1836117594471066');
+        fbq('track', 'PageView');
+      }
+
+      ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+        window.addEventListener(evt, loadThirdPartyTags, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () {
+        setTimeout(loadThirdPartyTags, 2000);
+      });
+    })();
   </script>
-  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
