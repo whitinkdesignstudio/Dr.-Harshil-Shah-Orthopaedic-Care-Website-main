@@ -89,7 +89,8 @@ const campItems = [
   {
     id: 'camp-bijainagar',
     title: 'Orthopaedic Screening & Joint Health Camp',
-    hospital: 'Shree P. K. V. Hospital and Research Centre',
+    metaLabel: 'Hospital',
+    metaValue: 'Shree P. K. V. Hospital and Research Centre',
     description:
       'Community orthopaedic screening and clinical consultation camp conducted by Dr. Harshil Shah for patients suffering from knee, spine, trauma, shoulder, and hip conditions. Provided specialist clinical assessments and joint care guidance.',
     photos: [
@@ -104,6 +105,40 @@ const campItems = [
         title: 'Hospital Felicitation & Reception',
         subtitle: 'Felicitation by hospital organizers and medical staff at Bijainagar',
         tag: 'Community Program'
+      }
+    ]
+  },
+  {
+    id: 'media-skywalker-launch',
+    title: 'West India’s First SkyWalker™ Robotic System Launched',
+    metaLabel: 'Hospital',
+    metaValue: 'Curis Hospitals, Ahmedabad · 24 Nov 2026',
+    description:
+      'Curis Hospital, Ahmedabad launched Western India’s first SkyWalker™ Orthopedic Robotic System with MicroPort Orthopedics. Dr. Harshil Shah highlighted how real-time dynamic gap balancing improves knee alignment precision and recovery.',
+    link: 'https://newsbharatdaily.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/',
+    linkLabel: 'Read Official Article',
+    secondaryLink: 'https://www.instagram.com/reel/DgH9l8-xLNX/',
+    secondaryLinkLabel: 'Watch Reel',
+    portalLinks: [
+      { name: 'The Redline News', url: 'https://theredline.news/story/tm' },
+      { name: 'Nirmal Metro', url: 'https://nirmalmetro.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Truth of Bharat', url: 'https://truthofbharat.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Virat Gujarat', url: 'https://viratgujarat.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Amdavad Post', url: 'https://amdavadpost.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Aajna Samachar', url: 'https://aajnasamachar.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Amdavad Live', url: 'https://amdavadlive.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Gujarat Gaurav', url: 'https://gujaratgaurav.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Gujarat Business Watch', url: 'https://gujaratbusinesswatch.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Gujarat Morning Post', url: 'https://gujaratmorningpost.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Hotline Gujarat', url: 'https://hotlinegujarat.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' },
+      { name: 'Ultimate Gujarat', url: 'https://ultimategujarat.com/skywalker-orthopedic-robotic-system-launched-curis-hospital-ahmedabad/' }
+    ],
+    photos: [
+      {
+        src: '/Media Coverage.webp',
+        title: 'SkyWalker™ Orthopedic Robotic System Launch',
+        subtitle: 'Curis Hospitals, Ahmedabad — Media Coverage',
+        tag: 'Media Coverage'
       }
     ]
   }
@@ -191,6 +226,17 @@ export default function AboutPage() {
   const [selectedExperience, setSelectedExperience] = useState(0);
   const [activeCampPhoto, setActiveCampPhoto] = useState(null);
   const [currentPhilosophyIndex, setCurrentPhilosophyIndex] = useState(0);
+  const [activeAwarenessIndex, setActiveAwarenessIndex] = useState(0);
+
+  const prevAwareness = () => {
+    setActiveAwarenessIndex((prev) => (prev === 0 ? campItems.length - 1 : prev - 1));
+  };
+
+  const nextAwareness = () => {
+    setActiveAwarenessIndex((prev) => (prev === campItems.length - 1 ? 0 : prev + 1));
+  };
+
+  const activeCamp = campItems[activeAwarenessIndex];
 
   const prevPhilosophy = () => {
     setCurrentPhilosophyIndex((prev) => (prev === 0 ? aboutFocusItems.length - 1 : prev - 1));
@@ -410,31 +456,105 @@ export default function AboutPage() {
 
       <section className="about-camp-section" id="camps-work">
         <div className="shell">
-          <h2 className="section-title">Community Health & Awareness</h2>
+          <h2 className="section-title">Media Coverage &amp; Public Awareness</h2>
 
           <div className="about-camp-container">
-            {campItems.map((camp) => (
-              <article key={camp.id} className="about-camp-box">
-                {/* Left Side: Auto-playing Image Slideshow */}
-                <div className="about-camp-left">
-                  <CampSlideshow
-                    photos={camp.photos}
-                    onPhotoClick={setActiveCampPhoto}
-                  />
-                </div>
+            <article key={activeCamp.id} className="about-camp-box">
+              {/* Left Side: Auto-playing Image Slideshow */}
+              <div className="about-camp-left">
+                <CampSlideshow
+                  key={activeCamp.id}
+                  photos={activeCamp.photos}
+                  onPhotoClick={setActiveCampPhoto}
+                />
+              </div>
 
-                {/* Right Side: Heading, Hospital, and Description */}
-                <div className="about-camp-right">
-                  <h3 className="about-camp-title">{camp.title}</h3>
+              {/* Right Side: Heading, Source/Hospital, Description & Link Button */}
+              <div className="about-camp-right">
+                <h3 className="about-camp-title">{activeCamp.title}</h3>
 
-                  <p className="about-camp-hospital-text">
-                    <strong>Hospital:</strong> {camp.hospital}
-                  </p>
+                <p className="about-camp-hospital-text">
+                  <strong>{activeCamp.metaLabel || 'Hospital'}:</strong>{' '}
+                  {activeCamp.metaValue || activeCamp.hospital}
+                </p>
 
-                  <p className="about-camp-desc">{camp.description}</p>
-                </div>
-              </article>
-            ))}
+                <p className="about-camp-desc">{activeCamp.description}</p>
+
+                {activeCamp.link && (
+                  <div className="about-camp-actions">
+                    <a
+                      href={activeCamp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="about-camp-link-btn"
+                    >
+                      {activeCamp.linkLabel || 'View Link'}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                    {activeCamp.secondaryLink && (
+                      <a
+                        href={activeCamp.secondaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="about-camp-link-btn about-camp-link-btn--outline"
+                      >
+                        {activeCamp.secondaryLinkLabel || 'Watch Video'}
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </div>
+                )}
+
+                {activeCamp.portalLinks && activeCamp.portalLinks.length > 0 && (
+                  <div className="about-camp-portals">
+                    <span className="about-camp-portals-label">Also featured on:</span>
+                    <div className="about-camp-portals-list">
+                      {activeCamp.portalLinks.map((portal) => (
+                        <a
+                          key={portal.name}
+                          href={portal.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="about-camp-portal-pill"
+                        >
+                          {portal.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </article>
+
+            {campItems.length > 1 && (
+              <div className="about-camp-nav" aria-label="Media and awareness carousel navigation">
+                <button
+                  type="button"
+                  className="about-camp-nav-btn"
+                  onClick={prevAwareness}
+                  aria-label="Previous item"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+
+                <span className="about-camp-nav-counter">
+                  {activeAwarenessIndex + 1} / {campItems.length}
+                </span>
+
+                <button
+                  type="button"
+                  className="about-camp-nav-btn"
+                  onClick={nextAwareness}
+                  aria-label="Next item"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
