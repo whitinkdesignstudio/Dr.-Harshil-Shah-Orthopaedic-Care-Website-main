@@ -139,6 +139,18 @@ const campItems = [
         title: 'SkyWalker™ Orthopedic Robotic System Launch',
         subtitle: 'Curis Hospitals, Ahmedabad — Media Coverage',
         tag: 'Media Coverage'
+      },
+      {
+        src: '/Image_02-3-1024x853.webp',
+        title: 'SkyWalker™ Robotic System Launch Event',
+        subtitle: 'Launch ceremony at Curis Hospitals, Ahmedabad',
+        tag: 'Launch Event'
+      },
+      {
+        src: '/54ffc36d-e434-4f13-b5aa-36a1b306179e.jpg',
+        title: 'Robotic Joint Replacement Milestone',
+        subtitle: 'Dr. Harshil Shah & team at Curis Hospitals, Ahmedabad',
+        tag: 'Clinical Team'
       }
     ]
   }
@@ -226,17 +238,6 @@ export default function AboutPage() {
   const [selectedExperience, setSelectedExperience] = useState(0);
   const [activeCampPhoto, setActiveCampPhoto] = useState(null);
   const [currentPhilosophyIndex, setCurrentPhilosophyIndex] = useState(0);
-  const [activeAwarenessIndex, setActiveAwarenessIndex] = useState(0);
-
-  const prevAwareness = () => {
-    setActiveAwarenessIndex((prev) => (prev === 0 ? campItems.length - 1 : prev - 1));
-  };
-
-  const nextAwareness = () => {
-    setActiveAwarenessIndex((prev) => (prev === campItems.length - 1 ? 0 : prev + 1));
-  };
-
-  const activeCamp = campItems[activeAwarenessIndex];
 
   const prevPhilosophy = () => {
     setCurrentPhilosophyIndex((prev) => (prev === 0 ? aboutFocusItems.length - 1 : prev - 1));
@@ -459,102 +460,73 @@ export default function AboutPage() {
           <h2 className="section-title">Media Coverage &amp; Public Awareness</h2>
 
           <div className="about-camp-container">
-            <article key={activeCamp.id} className="about-camp-box">
-              {/* Left Side: Auto-playing Image Slideshow */}
-              <div className="about-camp-left">
-                <CampSlideshow
-                  key={activeCamp.id}
-                  photos={activeCamp.photos}
-                  onPhotoClick={setActiveCampPhoto}
-                />
-              </div>
+            {campItems.map((camp) => (
+              <article key={camp.id} className="about-camp-box">
+                {/* Top/Left: Auto-playing Image Slideshow */}
+                <div className="about-camp-left">
+                  <CampSlideshow
+                    photos={camp.photos}
+                    onPhotoClick={setActiveCampPhoto}
+                  />
+                </div>
 
-              {/* Right Side: Heading, Source/Hospital, Description & Link Button */}
-              <div className="about-camp-right">
-                <h3 className="about-camp-title">{activeCamp.title}</h3>
+                {/* Bottom/Right: Heading, Source/Hospital, Description & Link Buttons */}
+                <div className="about-camp-right">
+                  <h3 className="about-camp-title">{camp.title}</h3>
 
-                <p className="about-camp-hospital-text">
-                  <strong>{activeCamp.metaLabel || 'Hospital'}:</strong>{' '}
-                  {activeCamp.metaValue || activeCamp.hospital}
-                </p>
+                  <p className="about-camp-hospital-text">
+                    <strong>{camp.metaLabel || 'Hospital'}:</strong>{' '}
+                    {camp.metaValue || camp.hospital}
+                  </p>
 
-                <p className="about-camp-desc">{activeCamp.description}</p>
+                  <p className="about-camp-desc">{camp.description}</p>
 
-                {activeCamp.link && (
-                  <div className="about-camp-actions">
-                    <a
-                      href={activeCamp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="about-camp-link-btn"
-                    >
-                      {activeCamp.linkLabel || 'View Link'}
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                    {activeCamp.secondaryLink && (
+                  {camp.link && (
+                    <div className="about-camp-actions">
                       <a
-                        href={activeCamp.secondaryLink}
+                        href={camp.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="about-camp-link-btn about-camp-link-btn--outline"
+                        className="about-camp-link-btn"
                       >
-                        {activeCamp.secondaryLinkLabel || 'Watch Video'}
+                        {camp.linkLabel || 'View Link'}
                         <span aria-hidden="true">↗</span>
                       </a>
-                    )}
-                  </div>
-                )}
-
-                {activeCamp.portalLinks && activeCamp.portalLinks.length > 0 && (
-                  <div className="about-camp-portals">
-                    <span className="about-camp-portals-label">Also featured on:</span>
-                    <div className="about-camp-portals-list">
-                      {activeCamp.portalLinks.map((portal) => (
+                      {camp.secondaryLink && (
                         <a
-                          key={portal.name}
-                          href={portal.url}
+                          href={camp.secondaryLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="about-camp-portal-pill"
+                          className="about-camp-link-btn about-camp-link-btn--outline"
                         >
-                          {portal.name}
+                          {camp.secondaryLinkLabel || 'Watch Video'}
+                          <span aria-hidden="true">↗</span>
                         </a>
-                      ))}
+                      )}
                     </div>
-                  </div>
-                )}
-              </div>
-            </article>
+                  )}
 
-            {campItems.length > 1 && (
-              <div className="about-camp-nav" aria-label="Media and awareness carousel navigation">
-                <button
-                  type="button"
-                  className="about-camp-nav-btn"
-                  onClick={prevAwareness}
-                  aria-label="Previous item"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="15 18 9 12 15 6" />
-                  </svg>
-                </button>
-
-                <span className="about-camp-nav-counter">
-                  {activeAwarenessIndex + 1} / {campItems.length}
-                </span>
-
-                <button
-                  type="button"
-                  className="about-camp-nav-btn"
-                  onClick={nextAwareness}
-                  aria-label="Next item"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </button>
-              </div>
-            )}
+                  {camp.portalLinks && camp.portalLinks.length > 0 && (
+                    <div className="about-camp-portals">
+                      <span className="about-camp-portals-label">Also featured on:</span>
+                      <div className="about-camp-portals-list">
+                        {camp.portalLinks.map((portal) => (
+                          <a
+                            key={portal.name}
+                            href={portal.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="about-camp-portal-pill"
+                          >
+                            {portal.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

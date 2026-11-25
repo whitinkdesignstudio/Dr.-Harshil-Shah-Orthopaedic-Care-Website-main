@@ -33578,11 +33578,12 @@ html body * {
 }
 
 .about-camp-container {
-  max-width: 940px;
+  max-width: 1180px;
   margin: 24px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
 .about-camp-box {
@@ -33591,18 +33592,17 @@ html body * {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(19, 43, 51, 0.05);
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* Left: Slideshow with clean light background (No black bars) */
+/* Top: Slideshow with clean light background (No black bars) */
 .about-camp-left {
   position: relative;
   width: 100%;
-  height: 100%;
   background: #f7faf9;
-  border-right: 1px solid #e7efef;
+  border-bottom: 1px solid #e7efef;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33611,7 +33611,7 @@ html body * {
 .about-camp-left .camp-slideshow {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 240px;
   background: #f7faf9;
   display: flex;
   align-items: center;
@@ -33865,7 +33865,7 @@ html body * {
 }
 
 @media (max-width: 820px) {
-  .about-camp-box {
+  .about-camp-container {
     grid-template-columns: 1fr;
   }
 
