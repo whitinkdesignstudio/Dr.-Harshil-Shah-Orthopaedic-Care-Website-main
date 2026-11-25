@@ -153,6 +153,8 @@ export default function HomePage() {
                     alt={cond.title}
                     className="mock-condition-img"
                     loading="lazy"
+                    width="400"
+                    height="250"
                   />
                 </div>
                 <div className="mock-condition-content">
@@ -174,6 +176,8 @@ export default function HomePage() {
                     alt={conditionsData[currentConditionIndex].title}
                     className="mock-condition-img"
                     loading="lazy"
+                    width="400"
+                    height="250"
                   />
                 </div>
                 <div className="mock-condition-content">
@@ -479,6 +483,9 @@ export default function HomePage() {
                     src="/knee-motion-v2.webp"
                     alt="Knee joint anatomical model"
                     className="mock-daycare-joint-img"
+                    loading="lazy"
+                    width="260"
+                    height="260"
                   />
                 </div>
               </div>
@@ -677,6 +684,8 @@ export default function HomePage() {
                     alt="Curis Hospitals Logo"
                     className="mock-loc-logo-img curis"
                     loading="lazy"
+                    width="140"
+                    height="45"
                   />
                 </div>
                 <div className="mock-loc-mobile-toggle" aria-label="Toggle details">
@@ -710,6 +719,8 @@ export default function HomePage() {
                     alt="Sterling Hospitals Logo"
                     className="mock-loc-logo-img sterling"
                     loading="lazy"
+                    width="140"
+                    height="45"
                   />
                 </div>
                 <div className="mock-loc-mobile-toggle" aria-label="Toggle details">
@@ -743,6 +754,8 @@ export default function HomePage() {
                     alt="Lilavati Hospital Logo"
                     className="mock-loc-logo-img lilavati"
                     loading="lazy"
+                    width="140"
+                    height="45"
                   />
                 </div>
                 <div className="mock-loc-mobile-toggle" aria-label="Toggle details">

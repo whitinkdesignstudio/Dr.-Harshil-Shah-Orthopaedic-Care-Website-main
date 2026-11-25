@@ -18240,15 +18240,18 @@ button {
 
 @keyframes footerEmergencyPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    transform: scale(0.95);
+    opacity: 1;
   }
 
   70% {
-    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+    transform: scale(1.15);
+    opacity: 0.4;
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    transform: scale(0.95);
+    opacity: 1;
   }
 }
 
