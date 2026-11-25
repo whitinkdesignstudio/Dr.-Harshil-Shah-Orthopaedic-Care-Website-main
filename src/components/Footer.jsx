@@ -124,7 +124,7 @@ export default function Footer() {
           <p className="footer-label">Explore</p>
           <Link to="/about">About Dr. Harshil Shah</Link>
           <Link to="/treatments">Treatments</Link>
-
+          <Link to="/treatments/avn-joint-preservation">AVN Joint Preservation</Link>
           <Link to="/brochures">Patient brochures</Link>
           <Link to="/gallery">Case gallery</Link>
         </div>

@@ -97,6 +97,7 @@ export default function HomePage() {
       <SEO
         title="Dr. Harshil Shah | Orthopaedic Surgeon, Ahmedabad"
         description="Fellowship-trained in joint replacement and arthroscopy (HSS New York, MGH Boston). Knee, hip and shoulder care in Ahmedabad."
+        keywords="Dr Harshil Shah, orthopaedic surgeon in Ahmedabad, joint replacement surgeon Ahmedabad, knee replacement Ahmedabad, hip replacement Ahmedabad, shoulder arthroscopy Ahmedabad, AVN joint preservation"
         canonicalUrl="/"
         schema={{
           '@context': 'https://schema.org',
@@ -113,6 +114,9 @@ export default function HomePage() {
 
       {/* Hero Banner */}
       <section className="home-hero-image-banner" aria-label="Hero Banner" style={{ width: '100%', lineHeight: 0 }}>
+        <h1 className="sr-only">
+          Dr. Harshil Shah – Orthopaedic, Hip, Knee &amp; Shoulder Surgeon in Ahmedabad
+        </h1>
         <picture style={{ display: 'block', width: '100%' }}>
           <source media="(max-width: 768px)" srcSet="/galleri/home-phone-version-banner.webp" />
           <img

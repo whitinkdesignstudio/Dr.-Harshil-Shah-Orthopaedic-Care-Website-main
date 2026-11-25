@@ -4,7 +4,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.drharshilshah.com/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- About Doctor & Credentials -->
   <url>
     <loc>https://www.drharshilshah.com/about</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,15 +20,31 @@
   <!-- Treatments & Procedures Hub -->
   <url>
     <loc>https://www.drharshilshah.com/treatments</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+
+  <!-- AVN & Hip Joint Preservation -->
+  <url>
+    <loc>https://www.drharshilshah.com/treatments/avn-joint-preservation</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Patient Education Guides -->
+  <url>
+    <loc>https://www.drharshilshah.com/patient-guides</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Surgical Videos & Operation Theatre -->
   <url>
     <loc>https://www.drharshilshah.com/surgical-videos</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -36,7 +52,7 @@
   <!-- Patient Education Guides & Brochures -->
   <url>
     <loc>https://www.drharshilshah.com/brochures</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +60,7 @@
   <!-- Clinical & Academic Gallery -->
   <url>
     <loc>https://www.drharshilshah.com/gallery</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -52,7 +68,7 @@
   <!-- FAQ Hub -->
   <url>
     <loc>https://www.drharshilshah.com/faq</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -60,7 +76,7 @@
   <!-- Contact & Hospital Locations -->
   <url>
     <loc>https://www.drharshilshah.com/contact</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -68,7 +84,7 @@
   <!-- Consultation & Appointment Booking -->
   <url>
     <loc>https://www.drharshilshah.com/appointment</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -76,14 +92,14 @@
   <!-- Legal & Compliance -->
   <url>
     <loc>https://www.drharshilshah.com/privacy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.drharshilshah.com/medical-disclaimer</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

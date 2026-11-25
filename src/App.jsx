@@ -26,6 +26,7 @@ import HomePage from './pages/HomePage';
 // Lazy-load all secondary pages with resilient retry — each gets its own JS chunk
 const AboutPage = lazyWithRetry(() => import('./pages/AboutPage'));
 const TreatmentsPage = lazyWithRetry(() => import('./pages/TreatmentsPage'));
+const AVNPreservationPage = lazyWithRetry(() => import('./pages/AVNPreservationPage'));
 const BrochuresPage = lazyWithRetry(() => import('./pages/BrochuresPage'));
 const PatientGuidesPage = lazyWithRetry(() => import('./pages/PatientGuidesPage'));
 const GalleryPage = lazyWithRetry(() => import('./pages/GalleryPage'));
@@ -89,6 +90,9 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/treatments" element={<TreatmentsPage />} />
+              <Route path="/treatments/avn-joint-preservation" element={<AVNPreservationPage />} />
+              <Route path="/avn-joint-preservation" element={<Navigate to="/treatments/avn-joint-preservation" replace />} />
+              <Route path="/avn" element={<Navigate to="/treatments/avn-joint-preservation" replace />} />
               <Route path="/treatment" element={<Navigate to="/treatments" replace />} />
               <Route path="/brochures" element={<BrochuresPage />} />
               <Route path="/brochure" element={<Navigate to="/brochures" replace />} />
