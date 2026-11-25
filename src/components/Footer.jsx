@@ -37,6 +37,8 @@ export default function Footer() {
               src="/galleri/Orthopedic Shield Running Logo.webp"
               alt="Dr. Harshil Shah - Orthopaedic Surgeon"
               className="footer-logo-img"
+              width="140"
+              height="48"
             />
           </Link>
           <p className="footer-brand-text">

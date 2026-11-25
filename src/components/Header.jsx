@@ -86,6 +86,8 @@ export default function Header() {
               src="/logo.webp"
               alt="Dr. Harshil Shah - M.S Orthopaedic, FIJR, FIAS"
               className="brand-logo-img"
+              width="160"
+              height="48"
             />
           </Link>
 
@@ -278,6 +280,8 @@ export default function Header() {
             src="/logo.webp"
             alt="Dr. Harshil Shah"
             className="brand-logo-img brand-logo-drawer"
+            width="140"
+            height="42"
           />
         </div>
 

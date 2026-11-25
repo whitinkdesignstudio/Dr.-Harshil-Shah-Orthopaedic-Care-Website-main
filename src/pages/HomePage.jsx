@@ -313,6 +313,9 @@ export default function HomePage() {
                 src="/galleri/docter img/WhatsApp Image 2026-08-24 at 12.48.03 PM.webp"
                 alt="Dr. Harshil Shah performing surgery in theatre"
                 className="mock-approach-img"
+                width="600"
+                height="450"
+                loading="lazy"
               />
               <Link to="/surgical-videos" className="mock-play-btn-overlay" title="Watch Surgical Videos">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -386,6 +389,8 @@ export default function HomePage() {
                 alt="The Times of India Health+"
                 className="mock-toi-logo-img-sm"
                 loading="lazy"
+                width="120"
+                height="40"
               />
             </div>
           </div>
@@ -417,6 +422,8 @@ export default function HomePage() {
                   alt="Dr. Harshil Shah receiving Times of India Healthcare Leaders Award 2026"
                   className="mock-award-photo-img"
                   loading="lazy"
+                  width="420"
+                  height="230"
                 />
               </div>
 
